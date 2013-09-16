@@ -108,9 +108,9 @@ namespace Correctionary
                 this._userSettings.LaguageTo = this._logics.GetLanguageTo();
 
             }
+            this.SetBtnTranslationState();
             //applying settings
             this._logics.SetUserSettings(this._userSettings);
-
         }
 
 
@@ -397,6 +397,20 @@ namespace Correctionary
             notificationDisplay.Location = location;
         }
 
+       
+
+        /// <summary>
+        /// Sets the state of the BTN translation.
+        /// </summary>
+        private void SetBtnTranslationState()
+        {
+            bool enable = !String.IsNullOrWhiteSpace(this.tsTxbWord.Text) && !String.IsNullOrWhiteSpace(this.tsTxbContext.Text);
+            this.tsmTranslate.Enabled = enable;
+        }
+        #endregion
+
+        #region Event Handlers
+
         /// <summary>
         /// Handles the FormClosed event of the notificationDisplay control.
         /// </summary>
@@ -410,11 +424,8 @@ namespace Correctionary
             {
                 this._userSettings.LastTranslationDisplayLocation = frmNotification.Location;
             }
-           
-        }
-        #endregion
 
-        #region Event Handlers
+        }
         /// <summary>
         /// Handles the Load event of the form.
         /// </summary>
@@ -591,8 +602,31 @@ namespace Correctionary
             }
            
         }
+        /// <summary>
+        /// Handles the TextChanged event of the tsTxbWord control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void tsTxbWord_TextChanged(object sender, EventArgs e)
+        {
+            this.SetBtnTranslationState();
+        }
+
+        /// <summary>
+        /// Handles the TextChanged event of the tsTxbContext control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void tsTxbContext_TextChanged(object sender, EventArgs e)
+        {
+            this.SetBtnTranslationState();
+        }
 
      
         #endregion
+
+       
+       
+
     }
 }

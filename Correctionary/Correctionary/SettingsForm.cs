@@ -106,9 +106,10 @@ namespace Correctionary
         /// </summary>
         private void BindDislpayLocationOptions()
         {
+            TranslationDisplayLocation selectedValue = this._userSettings.TranslationLocation;
             TranslationDisplayLocation[] locationOption = Enum.GetValues(typeof(TranslationDisplayLocation)).Cast<TranslationDisplayLocation>().ToArray();
-
             this.cmbDisplayLocation.DataSource = locationOption;
+            this.cmbDisplayLocation.SelectedItem = selectedValue;
         } 
 
         /// <summary>

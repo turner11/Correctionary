@@ -61,6 +61,12 @@
     <Compile Include="ControlHighlighter.cs" />
     <Compile Include="GuiExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaterMarkTextBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaterMarkTextBoxBase.Designer.cs">
+      <DependentUpon>WaterMarkTextBoxBase.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

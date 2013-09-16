@@ -1,4 +1,5 @@
 ﻿
+using Correctionary.GuiFramework;
 namespace Correctionary
 {
     partial class CorrectionaryForm:System.Windows.Forms.Form
@@ -33,8 +34,8 @@ namespace Correctionary
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CorrectionaryForm));
             this.nfi = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsTray = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsTxbWord = new System.Windows.Forms.ToolStripTextBox();
-            this.tsTxbContext = new System.Windows.Forms.ToolStripTextBox();
+            this.tsTxbWord = new Correctionary.GuiFramework.WaterMarkToolStripTextBox();
+            this.tsTxbContext = new Correctionary.GuiFramework.WaterMarkToolStripTextBox();
             this.tsmTranslate = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,19 +71,25 @@ namespace Correctionary
             this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.cmsTray.Name = "cmsTray";
-            this.cmsTray.Size = new System.Drawing.Size(161, 120);
+            this.cmsTray.Size = new System.Drawing.Size(161, 142);
             // 
             // tsTxbWord
             // 
+            this.tsTxbWord.ForeColor = System.Drawing.Color.Gray;
             this.tsTxbWord.Name = "tsTxbWord";
             this.tsTxbWord.Size = new System.Drawing.Size(100, 23);
-            this.tsTxbWord.Text = "Word";
+            this.tsTxbWord.WatermarkActive = true;
+            this.tsTxbWord.WatermarkText = "Word to translate";
+            this.tsTxbWord.TextChanged += new System.EventHandler(this.tsTxbWord_TextChanged);
             // 
             // tsTxbContext
             // 
+            this.tsTxbContext.ForeColor = System.Drawing.Color.Gray;
             this.tsTxbContext.Name = "tsTxbContext";
             this.tsTxbContext.Size = new System.Drawing.Size(100, 23);
-            this.tsTxbContext.Text = "Context";
+            this.tsTxbContext.WatermarkActive = true;
+            this.tsTxbContext.WatermarkText = "Type context of word";
+            this.tsTxbContext.TextChanged += new System.EventHandler(this.tsTxbContext_TextChanged);
             // 
             // tsmTranslate
             // 
@@ -227,8 +234,8 @@ namespace Correctionary
         private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.Label lblContext;
         private System.Windows.Forms.ContextMenuStrip cmsTray;
-        private System.Windows.Forms.ToolStripTextBox tsTxbWord;
-        private System.Windows.Forms.ToolStripTextBox tsTxbContext;
+        private WaterMarkToolStripTextBox tsTxbWord;
+        private WaterMarkToolStripTextBox tsTxbContext;
         private System.Windows.Forms.ToolStripMenuItem tsmTranslate;
         private System.Windows.Forms.Panel pnlMain;
         private System.Drawing.Icon IconRegular = Correctionary.Properties.Resources.dictionary;
