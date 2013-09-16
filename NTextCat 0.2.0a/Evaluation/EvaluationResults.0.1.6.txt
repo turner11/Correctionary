@@ -1,0 +1,208 @@
+
+D:\temp\NTextCat 0.1.6\Evaluation>cd..
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese-big5.txt 
+zh_yue_cp950
+zh_classical_cp950
+ko_cp949
+ko_cp51949
+zh_cp54936
+zh_cp51936
+zh_cp936
+zh_yue_cp54936
+zh_yue_cp51936
+zh_yue_cp936
+ja_cp1200
+zh_classical_cp54936
+zh_classical_cp51936
+zh_classical_cp936
+ko_cp1200
+bn_cp1200
+ko_cp1361
+ja_cp20932
+ja_cp51932
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese-utf8.txt 
+ii_cp65001
+zh_cp65001
+zh_yue_cp65001
+zh_classical_cp65001
+gan_cp65001
+wuu_cp65001
+ja_cp65001
+bn_cp1200
+gu_cp12000
+gu_cp1200
+bn_cp12000
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\russian-1200.txt 
+ru_cp1200
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\russian-1251.txt 
+ru_cp1251
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\russian-866.txt 
+ru_cp866
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\ukrainian-1200.txt 
+uk_cp1200
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\ukrainian-1251.txt 
+uk_cp1251
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\ukrainian-utf8.txt 
+uk_cp65001
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\ukrainian-866.txt 
+uk_cp866
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese2-1200.txt 
+zh_cp1200
+zh_classical_cp1200
+zh_yue_cp1200
+gan_cp1200
+zh_cp12000
+wuu_cp1200
+ja_cp1200
+zh_yue_cp12000
+zh_classical_cp12000
+wuu_cp12000
+gan_cp12000
+ja_cp12000
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese2-936-Simpl.txt 
+zh_cp51936
+zh_cp936
+zh_cp54936
+zh_yue_cp54936
+zh_yue_cp51936
+zh_yue_cp936
+zh_classical_cp51936
+zh_classical_cp936
+zh_classical_cp54936
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese2-950-big5.txt 
+zh_yue_cp950
+zh_classical_cp950
+zh_cp54936
+zh_cp51936
+zh_cp936
+zh_yue_cp54936
+zh_yue_cp51936
+zh_yue_cp936
+zh_classical_cp51936
+zh_classical_cp936
+zh_classical_cp54936
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\chinese2-utf8.txt 
+zh_cp65001
+zh_yue_cp65001
+wuu_cp65001
+gan_cp65001
+zh_classical_cp65001
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\nl-1200.txt 
+nl_cp1200
+nds_nl_cp1200
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\nl-1252.txt 
+nl_cp855
+nl_cp863
+nl_cp1252
+nl_cp861
+nl_cp850
+nl_cp858
+nl_cp437
+nl_cp865
+nl_cp28591
+nl_cp28605
+nl_cp10000
+nl_cp860
+nl_cp65001
+nl_cp20127
+nds_nl_cp65001
+af_cp855
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\nl-utf8.txt 
+nl_cp855
+nl_cp863
+nl_cp861
+nl_cp1252
+nl_cp850
+nl_cp858
+nl_cp437
+nl_cp865
+nl_cp28591
+nl_cp28605
+nl_cp10000
+nl_cp860
+nl_cp65001
+nl_cp20127
+nds_nl_cp65001
+af_cp855
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\english-1200.txt 
+simple_cp1200
+en_cp1200
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\english-1252.txt 
+simple_cp1252
+simple_cp863
+simple_cp437
+simple_cp861
+simple_cp858
+simple_cp10000
+simple_cp850
+simple_cp865
+simple_cp28591
+simple_cp28605
+simple_cp855
+simple_cp65001
+simple_cp860
+simple_cp20127
+en_cp860
+en_cp850
+en_cp858
+en_cp437
+en_cp855
+en_cp861
+en_cp863
+en_cp865
+en_cp28591
+en_cp28605
+en_cp1252
+en_cp65001
+en_cp10000
+en_cp20127
+sco_cp65001
+
+D:\temp\NTextCat 0.1.6>NTextCatLegacy.exe -noprompt  0<Evaluation\english-utf8.txt 
+simple_cp1252
+simple_cp863
+simple_cp437
+simple_cp861
+simple_cp858
+simple_cp10000
+simple_cp850
+simple_cp865
+simple_cp28591
+simple_cp28605
+simple_cp855
+simple_cp65001
+simple_cp860
+simple_cp20127
+en_cp860
+en_cp850
+en_cp858
+en_cp437
+en_cp855
+en_cp861
+en_cp863
+en_cp865
+en_cp28591
+en_cp28605
+en_cp1252
+en_cp65001
+en_cp10000
+en_cp20127
+sco_cp65001

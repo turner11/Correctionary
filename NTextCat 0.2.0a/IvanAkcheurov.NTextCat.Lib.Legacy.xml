@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IvanAkcheurov.NTextCat.Lib.Legacy</name>
+    </assembly>
+    <members>
+        <member name="T:IvanAkcheurov.NTextCat.Lib.Legacy.RankedClassifier`1">
+            <summary>
+            
+            </summary>
+            <remarks>
+            OPTIMIZATION. Legacy text cat works on level of bytes (not chars, so it is encoding tolerant).
+            Legacy text cat's Ngrams are 5-grams at max. So we could employ UInt64 (8 bytes) to hold 5 significant bytes.
+            To go beyond 8 bytes, remove alias NGram and create type NGram which will hold sequence of bytes of any length, override <see cref="M:System.Object.GetHashCode"/> and <see cref="M:System.Object.Equals(System.Object)"/>
+            </remarks>
+            <typeparam name="T">type of event of distribution</typeparam>
+        </member>
+        <member name="T:IvanAkcheurov.NTextCat.Lib.Legacy.LegacyLanguageModelDistanceCalculator`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T">type of token used in Language Models</typeparam>
+        </member>
+        <member name="F:IvanAkcheurov.NTextCat.Lib.Legacy.LegacyLanguageModelDistanceCalculator`1._guessedLanguageModel">
+            <summary>
+            HACK! Read remarks for the constructor parameter guessedLanguageModel
+            </summary>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LegacyLanguageModelDistanceCalculator`1.#ctor(System.Collections.Generic.IDictionary{`0,System.Int32},System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="guessedLanguageModel">
+            HACK! Put guessed language model here!
+            <see cref="!:IDistanceCalculator"/> is supposed to satisfy triangular inequity, 
+            hence distance(obj1, obj2) should always equal distance(obj2, obj1).
+            But it is not the case with distance comparison in original TextCat.
+            To repeat original behavior, you should know which object is guessed language!
+            </param>
+            <param name="defaultRankDistanceOnAbsence">if ngram is absent in known language model, this number will be used as rank distance for this ngram between unknown and known language models</param>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyText(System.String,System.String,System.Int32,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text passed or empty sequence if too uncertain
+            </summary>
+            <param name="text">text language of which should be identified</param>
+            <param name="languageModelsDirectory"></param>
+            <param name="maximumSizeOfDistribution"></param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyBytes(System.Byte[],System.Text.Encoding,System.String,System.Int32,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text contained in <paramref name="input"/> or empty sequence if too uncertain.
+            </summary>
+            <param name="input"></param>
+            <param name="encoding">encoding of text contained in stream or null if encoding is unknown beforehand.
+            <para> When encoding is not null, for performance and quality reasons 
+            make sure that <paramref name="languageModelsDirectory"/> points to models 
+            built from UTF8 encoded files (Wikipedia-Experimental-UTF8Only)</para></param>
+            <param name="languageModelsDirectory"></param>
+            <param name="maximumSizeOfDistribution"></param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyBytes(System.IO.Stream,System.Text.Encoding,System.String,System.Int32,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text contained in <paramref name="input"/> or empty sequence if too uncertain.
+            </summary>
+            <param name="input"></param>
+            <param name="encoding">encoding of text contained in stream or null if encoding is unknown beforehand.
+            <para> When encoding is not null, for performance and quality reasons 
+            make sure that <paramref name="languageModelsDirectory"/> points to models 
+            built from UTF8 encoded files (Wikipedia-Experimental-UTF8Only)</para></param>
+            <param name="languageModelsDirectory"></param>
+            <param name="maximumSizeOfDistribution"></param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.#ctor(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="languageModelsDirectory"></param>
+            <param name="maximumSizeOfDistribution"></param>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.#ctor(System.Collections.Generic.IEnumerable{System.Tuple{System.String,System.IO.Stream}},System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="languageModelsDirectory"></param>
+            <param name="maximumSizeOfDistribution"></param>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyBytes(System.IO.Stream,System.Text.Encoding,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text contained in <paramref name="input"/> or empty sequence if too uncertain.
+            </summary>
+            <param name="input"></param>
+            <param name="encoding">encoding of text contained in <paramref name="input"/> or null if encoding is unknown beforehand.
+            <para> When encoding is not null, for performance and quality reasons 
+            please make sure that <see cref="T:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier"/> is created with 
+            languageModelsDirectory parameter of constructor pointing to models 
+            built from UTF8 encoded files (models from folder "Wikipedia-Experimental-UTF8Only")</para></param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyBytes(System.Byte[],System.Text.Encoding,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text encoded in <paramref name="input"/> or empty sequence if too uncertain
+            </summary>
+            <param name="input"></param>
+            <param name="encoding">encoding of text contained in stream or null if encoding is unknown beforehand.
+            <para> When encoding is not null, for performance and quality reasons 
+            make sure that <see cref="T:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier"/> is created with 
+            languageModelsDirectory parameter of constructor pointing to models 
+            built from UTF8 encoded files (models from folder "Wikipedia-Experimental-UTF8Only")</para></param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.ClassifyText(System.String,IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings)">
+            <summary>
+            returns possible languages of text passed or empty sequence if too uncertain
+            Almost all parameters are optional.
+            </summary>
+            <param name="text">text language of which should be identified</param>
+            <param name="settings">null for default settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:IvanAkcheurov.NTextCat.Lib.Legacy.LanguageIdentifier.LanguageIdentifierSettings.#ctor(System.Int32,System.Int32,System.Int64,System.Double,System.Int32)">
+            <summary>
+            
+            Almost all parameters are optional.
+            </summary>
+            <param name="tooManyLanguagesThreshold"></param>
+            <param name="occuranceNumberThreshold"></param>
+            <param name="onlyReadFirstNLines"></param>
+            <param name="worstAcceptableThreshold"></param>
+            <param name="maxNgramLength"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

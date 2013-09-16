@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleTranslationUtilities", "GoogleTranslationUtilities\GoogleTranslationUtilities.csproj", "{3FE04B0E-875B-428F-B45E-7B8A362B7FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTester", "ConsoleTester\ConsoleTester.csproj", "{6796340F-447D-497F-AE9C-D8A427D3C4EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FE04B0E-875B-428F-B45E-7B8A362B7FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE04B0E-875B-428F-B45E-7B8A362B7FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE04B0E-875B-428F-B45E-7B8A362B7FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE04B0E-875B-428F-B45E-7B8A362B7FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6796340F-447D-497F-AE9C-D8A427D3C4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6796340F-447D-497F-AE9C-D8A427D3C4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6796340F-447D-497F-AE9C-D8A427D3C4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6796340F-447D-497F-AE9C-D8A427D3C4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

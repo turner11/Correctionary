@@ -1,0 +1,336 @@
+﻿<?xml version="1.0"?>
+<ArrayOfLanguage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Language>
+    <Symbol>af</Symbol>
+    <NativeName>Afrikaans</NativeName>
+    <EnglishName>Afrikaans</EnglishName>
+	<IsRightToLeft>false</IsRightToLeft>  </Language>  
+  <Language>
+    <Symbol>sq</Symbol>
+    <NativeName>shqipe</NativeName>
+    <EnglishName>Albanian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+<Language>  
+    <Symbol>ar</Symbol>
+    <NativeName>العربية</NativeName>
+    <EnglishName>Arabic</EnglishName>
+  <IsRightToLeft>true</IsRightToLeft> </Language>   
+  <Language>
+    <Symbol>hy</Symbol>
+    <NativeName>Հայերեն</NativeName>
+    <EnglishName>Armenian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>az</Symbol>
+    <NativeName>Azərbaycan­ılı</NativeName>
+    <EnglishName>Azeri</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>eu</Symbol>
+    <NativeName>euskara</NativeName>
+    <EnglishName>Basque</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>eu-ES</Symbol>
+    <NativeName>euskara (euskara)</NativeName>
+    <EnglishName>Basque (Basque)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>be</Symbol>
+    <NativeName>Беларускі</NativeName>
+    <EnglishName>Belarusian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>bn</Symbol>
+    <NativeName>বাংলা</NativeName>
+    <EnglishName>Bengali</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>bg</Symbol>
+    <NativeName>български</NativeName>
+    <EnglishName>Bulgarian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>bg-BG</Symbol>
+    <NativeName>български (България)</NativeName>
+    <EnglishName>Bulgarian (Bulgaria)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>ca</Symbol>
+    <NativeName>català</NativeName>
+    <EnglishName>Catalan</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>ca-ES</Symbol>
+    <NativeName>català (català)</NativeName>
+    <EnglishName>Catalan (Catalan)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>zh-Hans</Symbol>
+    <NativeName>中文(简体)</NativeName>
+    <EnglishName>Chinese (Simplified)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>zh-Hant</Symbol>
+    <NativeName>中文(繁體)</NativeName>
+    <EnglishName>Chinese (Traditional)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>hr</Symbol>
+    <NativeName>hrvatski</NativeName>
+    <EnglishName>Croatian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>cs</Symbol>
+    <NativeName>čeština</NativeName>
+    <EnglishName>Czech</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>da</Symbol>
+    <NativeName>dansk</NativeName>
+    <EnglishName>Danish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>nl</Symbol>
+    <NativeName>Nederlands</NativeName>
+    <EnglishName>Dutch</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>en</Symbol>
+    <NativeName>English</NativeName>
+    <EnglishName>English</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>et</Symbol>
+    <NativeName>eesti</NativeName>
+    <EnglishName>Estonian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>fil</Symbol>
+    <NativeName>Filipino</NativeName>
+    <EnglishName>Filipino</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>gl</Symbol>
+    <NativeName>galego</NativeName>
+    <EnglishName>Galician</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>ka</Symbol>
+    <NativeName>ქართული</NativeName>
+    <EnglishName>Georgian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>ka-GE</Symbol>
+    <NativeName>ქართული (საქართველო)</NativeName>
+    <EnglishName>Georgian (Georgia)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>de</Symbol>
+    <NativeName>Deutsch</NativeName>
+    <EnglishName>German</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>el</Symbol>
+    <NativeName>Ελληνικά</NativeName>
+    <EnglishName>Greek</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>gu</Symbol>
+    <NativeName>ગુજરાતી</NativeName>
+    <EnglishName>Gujarati</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>he</Symbol>
+    <NativeName>עברית</NativeName>
+    <EnglishName>Hebrew</EnglishName>
+  <IsRightToLeft>true</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>hi</Symbol>
+    <NativeName>हिंदी</NativeName>
+    <EnglishName>Hindi</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>hu</Symbol>
+    <NativeName>magyar</NativeName>
+    <EnglishName>Hungarian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>is</Symbol>
+    <NativeName>íslenska</NativeName>
+    <EnglishName>Icelandic</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>id</Symbol>
+    <NativeName>Bahasa Indonesia</NativeName>
+    <EnglishName>Indonesian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>ga</Symbol>
+    <NativeName>Gaeilge</NativeName>
+    <EnglishName>Irish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>it</Symbol>
+    <NativeName>italiano</NativeName>
+    <EnglishName>Italian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>ja</Symbol>
+    <NativeName>日本語</NativeName>
+    <EnglishName>Japanese</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft></Language>    
+  <Language>
+    <Symbol>kn</Symbol>
+    <NativeName>ಕನ್ನಡ</NativeName>
+    <EnglishName>Kannada</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>ko</Symbol>
+    <NativeName>한국어</NativeName>
+    <EnglishName>Korean</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>lv</Symbol>
+    <NativeName>latviešu</NativeName>
+    <EnglishName>Latvian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+   <Language>
+    <Symbol>lt</Symbol>
+    <NativeName>lietuvių</NativeName>
+    <EnglishName>Lithuanian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>mk</Symbol>
+    <NativeName>македонски јазик</NativeName>
+    <EnglishName>Macedonian (FYROM)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>ms</Symbol>
+    <NativeName>Bahasa Melayu</NativeName>
+    <EnglishName>Malay</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>mt</Symbol>
+    <NativeName>Malti</NativeName>
+    <EnglishName>Maltese</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>no</Symbol>
+    <NativeName>norsk</NativeName>
+    <EnglishName>Norwegian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>fa</Symbol>
+    <NativeName>فارسى</NativeName>
+    <EnglishName>Persian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>pl</Symbol>
+    <NativeName>polski</NativeName>
+    <EnglishName>Polish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>   
+  <Language>
+    <Symbol>pt</Symbol>
+    <NativeName>Português</NativeName>
+    <EnglishName>Portuguese</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+</Language>    
+  <Language>
+    <Symbol>ro</Symbol>
+    <NativeName>română</NativeName>
+    <EnglishName>Romanian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>ru</Symbol>
+    <NativeName>русский</NativeName>
+    <EnglishName>Russian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>sr</Symbol>
+    <NativeName>srpski</NativeName>
+    <EnglishName>Serbian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>sk</Symbol>
+    <NativeName>slovenčina</NativeName>
+    <EnglishName>Slovak</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>    
+  <Language>
+    <Symbol>sl</Symbol>
+    <NativeName>slovenski</NativeName>
+    <EnglishName>Slovenian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>    
+  <Language>
+    <Symbol>es</Symbol>
+    <NativeName>español</NativeName>
+    <EnglishName>Spanish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>  
+  <Language>
+    <Symbol>es-AR</Symbol>
+    <NativeName>Español (Argentina)</NativeName>
+    <EnglishName>Spanish (Argentina)</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> </Language>  
+  <Language>
+    <Symbol>sv</Symbol>
+    <NativeName>svenska</NativeName>
+    <EnglishName>Swedish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>  
+  <Language>
+    <Symbol>ta</Symbol>
+    <NativeName>தமிழ்</NativeName>
+    <EnglishName>Tamil</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>    
+  <Language>
+    <Symbol>te</Symbol>
+    <NativeName>తెలుగు</NativeName>
+    <EnglishName>Telugu</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>    
+  <Language>
+    <Symbol>th</Symbol>
+    <NativeName>ไทย</NativeName>
+    <EnglishName>Thai</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft>
+  </Language>    
+  <Language>
+    <Symbol>tr</Symbol>
+    <NativeName>Türkçe</NativeName>
+    <EnglishName>Turkish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>   
+  <Language>
+    <Symbol>uk</Symbol>
+    <NativeName>українська</NativeName>
+    <EnglishName>Ukrainian</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>    
+  <Language>
+    <Symbol>ur</Symbol>
+    <NativeName>اُردو</NativeName>
+    <EnglishName>Urdu</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>  
+  <Language>
+    <Symbol>vi</Symbol>
+    <NativeName>Tiếng Việt</NativeName>
+    <EnglishName>Vietnamese</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>  
+  <Language>
+    <Symbol>cy</Symbol>
+    <NativeName>Cymraeg</NativeName>
+    <EnglishName>Welsh</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>  
+  <Language>
+    <Symbol>yi</Symbol>
+    <NativeName>Yiddish</NativeName>
+    <EnglishName>Yiddish</EnglishName>
+  <IsRightToLeft>false</IsRightToLeft> 
+  </Language>   
+</ArrayOfLanguage>
