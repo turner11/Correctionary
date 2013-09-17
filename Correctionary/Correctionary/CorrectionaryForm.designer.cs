@@ -71,10 +71,11 @@ namespace Correctionary
             this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.cmsTray.Name = "cmsTray";
-            this.cmsTray.Size = new System.Drawing.Size(161, 142);
+            this.cmsTray.Size = new System.Drawing.Size(161, 120);
             // 
             // tsTxbWord
             // 
+            this.tsTxbWord.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tsTxbWord.ForeColor = System.Drawing.Color.Gray;
             this.tsTxbWord.Name = "tsTxbWord";
             this.tsTxbWord.Size = new System.Drawing.Size(100, 23);
@@ -84,11 +85,12 @@ namespace Correctionary
             // 
             // tsTxbContext
             // 
+            this.tsTxbContext.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tsTxbContext.ForeColor = System.Drawing.Color.Gray;
             this.tsTxbContext.Name = "tsTxbContext";
             this.tsTxbContext.Size = new System.Drawing.Size(100, 23);
             this.tsTxbContext.WatermarkActive = true;
-            this.tsTxbContext.WatermarkText = "Type context of word";
+            this.tsTxbContext.WatermarkText = "Context of word";
             this.tsTxbContext.TextChanged += new System.EventHandler(this.tsTxbContext_TextChanged);
             // 
             // tsmTranslate

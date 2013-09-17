@@ -12,6 +12,7 @@ using System.Globalization;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 
 namespace nsLogics
@@ -30,7 +31,7 @@ namespace nsLogics
         /// <summary>
         /// Occurs when a hot key is pressed.
         /// </summary>
-        public event EventHandler onHotkeyPressed;
+        public event EventHandler<HotkeyPressedArgs> onHotkeyPressed;
         /// <summary>
         /// Occurs when translation started.
         /// </summary>
@@ -288,11 +289,11 @@ namespace nsLogics
         /// <summary>
         /// Triggers the on hot key pressed.
         /// </summary>
-        private void TriggerOnHotkeyPressed()
+        private void TriggerOnHotkeyPressed(HotkeyPressedArgs e)
         {
             if (this.onHotkeyPressed != null)
             {
-                this.onHotkeyPressed(this, new EventArgs());
+                this.onHotkeyPressed(this, e);
             }
         }
         #endregion
@@ -305,7 +306,7 @@ namespace nsLogics
         /// <param name="e">The argument.</param>
         private void cbLogics_onHotkeyPressed(object sender, HotkeyPressedArgs e)
         {
-            this.TriggerOnHotkeyPressed();
+            this.TriggerOnHotkeyPressed(e);
             //If we are not during a translation, we can process...
             if (!this._isDuringTranslate)
             {
@@ -367,6 +368,17 @@ namespace nsLogics
         #endregion
 
 
-       
+
+
+        /// <summary>
+        /// Logs the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        public void Log(string message)
+        {
+            Debug.WriteLine(">========================");
+            Debug.WriteLine(message);
+            Debug.WriteLine("========================<");
+        }
     }
 }

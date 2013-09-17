@@ -31,10 +31,7 @@ namespace TransparentControls
             this.lblInnerText.Text = String.Empty;
             this.HookMouseMove(this.Controls);
 
-            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
-            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
-            this.Left = screenWidth - this.Width;
-            this.Top = screenHeight - this.Height;
+           
 		}
 
 		protected override void Dispose( bool disposing )
@@ -87,7 +84,11 @@ namespace TransparentControls
         #region Event handler
         private void Notification_Load(object sender, System.EventArgs e)
         {
-            
+
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Left = screenWidth - this.Width;
+            this.Top = screenHeight - this.Height;
 
             this.StartCountDown();
 

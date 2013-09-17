@@ -83,12 +83,15 @@ namespace Correctionary
             {
                 this.cmbLanguageB.SelectedItem = userSettings.LaguageTo;
             }
+            /*Display location*/
             if (this.cmbDisplayLocation.Items.Contains(userSettings.TranslationLocation))
             {
                 this.cmbDisplayLocation.SelectedItem = userSettings.TranslationLocation;
             }
             /*AutoDetect*/
             this.chbIdentifyLanguageAutomaticaly.Checked = userSettings.AutoDetectLanguage;
+            /*Debug messages*/
+            this.chbShowDebugMessages.Checked = userSettings.ShowDebugMessages;
         }
 
         /// <summary>
@@ -212,9 +215,21 @@ namespace Correctionary
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void chbIdentifyLanguageAutomaticaly_CheckedChanged(object sender, EventArgs e)
         {
-            this._userSettings.AutoDetectLanguage = true;
+            this._userSettings.AutoDetectLanguage = this.chbIdentifyLanguageAutomaticaly.Checked;
+        }
+
+        /// <summary>
+        /// Handles the CheckedChanged event of the chbShowDebugMessages control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void chbShowDebugMessages_CheckedChanged(object sender, EventArgs e)
+        {
+            this._userSettings.ShowDebugMessages = this.chbShowDebugMessages.Checked;
         }
         #endregion
+
+       
       
     }
 }

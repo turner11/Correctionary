@@ -23,7 +23,9 @@ namespace Correctionary
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler        (CurrentDomain_UnhandledException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CorrectionaryForm());
+            //thisis this way for avoiding showing the form
+            CorrectionaryForm frmCorrectionary = new CorrectionaryForm();
+            Application.Run();
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

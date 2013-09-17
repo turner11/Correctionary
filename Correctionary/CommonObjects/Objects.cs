@@ -483,6 +483,19 @@ namespace CommonObjects
             get { return _lastTranslationDisplayLocation; }
             set { _lastTranslationDisplayLocation = value; }
         }
+
+        bool _showDebugMessages;
+        /// <summary>
+        /// Gets or sets a value indicating whether should show debug messages to user.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [show debug messages]; otherwise, <c>false</c>.
+        /// </value>
+        public bool ShowDebugMessages
+        {
+            get { return _showDebugMessages; }
+            set { _showDebugMessages = value; }
+        }
         
 
         /// <summary>

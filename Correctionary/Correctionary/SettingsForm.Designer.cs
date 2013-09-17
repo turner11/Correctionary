@@ -41,6 +41,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.cmbDisplayLocation = new System.Windows.Forms.ComboBox();
             this.lblDisplayLocation = new System.Windows.Forms.Label();
+            this.chbShowDebugMessages = new System.Windows.Forms.CheckBox();
             this.gbLanguages.SuspendLayout();
             this.lblGeneral.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +138,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOk.Location = new System.Drawing.Point(10, 229);
+            this.btnOk.Location = new System.Drawing.Point(10, 247);
             this.btnOk.Margin = new System.Windows.Forms.Padding(2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(55, 24);
@@ -149,7 +150,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.Location = new System.Drawing.Point(69, 229);
+            this.btnCancel.Location = new System.Drawing.Point(69, 247);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(55, 24);
@@ -178,12 +179,24 @@
             this.lblDisplayLocation.TabIndex = 2;
             this.lblDisplayLocation.Text = "Display Translation At:";
             // 
+            // chbShowDebugMessages
+            // 
+            this.chbShowDebugMessages.AutoSize = true;
+            this.chbShowDebugMessages.Location = new System.Drawing.Point(19, 216);
+            this.chbShowDebugMessages.Name = "chbShowDebugMessages";
+            this.chbShowDebugMessages.Size = new System.Drawing.Size(139, 17);
+            this.chbShowDebugMessages.TabIndex = 4;
+            this.chbShowDebugMessages.Text = "Show Debug Messages";
+            this.chbShowDebugMessages.UseVisualStyleBackColor = true;
+            this.chbShowDebugMessages.CheckedChanged += new System.EventHandler(this.chbShowDebugMessages_CheckedChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 264);
+            this.ClientSize = new System.Drawing.Size(286, 282);
             this.ControlBox = false;
+            this.Controls.Add(this.chbShowDebugMessages);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblDisplayLocation);
             this.Controls.Add(this.btnOk);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cmbDisplayLocation;
         private System.Windows.Forms.Label lblDisplayLocation;
+        private System.Windows.Forms.CheckBox chbShowDebugMessages;
     }
 }

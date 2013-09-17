@@ -67,7 +67,10 @@ namespace Correctionary
         /// </summary>
         const int HOT_KKEY_ICON_DURATION_IN_MILLISECONDS = 500;
 
-        
+
+        /// <summary>
+        /// The user settings
+        /// </summary>
         UserSettings _userSettings;
     
 
@@ -125,7 +128,7 @@ namespace Correctionary
             this._logics.onGotTranslation += new EventHandler<TranslationEventArgs>(this.logics_onGotTranslation);
             this._logics.onTranslationStarted += new EventHandler(this.logics_onTranslationStarted);
             this._logics.onTranslationCompleted += new EventHandler(this.logics_onTranslationCompleted);
-            this._logics.onHotkeyPressed += new EventHandler(this.logics_onHotkeyPressed);
+            this._logics.onHotkeyPressed += new EventHandler<HotkeyPressedArgs>(this.logics_onHotkeyPressed);
         }
 
         /// <summary>
@@ -345,24 +348,35 @@ namespace Correctionary
         /// <exception cref="System.NotImplementedException"></exception>
         private void ShowMessage(string caption, string message, int showTime, Color background, RightToLeft rtl)
         {
-            Notification notificationDisplay = new Notification(showTime);
-            notificationDisplay.FormClosed += new FormClosedEventHandler(Notification_FormClosed);
+            if (this.InvokeRequired)
+            {
+                Action<string, string, int, Color, RightToLeft> action = new Action<string, string, int, Color, RightToLeft>(ShowMessage);
+                object[] args = new object[] { caption, message, showTime, background, rtl };
+                this.BeginInvoke(action, args);
+            }
+            else
+            {
+                this._logics.Log(message);
+
+                Notification notificationDisplay = new Notification(showTime);
+                notificationDisplay.FormClosed += new FormClosedEventHandler(Notification_FormClosed);
 
 
-            notificationDisplay.Text = caption;
-            notificationDisplay.SetInnerTexst(message);
+                notificationDisplay.Text = caption;
+                notificationDisplay.SetInnerTexst(message);
 
-            notificationDisplay.BackColor = background;
-            notificationDisplay.RightToLeft = rtl;
+                notificationDisplay.BackColor = background;
+                notificationDisplay.RightToLeft = rtl;
 
-           
-           
 
-            notificationDisplay.Show();
 
-            this.SetNotificationLocation(notificationDisplay);
 
-            notificationDisplay.Flash();
+                notificationDisplay.Show();
+
+                this.SetNotificationLocation(notificationDisplay);
+
+                notificationDisplay.Flash();
+            }
         }
 
         /// <summary>
@@ -371,13 +385,14 @@ namespace Correctionary
         /// <param name="notificationDisplay">The notification display.</param>
         private void SetNotificationLocation(Notification notificationDisplay)
         {
+            this._logics.Log(String.Format("Location: {0}", this._userSettings.TranslationLocation));
             //point is a struct and is passed by value
-            Point location = notificationDisplay.Location; 
+            Point? location = null ; 
 
             switch (this._userSettings.TranslationLocation)
             {
                 case TranslationDisplayLocation.DefaultLocation:
-                    location = notificationDisplay.Location;
+                    location = null;
                     break;
                 case TranslationDisplayLocation.LastLocation:
                     if (this._userSettings.LastTranslationDisplayLocation != null)
@@ -389,12 +404,13 @@ namespace Correctionary
                     location = Cursor.Position;
                     break;
                 default:
+                    location = null;
                     break;
             }
-           
 
 
-            notificationDisplay.Location = location;
+
+            //notificationDisplay.Location = location.HasValue?location.Value : notificationDisplay.Location;
         }
 
        
@@ -456,13 +472,43 @@ namespace Correctionary
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void logics_onHotkeyPressed(object sender, EventArgs e)
+        private void logics_onHotkeyPressed(object sender,  HotkeyPressedArgs e)
         {
             this.SetComponentIcon(this.nfi, this.IconHotkey);
 
             this._timerNfiIcon.Interval = HOT_KKEY_ICON_DURATION_IN_MILLISECONDS;
             this._timerNfiIcon.Start();
 
+            
+            if (this._userSettings.ShowDebugMessages)
+            {
+                //we adoing it in another thread because other wise we are blocking the logic thread and missing system messages.
+                //TODO: do the threading thingy on the logic layer or lower. optionally for all events
+                System.Threading.ParameterizedThreadStart ts = 
+                    new System.Threading.ParameterizedThreadStart(ShowHotKeyPressedMessage);
+                
+                System.Threading.Thread th = new System.Threading.Thread(ts);
+
+                th.Start(e);
+                
+            }
+
+        }
+
+        void ShowHotKeyPressedMessage(object argument)
+        {
+            HotkeyPressedArgs e = argument as HotkeyPressedArgs;
+            if (e != null)
+            {
+                this.ShowMessage("Hot Key was pressed", String.Format("Hot Key was pressed: {0} {1}", e.Modifier, e.Key));
+
+            }
+            else if (this._userSettings.ShowDebugMessages)            
+            {
+                this.ShowMessage("Cannot display hot key pressed",
+                    String.Format("Cannot display hot key pressed argument was of type: '{0}'",
+                    argument == null? "Null": argument.GetType().ToString()));
+            }
         }
 
         /// <summary>
@@ -625,8 +671,9 @@ namespace Correctionary
      
         #endregion
 
-       
-       
+
+
+
 
     }
 }
