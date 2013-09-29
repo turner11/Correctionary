@@ -410,7 +410,7 @@ namespace Correctionary
 
 
 
-            //notificationDisplay.Location = location.HasValue?location.Value : notificationDisplay.Location;
+            notificationDisplay.Location = location.HasValue?location.Value : notificationDisplay.Location;
         }
 
        
