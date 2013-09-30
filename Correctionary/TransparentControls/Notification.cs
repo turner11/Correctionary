@@ -10,7 +10,8 @@ namespace TransparentControls
 	{
         const int DEFAULT_DISPLAY_TIME = 3000;
         readonly int _timeToDisplay;
-        private Label lblCopyRights;
+        private Label lblCredit;
+        private TableLayoutPanel tlpMain;
         bool _ClosingBecauseOFTimer;
 
         #region Ctor, init code and dispose
@@ -146,7 +147,9 @@ namespace TransparentControls
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblInnerText = new TransparentControls.WrapLabel();
-            this.lblCopyRights = new System.Windows.Forms.Label();
+            this.lblCredit = new System.Windows.Forms.Label();
+            this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -155,28 +158,44 @@ namespace TransparentControls
             // 
             // lblInnerText
             // 
-            this.lblInnerText.Location = new System.Drawing.Point(6, 6);
+            this.lblInnerText.Location = new System.Drawing.Point(5, 5);
             this.lblInnerText.Margin = new System.Windows.Forms.Padding(5);
             this.lblInnerText.Name = "lblInnerText";
             this.lblInnerText.Padding = new System.Windows.Forms.Padding(5);
-            this.lblInnerText.Size = new System.Drawing.Size(301, 27);
+            this.lblInnerText.Size = new System.Drawing.Size(291, 27);
             this.lblInnerText.TabIndex = 2;
             this.lblInnerText.Text = "---";
             this.lblInnerText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblInnerText.TextChanged += new System.EventHandler(this.lblInnerText_TextChanged);
             // 
-            // lblCopyRights
+            // lblCredit
             // 
-            this.lblCopyRights.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblCredit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCopyRights.AutoSize = true;
-            this.lblCopyRights.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCopyRights.Location = new System.Drawing.Point(0, 53);
-            this.lblCopyRights.Name = "lblCopyRights";
-            this.lblCopyRights.Size = new System.Drawing.Size(369, 17);
-            this.lblCopyRights.TabIndex = 3;
-            this.lblCopyRights.Text = "Brought to you by Avi Turner (avi.turner111@gmail.com).";
-            this.lblCopyRights.Visible = false;
+            this.lblCredit.AutoSize = true;
+            this.lblCredit.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblCredit.Location = new System.Drawing.Point(3, 60);
+            this.lblCredit.Name = "lblCredit";
+            this.lblCredit.Size = new System.Drawing.Size(375, 17);
+            this.lblCredit.TabIndex = 3;
+            this.lblCredit.Text = "Brought to you by Avi Turner: avi.turner111@gmail.com";
+            // 
+            // tlpMain
+            // 
+            this.tlpMain.AutoSize = true;
+            this.tlpMain.BackColor = System.Drawing.Color.Transparent;
+            this.tlpMain.ColumnCount = 1;
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMain.Controls.Add(this.lblCredit, 0, 1);
+            this.tlpMain.Controls.Add(this.lblInnerText, 0, 0);
+            this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMain.Location = new System.Drawing.Point(0, 0);
+            this.tlpMain.Name = "tlpMain";
+            this.tlpMain.RowCount = 2;
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpMain.Size = new System.Drawing.Size(381, 77);
+            this.tlpMain.TabIndex = 4;
             // 
             // Notification
             // 
@@ -184,9 +203,8 @@ namespace TransparentControls
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(369, 70);
-            this.Controls.Add(this.lblCopyRights);
-            this.Controls.Add(this.lblInnerText);
+            this.ClientSize = new System.Drawing.Size(381, 77);
+            this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(720, 692);
             this.Name = "Notification";
@@ -196,6 +214,8 @@ namespace TransparentControls
             this.Load += new System.EventHandler(this.Notification_Load);
             this.MouseEnter += new System.EventHandler(this.Notification_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.Notification_MouseLeave);
+            this.tlpMain.ResumeLayout(false);
+            this.tlpMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,9 +233,9 @@ namespace TransparentControls
         {
             //setting size of form to fit text
             Size lblSize = this.lblInnerText.Size;
-            //int width = Math.Max(this.lblCopyRights.Width, lblSize.Width);
-            //this.Size = new Size(width + 10, lblSize.Height + this.lblCopyRights.Height +30);
-            this.Size = new Size(lblSize.Width + 10, lblSize.Height+ 10);
+            int width = Math.Max(this.lblCredit.Width, lblSize.Width);
+            this.Size = new Size(width + 10, lblSize.Height + this.lblCredit.Height +30);
+            //this.Size = new Size(lblSize.Width + 10, lblSize.Height+ 10);
             
         }
 

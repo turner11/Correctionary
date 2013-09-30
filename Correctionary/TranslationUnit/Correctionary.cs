@@ -16,7 +16,7 @@ namespace TranslationUnit
         #region Data members
 
         static readonly Language DEFAULT_LANGUAGE_FOR = new Language("en", "English", "English");
-        static readonly Language DEFAULT_LANGUAGE_TO = new Language("iw", "עברית", "Hebrew");
+        static readonly Language DEFAULT_LANGUAGE_TO = new Language("iw", "עברית", "Hebrew"){IsRightToLeft = true};
         
         /// <summary>
         /// The object that translate text
