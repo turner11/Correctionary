@@ -42,8 +42,18 @@
             this.cmbDisplayLocation = new System.Windows.Forms.ComboBox();
             this.lblDisplayLocation = new System.Windows.Forms.Label();
             this.chbShowDebugMessages = new System.Windows.Forms.CheckBox();
+            this.gbTrnaslationWindow = new System.Windows.Forms.GroupBox();
+            this.gbHotKeys = new System.Windows.Forms.GroupBox();
+            this.lblHotKeyTranslation = new System.Windows.Forms.Label();
+            this.lblReverseTranslation = new System.Windows.Forms.Label();
+            this.cmbTranslationMofifier = new System.Windows.Forms.ComboBox();
+            this.cmbTranslationHotKey = new System.Windows.Forms.ComboBox();
+            this.cmbReverseTranslationMofifier = new System.Windows.Forms.ComboBox();
+            this.cmbReverseTranslationHotKey = new System.Windows.Forms.ComboBox();
             this.gbLanguages.SuspendLayout();
             this.lblGeneral.SuspendLayout();
+            this.gbTrnaslationWindow.SuspendLayout();
+            this.gbHotKeys.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLanguages
@@ -127,6 +137,8 @@
             // 
             // lblGeneral
             // 
+            this.lblGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGeneral.Controls.Add(this.chbIdentifyLanguageAutomaticaly);
             this.lblGeneral.Location = new System.Drawing.Point(10, 114);
             this.lblGeneral.Name = "lblGeneral";
@@ -138,7 +150,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOk.Location = new System.Drawing.Point(10, 247);
+            this.btnOk.Location = new System.Drawing.Point(10, 339);
             this.btnOk.Margin = new System.Windows.Forms.Padding(2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(55, 24);
@@ -150,7 +162,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.Location = new System.Drawing.Point(69, 247);
+            this.btnCancel.Location = new System.Drawing.Point(69, 339);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(55, 24);
@@ -164,16 +176,16 @@
             this.cmbDisplayLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbDisplayLocation.FormattingEnabled = true;
-            this.cmbDisplayLocation.Location = new System.Drawing.Point(157, 185);
+            this.cmbDisplayLocation.Location = new System.Drawing.Point(147, 19);
             this.cmbDisplayLocation.Name = "cmbDisplayLocation";
-            this.cmbDisplayLocation.Size = new System.Drawing.Size(114, 21);
+            this.cmbDisplayLocation.Size = new System.Drawing.Size(106, 21);
             this.cmbDisplayLocation.TabIndex = 3;
             this.cmbDisplayLocation.SelectedIndexChanged += new System.EventHandler(this.cmbDisplayLocation_SelectedIndexChanged);
             // 
             // lblDisplayLocation
             // 
             this.lblDisplayLocation.AutoSize = true;
-            this.lblDisplayLocation.Location = new System.Drawing.Point(16, 188);
+            this.lblDisplayLocation.Location = new System.Drawing.Point(6, 22);
             this.lblDisplayLocation.Name = "lblDisplayLocation";
             this.lblDisplayLocation.Size = new System.Drawing.Size(112, 13);
             this.lblDisplayLocation.TabIndex = 2;
@@ -182,7 +194,7 @@
             // chbShowDebugMessages
             // 
             this.chbShowDebugMessages.AutoSize = true;
-            this.chbShowDebugMessages.Location = new System.Drawing.Point(19, 216);
+            this.chbShowDebugMessages.Location = new System.Drawing.Point(9, 50);
             this.chbShowDebugMessages.Name = "chbShowDebugMessages";
             this.chbShowDebugMessages.Size = new System.Drawing.Size(139, 17);
             this.chbShowDebugMessages.TabIndex = 4;
@@ -190,30 +202,121 @@
             this.chbShowDebugMessages.UseVisualStyleBackColor = true;
             this.chbShowDebugMessages.CheckedChanged += new System.EventHandler(this.chbShowDebugMessages_CheckedChanged);
             // 
+            // gbTrnaslationWindow
+            // 
+            this.gbTrnaslationWindow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbTrnaslationWindow.Controls.Add(this.chbShowDebugMessages);
+            this.gbTrnaslationWindow.Controls.Add(this.lblDisplayLocation);
+            this.gbTrnaslationWindow.Controls.Add(this.cmbDisplayLocation);
+            this.gbTrnaslationWindow.Location = new System.Drawing.Point(10, 185);
+            this.gbTrnaslationWindow.Name = "gbTrnaslationWindow";
+            this.gbTrnaslationWindow.Size = new System.Drawing.Size(267, 69);
+            this.gbTrnaslationWindow.TabIndex = 5;
+            this.gbTrnaslationWindow.TabStop = false;
+            this.gbTrnaslationWindow.Text = "Translation Window";
+            // 
+            // gbHotKeys
+            // 
+            this.gbHotKeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbHotKeys.Controls.Add(this.cmbReverseTranslationHotKey);
+            this.gbHotKeys.Controls.Add(this.cmbTranslationHotKey);
+            this.gbHotKeys.Controls.Add(this.cmbReverseTranslationMofifier);
+            this.gbHotKeys.Controls.Add(this.cmbTranslationMofifier);
+            this.gbHotKeys.Controls.Add(this.lblReverseTranslation);
+            this.gbHotKeys.Controls.Add(this.lblHotKeyTranslation);
+            this.gbHotKeys.Location = new System.Drawing.Point(10, 261);
+            this.gbHotKeys.Name = "gbHotKeys";
+            this.gbHotKeys.Size = new System.Drawing.Size(267, 73);
+            this.gbHotKeys.TabIndex = 6;
+            this.gbHotKeys.TabStop = false;
+            this.gbHotKeys.Text = "Hot Keys";
+            // 
+            // lblHotKeyTranslation
+            // 
+            this.lblHotKeyTranslation.AutoSize = true;
+            this.lblHotKeyTranslation.Location = new System.Drawing.Point(6, 16);
+            this.lblHotKeyTranslation.Name = "lblHotKeyTranslation";
+            this.lblHotKeyTranslation.Size = new System.Drawing.Size(59, 13);
+            this.lblHotKeyTranslation.TabIndex = 0;
+            this.lblHotKeyTranslation.Text = "Translation";
+            // 
+            // lblReverseTranslation
+            // 
+            this.lblReverseTranslation.AutoSize = true;
+            this.lblReverseTranslation.Location = new System.Drawing.Point(6, 40);
+            this.lblReverseTranslation.Name = "lblReverseTranslation";
+            this.lblReverseTranslation.Size = new System.Drawing.Size(102, 13);
+            this.lblReverseTranslation.TabIndex = 0;
+            this.lblReverseTranslation.Text = "Reverse Translation";
+            // 
+            // cmbTranslationMofifier
+            // 
+            this.cmbTranslationMofifier.FormattingEnabled = true;
+            this.cmbTranslationMofifier.Location = new System.Drawing.Point(120, 13);
+            this.cmbTranslationMofifier.Name = "cmbTranslationMofifier";
+            this.cmbTranslationMofifier.Size = new System.Drawing.Size(74, 21);
+            this.cmbTranslationMofifier.TabIndex = 1;
+            this.cmbTranslationMofifier.SelectedIndexChanged += new System.EventHandler(this.cmbTranslationMofifier_SelectedIndexChanged);
+            // 
+            // cmbTranslationHotKey
+            // 
+            this.cmbTranslationHotKey.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTranslationHotKey.FormattingEnabled = true;
+            this.cmbTranslationHotKey.Location = new System.Drawing.Point(200, 13);
+            this.cmbTranslationHotKey.Name = "cmbTranslationHotKey";
+            this.cmbTranslationHotKey.Size = new System.Drawing.Size(53, 21);
+            this.cmbTranslationHotKey.TabIndex = 1;
+            this.cmbTranslationHotKey.SelectedIndexChanged += new System.EventHandler(this.cmbTranslationHotKey_SelectedIndexChanged);
+            // 
+            // cmbReverseTranslationMofifier
+            // 
+            this.cmbReverseTranslationMofifier.FormattingEnabled = true;
+            this.cmbReverseTranslationMofifier.Location = new System.Drawing.Point(120, 40);
+            this.cmbReverseTranslationMofifier.Name = "cmbReverseTranslationMofifier";
+            this.cmbReverseTranslationMofifier.Size = new System.Drawing.Size(74, 21);
+            this.cmbReverseTranslationMofifier.TabIndex = 1;
+            this.cmbReverseTranslationMofifier.SelectedIndexChanged += new System.EventHandler(this.cmbReverseTranslationMofifier_SelectedIndexChanged);
+            // 
+            // cmbReverseTranslationHotKey
+            // 
+            this.cmbReverseTranslationHotKey.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbReverseTranslationHotKey.FormattingEnabled = true;
+            this.cmbReverseTranslationHotKey.Location = new System.Drawing.Point(200, 40);
+            this.cmbReverseTranslationHotKey.Name = "cmbReverseTranslationHotKey";
+            this.cmbReverseTranslationHotKey.Size = new System.Drawing.Size(53, 21);
+            this.cmbReverseTranslationHotKey.TabIndex = 1;
+            this.cmbReverseTranslationHotKey.SelectedIndexChanged += new System.EventHandler(this.cmbReverseTranslationHotKey_SelectedIndexChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 282);
+            this.ClientSize = new System.Drawing.Size(286, 374);
             this.ControlBox = false;
-            this.Controls.Add(this.chbShowDebugMessages);
+            this.Controls.Add(this.gbHotKeys);
+            this.Controls.Add(this.gbTrnaslationWindow);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblDisplayLocation);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblGeneral);
-            this.Controls.Add(this.cmbDisplayLocation);
             this.Controls.Add(this.gbLanguages);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(302, 257);
+            this.MinimumSize = new System.Drawing.Size(302, 412);
             this.Name = "SettingsForm";
             this.Text = "Settings";
             this.gbLanguages.ResumeLayout(false);
             this.gbLanguages.PerformLayout();
             this.lblGeneral.ResumeLayout(false);
             this.lblGeneral.PerformLayout();
+            this.gbTrnaslationWindow.ResumeLayout(false);
+            this.gbTrnaslationWindow.PerformLayout();
+            this.gbHotKeys.ResumeLayout(false);
+            this.gbHotKeys.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -232,5 +335,13 @@
         private System.Windows.Forms.ComboBox cmbDisplayLocation;
         private System.Windows.Forms.Label lblDisplayLocation;
         private System.Windows.Forms.CheckBox chbShowDebugMessages;
+        private System.Windows.Forms.GroupBox gbTrnaslationWindow;
+        private System.Windows.Forms.GroupBox gbHotKeys;
+        private System.Windows.Forms.ComboBox cmbReverseTranslationHotKey;
+        private System.Windows.Forms.ComboBox cmbTranslationHotKey;
+        private System.Windows.Forms.ComboBox cmbReverseTranslationMofifier;
+        private System.Windows.Forms.ComboBox cmbTranslationMofifier;
+        private System.Windows.Forms.Label lblReverseTranslation;
+        private System.Windows.Forms.Label lblHotKeyTranslation;
     }
 }

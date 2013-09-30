@@ -62,6 +62,45 @@ namespace CommonObjects
         }
     }
 
+    public class ErrorRegistratingHotKeyArgs: EventArgs
+    {
+        HotkeyPackage _hotKeyPackage;
+
+        /// <summary>
+        /// Gets or sets the hot key package.
+        /// </summary>
+        /// <value>
+        /// The hot key package.
+        /// </value>
+        public HotkeyPackage HotKeyPackage
+        {
+            get { return _hotKeyPackage; }
+        }
+        int _errorCode;
+
+        /// <summary>
+        /// Gets or sets the error code.
+        /// </summary>
+        /// <value>
+        /// The error code.
+        /// </value>
+        public int ErrorCode
+        {
+            get { return _errorCode; }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ErrorRegistratingHotKeyArgs"/> class.
+        /// </summary>
+        /// <param name="hotKeyPackage">The hot key package.</param>
+        /// <param name="errorCode">The error code.</param>
+        public ErrorRegistratingHotKeyArgs(HotkeyPackage hotKeyPackage, int errorCode)
+        {
+            this._hotKeyPackage = hotKeyPackage;
+            this._errorCode = errorCode;
+        }
+    }
+
     public class ClipBoardDataObject
     {
        

@@ -114,6 +114,8 @@ namespace Correctionary
             this.SetBtnTranslationState();
             //applying settings
             this._logics.SetUserSettings(this._userSettings);
+
+            this.ShowWelcomeMessage();
         }
 
 
@@ -129,7 +131,10 @@ namespace Correctionary
             this._logics.onTranslationStarted += new EventHandler(this.logics_onTranslationStarted);
             this._logics.onTranslationCompleted += new EventHandler(this.logics_onTranslationCompleted);
             this._logics.onHotkeyPressed += new EventHandler<HotkeyPressedArgs>(this.logics_onHotkeyPressed);
+            this._logics.onFailedRegistratingHotKeys += new EventHandler<ErrorRegistratingHotKeyArgs>(logics_onFailedRegistratingHotKey);
         }
+
+        
 
         /// <summary>
         /// Displaytranslations the specified e.
@@ -413,7 +418,18 @@ namespace Correctionary
             notificationDisplay.Location = location.HasValue?location.Value : notificationDisplay.Location;
         }
 
-       
+        /// <summary>
+        /// Shows the welcome message.
+        /// </summary>
+        private void ShowWelcomeMessage()
+        {
+            string transKey = this._userSettings.TranslationHotKey.ToString();
+            string rTranslationKey = this._userSettings.ReverseTranslationHotKey.ToString();
+            this.ShowMessage("Correctionary is now running.",
+                             "Correctionary is now running.\n\n"
+                            + "To translate text highlight it, and click " + transKey + ".\n"
+                            + "For a reverse translation click " + rTranslationKey + ".");
+        }
 
         /// <summary>
         /// Sets the state of the BTN translation.
@@ -442,18 +458,8 @@ namespace Correctionary
             }
 
         }
-        /// <summary>
-        /// Handles the Load event of the form.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CorrectionaryForm_Load(object sender, EventArgs e)
-        {
-            this.ShowMessage("Correctionary is now running.",
-                             "Correctionary is now running.\n\n"
-                            +"To translate text highlight it, and click CTRL+F6.\n"
-                            +"For a reverse translation click CTRL+F7.");
-        }
+
+        
         /// <summary>
         /// Handles the Tick event of the timerNfiIcon control.
         /// </summary>
@@ -493,6 +499,14 @@ namespace Correctionary
                 
             }
 
+        }
+
+        void logics_onFailedRegistratingHotKey(object sender, ErrorRegistratingHotKeyArgs e)
+        {
+            string msg =
+                String.Format("Failed to register Hotkey ('{0}').{1}Please try another hot key."
+                , e.HotKeyPackage.ToString(), Environment.NewLine);
+            this.ShowMessage("Failed to register Hot key.", msg);
         }
 
         void ShowHotKeyPressedMessage(object argument)
@@ -560,6 +574,10 @@ namespace Correctionary
         private void tsmTranslate_Click(object sender, EventArgs e)
         {
             this._logics.TranslateWordInContext(this.tsTxbWord.Text, this.tsTxbContext.Text);
+            this.tsTxbWord.Text = String.Empty;
+            this.tsTxbContext.Text = String.Empty;
+            this.tsTxbWord.ApplyWatermark();
+            this.tsTxbContext.ApplyWatermark();
         }
 
         /// <summary>
@@ -667,13 +685,10 @@ namespace Correctionary
         {
             this.SetBtnTranslationState();
         }
-
-     
+        
         #endregion
 
-
-
-
+       
 
     }
 }

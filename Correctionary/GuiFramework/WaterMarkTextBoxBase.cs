@@ -31,7 +31,7 @@ namespace Correctionary.GuiFramework
             }
             set
             {
-                base.Text = value;
+                base.Text = value;                
             }
         }
         /// <summary>

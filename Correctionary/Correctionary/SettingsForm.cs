@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace Correctionary
 {
@@ -53,17 +54,17 @@ namespace Correctionary
             this._isInitialized = false;
             
             InitializeComponent();
-            this._userSettings = setting;
+            this._userSettings = setting.Clone() as UserSettings;
             this._languages = nsLogics.CorrectionaryLogics.GetLanguages();
             this.BindLanguagesComboBoxes(this._languages);
             this.BindDislpayLocationOptions();
-            this.MatchGuiToUserSettings(this._userSettings);
+            this.BindHotKeys();
+            this.MatchGuiToUserSettings(setting);
             
             this._isInitialized = true;
 
 
         }
-
        
         #endregion
 
@@ -92,6 +93,11 @@ namespace Correctionary
             this.chbIdentifyLanguageAutomaticaly.Checked = userSettings.AutoDetectLanguage;
             /*Debug messages*/
             this.chbShowDebugMessages.Checked = userSettings.ShowDebugMessages;
+            /*Hot keys*/
+            this.cmbTranslationMofifier.SelectedItem = (ModifierKeys)userSettings.TranslationHotKey.Modifier;
+            this.cmbTranslationHotKey.SelectedItem = (Keys)userSettings.TranslationHotKey.Hotkey;
+            this.cmbReverseTranslationMofifier.SelectedItem = (ModifierKeys)userSettings.ReverseTranslationHotKey.Modifier;
+            this.cmbReverseTranslationHotKey.SelectedItem = (Keys)userSettings.ReverseTranslationHotKey.Hotkey;
         }
 
         /// <summary>
@@ -113,7 +119,23 @@ namespace Correctionary
             TranslationDisplayLocation[] locationOption = Enum.GetValues(typeof(TranslationDisplayLocation)).Cast<TranslationDisplayLocation>().ToArray();
             this.cmbDisplayLocation.DataSource = locationOption;
             this.cmbDisplayLocation.SelectedItem = selectedValue;
-        } 
+        }
+
+        /// <summary>
+        /// Binds the hot keys combo boxes.
+        /// </summary>
+        private void BindHotKeys()
+        {
+
+            ModifierKeys[] modifiers = Enum.GetValues(typeof(ModifierKeys)).OfType<ModifierKeys>().ToArray() ;
+            this.cmbTranslationMofifier.DataSource = modifiers.Clone();
+            this.cmbReverseTranslationMofifier.DataSource = modifiers.Clone();
+
+            Keys[] keys = Enum.GetValues(typeof(Keys)).OfType<Keys>().ToArray();
+            this.cmbTranslationHotKey.DataSource = keys.Clone();
+            this.cmbReverseTranslationHotKey.DataSource = keys.Clone();
+           
+        }
 
         /// <summary>
         /// Binds the language combo box.
@@ -140,7 +162,7 @@ namespace Correctionary
        
         #endregion
 
-        #region EventHandlers
+        #region Event Handlers
         /// <summary>
         /// Handles the CheckedChanged event of the chbDisplayNativeName control.
         /// </summary>
@@ -227,9 +249,55 @@ namespace Correctionary
         {
             this._userSettings.ShowDebugMessages = this.chbShowDebugMessages.Checked;
         }
-        #endregion
 
-       
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the cmbTranslationMofifier control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void cmbTranslationMofifier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!this._isInitialized)
+                return;
+            this._userSettings.TranslationHotKey.Modifier = (ModifierKeys)this.cmbTranslationMofifier.SelectedValue;
+        }
+
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the cmbReverseTranslationMofifier control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void cmbReverseTranslationMofifier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!this._isInitialized)
+                return;
+            this._userSettings.ReverseTranslationHotKey.Modifier = (ModifierKeys)this.cmbReverseTranslationMofifier.SelectedValue;
+        }
+
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the cmbTranslationHotKey control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void cmbTranslationHotKey_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!this._isInitialized)
+                return;
+            this._userSettings.TranslationHotKey.Hotkey = (Keys)this.cmbTranslationHotKey.SelectedValue;
+        }
+
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the cmbReverseTranslationHotKey control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void cmbReverseTranslationHotKey_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!this._isInitialized)
+                return;
+            this._userSettings.ReverseTranslationHotKey.Hotkey = (Keys)this.cmbReverseTranslationHotKey.SelectedValue;
+        }
+        #endregion
       
     }
 }

@@ -32,6 +32,11 @@ namespace nsLogics
         /// Occurs when a hot key is pressed.
         /// </summary>
         public event EventHandler<HotkeyPressedArgs> onHotkeyPressed;
+
+        /// <summary>
+        /// Occurs when failes registrating hot key.
+        /// </summary>
+        public event EventHandler<ErrorRegistratingHotKeyArgs> onFailedRegistratingHotKeys;
         /// <summary>
         /// Occurs when translation started.
         /// </summary>
@@ -104,7 +109,11 @@ namespace nsLogics
         {
             this.SetLanguages(userSettings.LaguageFrom, userSettings.LaguageTo);
             this.SetLanguageAutoDetectionState(userSettings.AutoDetectLanguage);
+
+            this.SetHotKeys(userSettings.TranslationHotKey, userSettings.ReverseTranslationHotKey);
         }
+
+       
 
        
         /// <summary>
@@ -212,13 +221,26 @@ namespace nsLogics
         }
 
         /// <summary>
+        /// Sets the hot keys.
+        /// </summary>
+        /// <param name="translationKeys">The translation keys.</param>
+        /// <param name="reverseTranslationKeys">The reverse translation keys.</param>
+        private void SetHotKeys(HotkeyPackage translationKeys, HotkeyPackage reverseTranslationKeys)
+        {
+            this._HookLogics.SetHotKeys(translationKeys,reverseTranslationKeys);
+        }
+
+        /// <summary>
         /// Binds the events that is required for logics.
         /// </summary>
         private void BindEvents()
         {
             this._HookLogics.onHotkeyPressed += new EventHandler<HotkeyPressedArgs>(this.cbLogics_onHotkeyPressed);
             this._HookLogics.onGotHighlightedText += new EventHandler<ClipBoardDataArgs>(this.HookLogics_onGotHighlightedText);
+            this._HookLogics.onFailedRegistratingHotKey += new EventHandler<ErrorRegistratingHotKeyArgs>(_HookLogics_onFailedRegistratingHotKeyArgs);
         }
+
+      
 
         /// <summary>
         /// Handles the hot key pressed a synchronusly.
@@ -296,6 +318,18 @@ namespace nsLogics
                 this.onHotkeyPressed(this, e);
             }
         }
+
+        /// <summary>
+        /// Triggers the on failed to register hot key event.
+        /// </summary>
+        /// <param name="e">The e.</param>
+        private void TriggerOnFailedToRegisterHotKey(ErrorRegistratingHotKeyArgs e)
+        {
+            if (this.onFailedRegistratingHotKeys != null)
+            {
+                this.onFailedRegistratingHotKeys(this, e);
+            }
+        }
         #endregion
 
         #region Event Handlers
@@ -330,6 +364,18 @@ namespace nsLogics
             }
 
         }
+
+        /// <summary>
+        /// handles the hook logics on failed registrating hot key event.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The e.</param>
+        void _HookLogics_onFailedRegistratingHotKeyArgs(object sender, ErrorRegistratingHotKeyArgs e)
+        {
+            TriggerOnFailedToRegisterHotKey(e);
+        }
+
+        
 
         /// <summary>
         /// Starts the translate thread.

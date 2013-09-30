@@ -71,7 +71,7 @@ namespace Correctionary
             this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.cmsTray.Name = "cmsTray";
-            this.cmsTray.Size = new System.Drawing.Size(161, 120);
+            this.cmsTray.Size = new System.Drawing.Size(161, 142);
             // 
             // tsTxbWord
             // 
@@ -216,7 +216,6 @@ namespace Correctionary
             this.Name = "CorrectionaryForm";
             this.Text = "Correctionary";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CorrectionaryForm_FormClosing);
-            this.Load += new System.EventHandler(this.CorrectionaryForm_Load);
             this.Resize += new System.EventHandler(this.Correctionary_Resize);
             this.cmsTray.ResumeLayout(false);
             this.cmsTray.PerformLayout();

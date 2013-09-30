@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.ComponentModel;
 using System.Drawing;
+using System.Xml.Serialization;
 
 namespace CommonObjects
 {
@@ -249,15 +250,32 @@ namespace CommonObjects
         
     }
 
+    /// <summary>
+    /// A package for passing Modifier + key
+    /// </summary>
+    [Serializable]
     public class HotkeyPackage
     {
         ModifierKeys _modifier;
+        /// <summary>
+        /// Gets or sets the modifier.
+        /// </summary>
+        /// <value>
+        /// The modifier.
+        /// </value>
         public ModifierKeys Modifier
         {
             get { return _modifier; }
+            set { this._modifier = value;}
         }
 
         Keys _hotkey;
+        /// <summary>
+        /// Gets or sets the hotkey.
+        /// </summary>
+        /// <value>
+        /// The hotkey.
+        /// </value>
         public Keys Hotkey
         {
             get { return _hotkey; }
@@ -268,6 +286,34 @@ namespace CommonObjects
         {
             this._modifier = modifier;
             this._hotkey = hotKey;
+        }
+
+
+        /// <summary>
+        /// Prevents a default instance of the <see cref="HotkeyPackage"/> class from being created.
+        /// This is for allowinf serialization (empty c'tor)
+        /// </summary>
+        private HotkeyPackage():this(ModifierKeys.None,Keys.None)
+        {
+            
+        }
+
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
+         public override string ToString()
+        {
+            string str =String.Empty;
+            if (this.Modifier != ModifierKeys.None)
+            {
+                str = this.Modifier + "+";
+            }
+            str += this.Hotkey;
+
+            return str;
         }
     }
 
@@ -327,6 +373,7 @@ namespace CommonObjects
             get { return _isRightToLeft; }
             set { _isRightToLeft = value; }
         }
+
         #endregion
 
         #region C'tors
@@ -419,6 +466,7 @@ namespace CommonObjects
     [Serializable]
     public class UserSettings:ICloneable
     {
+        #region Data members
         Language _laguageFrom;
         /// <summary>
         /// Gets or sets the laguage A (typically the laguage to translate FROM).
@@ -431,7 +479,7 @@ namespace CommonObjects
             get { return _laguageFrom; }
             set { _laguageFrom = value; }
         }
-        
+
         Language _laguageTo;
         /// <summary>
         /// Gets or sets the laguage B (typically the laguage to translate TO).
@@ -444,7 +492,7 @@ namespace CommonObjects
             get { return _laguageTo; }
             set { _laguageTo = value; }
         }
-        
+
         bool _autoDetectLanguage;
         /// <summary>
         /// Gets or sets a value indicating whether attempt to auto detect language to translate from.
@@ -497,7 +545,45 @@ namespace CommonObjects
             set { _showDebugMessages = value; }
         }
         
+        //assign default value so it will be assigned also when deserialized before it was ever assignedt
+        HotkeyPackage _translationHotKey = new HotkeyPackage(ModifierKeys.Control, Keys.F6);
+                                        
+        /// <summary>
+        /// Gets or sets the translation hot key.
+        /// </summary>
+        /// <value>
+        /// The translation hot key.
+        /// </value>
+        public HotkeyPackage TranslationHotKey
+        {
+            get { return _translationHotKey; }
+            set { _translationHotKey = value; }
+        }
+        
+        //assign default value so it will be assigned also when deserialized before it was ever assignedt
+        HotkeyPackage _reverseTranslationHotKey = new HotkeyPackage(ModifierKeys.Control, Keys.F7);
+        /// <summary>
+        /// Gets or sets the reverse translation hot key.
+        /// </summary>
+        /// <value>
+        /// The reverse translation hot key.
+        /// </value>       
+        public HotkeyPackage ReverseTranslationHotKey
+        {
+            get { return _reverseTranslationHotKey; }
+            set { _reverseTranslationHotKey = value; }
+        } 
+        #endregion
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserSettings"/> class.
+        /// </summary>
+        public UserSettings()
+        {
+            
+        }
+        
+        #region Public Methods
         /// <summary>
         /// Creates a new object that is a copy of the current instance.
         /// </summary>
@@ -516,6 +602,9 @@ namespace CommonObjects
             }
             return clone;
         }
+
+       
+        #endregion
     }
 
     /// <summary>

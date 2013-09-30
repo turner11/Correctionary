@@ -28,6 +28,11 @@ namespace HookUtils
         public event EventHandler<ClipBoardDataArgs> onGotHighlightedText;
 
         /// <summary>
+        /// Occurs when failes registrating hot key.
+        /// </summary>
+        public event EventHandler<ErrorRegistratingHotKeyArgs> onFailedRegistratingHotKey;
+
+        /// <summary>
         /// Hold the information about which hot key (value) is assigned to which action (key).
         /// </summary>
         private Dictionary<HotkeysActions, HotkeyPackage> dicHotkey;
@@ -117,10 +122,19 @@ namespace HookUtils
         /// with the key specified by the uVirtKey parameter in order to generate the WM_HOTKEY message. 
         /// The fsModifiers parameter can be a combination of the values in System.ConsoleModifiers.</param>
         /// <param name="vlc">The virtual-key code of the hot key. this corespond with System.Windows.Forms.Keys Enum.</param>
-        /// <returns></returns>
+        /// <returns>If the function succeeds, the return value is nonzero.
+        ///If the function fails, the return value is zero. To get extended error information, call GetLastError.</returns>
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
 
+
+        /// <summary>
+        /// Frees a hot key previously registered by the calling thread.
+        /// </summary>
+        /// <param name="hWnd">A handle to the window associated with the hot key to be freed. This parameter should be NULL if the hot key is not associated with a window.</param>
+        /// <param name="id">The identifier of the hot key to be freed..</param>
+        /// <returns>If the function succeeds, the return value is nonzero.
+        ///If the function fails, the return value is zero. To get extended error information, call GetLastError.</returns>
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int UnregisterHotKey(IntPtr hWnd, int id);
 
@@ -151,20 +165,32 @@ namespace HookUtils
         public bool RegisterHotkey(HotkeysActions action, ModifierKeys modifier, Keys key)
         {
             //If we already have a hot key, we want to unregister it
-            Keys OldHotkey = this.dicHotkey[action].Hotkey;
-            if (OldHotkey != Keys.None)
+            bool isUnregisterSuccess = this.UnRegisterHotkey(action);
+            //making sure that we are not double registrating due to previous instances of program
+            int result = HookLogics.UnregisterHotKey(this.Handle, (int)action);
+            //registering new value (we are action using enum int as ID)
+            result = HookLogics.RegisterHotKey(this.Handle, (int)action, (int)modifier, (int)key);
+            bool success = result != 0;
+            if (success)
             {
-                bool isUnregisterSuccess = this.UnRegisterHotkey(action);
-            }
-            //registering new value (we are using enums int as ID)
-            int result = HookLogics.RegisterHotKey(this.Handle, (int)action, (int)modifier, (int)key);
-            //updating Hotkeys
-            HotkeyPackage package = new HotkeyPackage(modifier, key);
-            this.dicHotkey[action] = package;
+                //updating Hotkeys
+                HotkeyPackage package = new HotkeyPackage(modifier, key);
+                this.dicHotkey[action] = package;
 
-            return result != 0;
+            }
+            else
+            {
+                int errorCode = Marshal.GetLastWin32Error();
+                this.TriggerOnFailedToRegisterHotKey(new HotkeyPackage(modifier,key), errorCode);
+            }
+
+            return success;
 
         }
+
+       
+
+        
         /// <summary>
         /// Unregisters a hot key.
         /// </summary>
@@ -174,8 +200,15 @@ namespace HookUtils
         public bool UnRegisterHotkey(HotkeysActions action)
         {
             //a non 0 value would be success
-            //(we are using enums int as ID)
-            int result = HookLogics.UnregisterHotKey(this.Handle, (int)action);
+            int result = 1;          
+            
+            Keys OldHotkey = this.dicHotkey[action].Hotkey;
+            if (OldHotkey != Keys.None)
+            {
+                //(we are using enums int as ID)
+                int registrationId = (int)action;
+                result = HookLogics.UnregisterHotKey(this.Handle, registrationId);
+            }
 
             //updating Hotkeys
             HotkeyPackage package = new HotkeyPackage(System.Windows.Input.ModifierKeys.None, Keys.None);
@@ -444,8 +477,31 @@ namespace HookUtils
                 this.onGotHighlightedText(this, e);
             }
         }
-       
-        
+
+        /// <summary>
+        /// Triggers the on failed to register hot key.
+        /// </summary>
+        /// <param name="hotkeyPackage">The hotkey package.</param>
+        /// <param name="errorCode">The error code.</param>        
+        private void TriggerOnFailedToRegisterHotKey(HotkeyPackage hotkeyPackage, int errorCode)
+        {
+            if (this.onFailedRegistratingHotKey != null)
+            {
+                ErrorRegistratingHotKeyArgs args = new ErrorRegistratingHotKeyArgs(hotkeyPackage, errorCode);
+               this.onFailedRegistratingHotKey(this,args);
+            }
+        }
+        /// <summary>
+        /// Sets the hot keys.
+        /// </summary>
+        /// <param name="translationKeys">The translation keys.</param>
+        /// <param name="reverseTranslationKeys">The reverse translation keys.</param>
+        public void SetHotKeys(HotkeyPackage translationKeys, HotkeyPackage reverseTranslationKeys)
+        {
+            this.RegisterHotkey(HotkeysActions.TranslateWord, translationKeys.Modifier, translationKeys.Hotkey);
+            
+            this.RegisterHotkey(HotkeysActions.ReverseTranslate, reverseTranslationKeys.Modifier, reverseTranslationKeys.Hotkey);
+        }
     }
 
    
