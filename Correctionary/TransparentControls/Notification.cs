@@ -10,6 +10,7 @@ namespace TransparentControls
 	{
         const int DEFAULT_DISPLAY_TIME = 3000;
         readonly int _timeToDisplay;
+        private Label lblCopyRights;
         bool _ClosingBecauseOFTimer;
 
         #region Ctor, init code and dispose
@@ -145,6 +146,7 @@ namespace TransparentControls
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblInnerText = new TransparentControls.WrapLabel();
+            this.lblCopyRights = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -163,13 +165,27 @@ namespace TransparentControls
             this.lblInnerText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblInnerText.TextChanged += new System.EventHandler(this.lblInnerText_TextChanged);
             // 
+            // lblCopyRights
+            // 
+            this.lblCopyRights.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCopyRights.AutoSize = true;
+            this.lblCopyRights.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblCopyRights.Location = new System.Drawing.Point(0, 53);
+            this.lblCopyRights.Name = "lblCopyRights";
+            this.lblCopyRights.Size = new System.Drawing.Size(369, 17);
+            this.lblCopyRights.TabIndex = 3;
+            this.lblCopyRights.Text = "Brought to you by Avi Turner (avi.turner111@gmail.com).";
+            this.lblCopyRights.Visible = false;
+            // 
             // Notification
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(269, 93);
+            this.ClientSize = new System.Drawing.Size(369, 70);
+            this.Controls.Add(this.lblCopyRights);
             this.Controls.Add(this.lblInnerText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(720, 692);
@@ -181,6 +197,7 @@ namespace TransparentControls
             this.MouseEnter += new System.EventHandler(this.Notification_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.Notification_MouseLeave);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		#endregion
@@ -196,7 +213,9 @@ namespace TransparentControls
         {
             //setting size of form to fit text
             Size lblSize = this.lblInnerText.Size;
-            this.Size = new Size(lblSize.Width + 10, lblSize.Height + 10);
+            //int width = Math.Max(this.lblCopyRights.Width, lblSize.Width);
+            //this.Size = new Size(width + 10, lblSize.Height + this.lblCopyRights.Height +30);
+            this.Size = new Size(lblSize.Width + 10, lblSize.Height+ 10);
             
         }
 
