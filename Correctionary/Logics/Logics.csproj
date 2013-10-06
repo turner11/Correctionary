@@ -87,6 +87,10 @@
       <Project>{70205539-5988-4553-B325-98C4604C3CBA}</Project>
       <Name>CommonObjects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SearchUtils\SearchUtils.csproj">
+      <Project>{E8F13B0B-9BE2-4731-B326-462B4DBDB741}</Project>
+      <Name>SearchUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TranslationUnit\TranslationUnit.csproj">
       <Project>{5BDD9F32-0596-48A2-A3B1-0D765A172BBC}</Project>
       <Name>TranslationUnit</Name>

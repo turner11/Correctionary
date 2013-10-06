@@ -1,0 +1,3249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoogleSearchDotnet</name>
+    </assembly>
+    <members>
+        <member name="T:GoogleSearchAPI.Resources.Languages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Arabic">
+            <summary>
+              Looks up a localized string similar to lang_ar.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Bulgarian">
+            <summary>
+              Looks up a localized string similar to lang_bg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Catalan">
+            <summary>
+              Looks up a localized string similar to lang_ca.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Chinese_Simplified">
+            <summary>
+              Looks up a localized string similar to lang_zh-CN.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Chinese_Traditional">
+            <summary>
+              Looks up a localized string similar to lang_zh_TW.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Croation">
+            <summary>
+              Looks up a localized string similar to lang_hr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Czech">
+            <summary>
+              Looks up a localized string similar to lang_cs.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Danish">
+            <summary>
+              Looks up a localized string similar to lang_da.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Dutch">
+            <summary>
+              Looks up a localized string similar to lang_nl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.English">
+            <summary>
+              Looks up a localized string similar to lang_en.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Estonian">
+            <summary>
+              Looks up a localized string similar to lang_et.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Finnish">
+            <summary>
+              Looks up a localized string similar to lang_fi.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.French">
+            <summary>
+              Looks up a localized string similar to lang_fr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.German">
+            <summary>
+              Looks up a localized string similar to lang_de.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Greek">
+            <summary>
+              Looks up a localized string similar to lang_el.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Hebrew">
+            <summary>
+              Looks up a localized string similar to lang_iw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Hungarian">
+            <summary>
+              Looks up a localized string similar to lang_hu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Icelandic">
+            <summary>
+              Looks up a localized string similar to lang_is.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Indonesian">
+            <summary>
+              Looks up a localized string similar to lang_id.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Italian">
+            <summary>
+              Looks up a localized string similar to lang_it.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Japanese">
+            <summary>
+              Looks up a localized string similar to lang_ja.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Korean">
+            <summary>
+              Looks up a localized string similar to lang_ko.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Latvian">
+            <summary>
+              Looks up a localized string similar to lang_lv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Lithuanian">
+            <summary>
+              Looks up a localized string similar to lang_lt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Norwegian">
+            <summary>
+              Looks up a localized string similar to lang_no.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Polish">
+            <summary>
+              Looks up a localized string similar to lang_pl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Portuguese">
+            <summary>
+              Looks up a localized string similar to lang_pt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Romanian">
+            <summary>
+              Looks up a localized string similar to lang_ro.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Russian">
+            <summary>
+              Looks up a localized string similar to lang_ru.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Serbian">
+            <summary>
+              Looks up a localized string similar to lang_sr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Slovak">
+            <summary>
+              Looks up a localized string similar to lang_sk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Slovenian">
+            <summary>
+              Looks up a localized string similar to lang_sl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Spanish">
+            <summary>
+              Looks up a localized string similar to lang_es.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Swedish">
+            <summary>
+              Looks up a localized string similar to lang_sv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.Languages.Turkish">
+            <summary>
+              Looks up a localized string similar to lang_tr.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.IGoogleResult">
+            <summary>
+            A generic Google result. Based on http://code.google.com/apis/ajaxsearch/documentation/reference.html
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResult.Title">
+            <summary>
+            Supplies the title value of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResult.Content">
+            <summary>
+            Supplies the title, but unlike Title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Title">
+            <summary>
+            Supplies the title of the video result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is 
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Url">
+            <summary>
+            Supplies the url of a playable version of the video result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Content">
+            <summary>
+            Supplies a snippet style description of the video clip.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Published">
+            <summary>
+            Supplies the published date of the video (rfc-822 format).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Publisher">
+            <summary>
+            Supplies the name of the video's publisher, typically displayed 
+            in green below the video thumbnail, similar to the treatment 
+            used for visibleUrl in the other search result objects.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Duration">
+            <summary>
+            The approximate duration, in seconds, of the video.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.TbWidth">
+            <summary>
+            Supplies the width, in pixels, of the video thumbnail.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.TbHeight">
+            <summary>
+            Supplies the height, in pixels, of the video thumbnail.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image which visually represents the video.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.PlayUrl">
+            <summary>
+            If present, supplies the url of the flash version of the video that can be
+            played inline on your page. To play this video simply create an embed 
+            element on your page using this value as the src attribute and using 
+            application/x-shockwave-flash as the type attribute. If you want the 
+            video to play right away, make sure to append and autoPlay=true to the url.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Author">
+            <summary>
+            If present, this property supplies the YouTube user name of the author of the video.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.ViewCount">
+            <summary>
+            If present, this property supplies a count of the number of plays for this video.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleVideoResult.Rating">
+            <summary>
+            If present, this property supplies the rating of the video on a scale of 1 to 5.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Title">
+            <summary>
+            Supplies the title of the video result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Url">
+            <summary>
+            Supplies the url of a playable version of the video result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Content">
+            <summary>
+            Supplies a snippet style description of the video clip.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Published">
+            <summary>
+            Supplies the published date of the video (rfc-822 format).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Publisher">
+            <summary>
+            Supplies the name of the video's publisher, typically displayed
+            in green below the video thumbnail, similar to the treatment
+            used for visibleUrl in the other search result objects.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Duration">
+            <summary>
+            The approximate duration, in seconds, of the video.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.TbWidth">
+            <summary>
+            Supplies the width, in pixels, of the video thumbnail.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.TbHeight">
+            <summary>
+            Supplies the height, in pixels, of the video thumbnail.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image which visually represents the video.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.PlayUrl">
+            <summary>
+            If present, supplies the url of the flash version of the video that can be
+            played inline on your page. To play this video simply create an embed
+            element on your page using this value as the src attribute and using
+            application/x-shockwave-flash as the type attribute. If you want the
+            video to play right away, make sure to append and autoPlay=true to the url.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Author">
+            <summary>
+            If present, this property supplies the YouTube user name of the author of the video.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.ViewCount">
+            <summary>
+            If present, this property supplies a count of the number of plays for this video.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleVideoResult.Rating">
+            <summary>
+            If present, this property supplies the rating of the video on a scale of 1 to 5.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.GoogleResultSet`1">
+            <summary>
+            A Google Result Set supplied by the Google AJAX API.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.IGoogleResultSet`1">
+            <summary>
+            Describes a Google search, search results.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResultSet`1.Results">
+            <summary>
+            The list of the Google Search results.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResultSet`1.Cursor">
+            <summary>
+            Provides details about the amount of results, pages and which start indexes are valid to query.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResultSet`1.ResponseDetails">
+            <summary>
+            Additional details about the search. TODO: Find out what is this exactly.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleResultSet`1.Status">
+            <summary>
+            Response status. In here we will know if the search succeeded or failed.
+            200 on success. non-200 on failure.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleResultSet`1.Results">
+            <summary>
+            The list of the Google Search results.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleResultSet`1.Cursor">
+            <summary>
+            Provides details about the amount of results, pages and which start indexes are valid to query.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleResultSet`1.ResponseDetails">
+            <summary>
+            Additional details about the search. TODO: Find out what is this exactly.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleResultSet`1.Status">
+            <summary>
+            Response status. In here we will know if the search succeeded or failed.
+            200 on success. non-200 on failure.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.BookQuery">
+            <summary>
+            Provides a google book query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/books.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Resources.NewsEdition">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Arab_World">
+            <summary>
+              Looks up a localized string similar to ar_me.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Argentina">
+            <summary>
+              Looks up a localized string similar to es_ar.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Australia">
+            <summary>
+              Looks up a localized string similar to au.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Austria">
+            <summary>
+              Looks up a localized string similar to de_at.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Belgium_Dutch">
+            <summary>
+              Looks up a localized string similar to nl_be.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Belgium_French">
+            <summary>
+              Looks up a localized string similar to fr_be.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Botswana_English">
+            <summary>
+              Looks up a localized string similar to en_bw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Brazil">
+            <summary>
+              Looks up a localized string similar to es_br.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Canada_English">
+            <summary>
+              Looks up a localized string similar to ca.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Canada_French">
+            <summary>
+              Looks up a localized string similar to fr_ca.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Chile">
+            <summary>
+              Looks up a localized string similar to es_cl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.China">
+            <summary>
+              Looks up a localized string similar to cn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Colombia">
+            <summary>
+              Looks up a localized string similar to es_co.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Cuba">
+            <summary>
+              Looks up a localized string similar to es_cu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Czech">
+            <summary>
+              Looks up a localized string similar to cs_cz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Egypt">
+            <summary>
+              Looks up a localized string similar to ar_eg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Ethiopia_English">
+            <summary>
+              Looks up a localized string similar to en_et.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.France">
+            <summary>
+              Looks up a localized string similar to fr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Germany">
+            <summary>
+              Looks up a localized string similar to de.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Ghana_English">
+            <summary>
+              Looks up a localized string similar to en_gh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Holland">
+            <summary>
+              Looks up a localized string similar to nl_nl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Hong_Kong">
+            <summary>
+              Looks up a localized string similar to hk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Hungary">
+            <summary>
+              Looks up a localized string similar to hu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.India">
+            <summary>
+              Looks up a localized string similar to in.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Indonesia">
+            <summary>
+              Looks up a localized string similar to id.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Ireland_English">
+            <summary>
+              Looks up a localized string similar to en_ie.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Israel_English">
+            <summary>
+              Looks up a localized string similar to en_il.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Israel_Hebrew">
+            <summary>
+              Looks up a localized string similar to iw_il.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Italy">
+            <summary>
+              Looks up a localized string similar to it.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Japan">
+            <summary>
+              Looks up a localized string similar to jp.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Kenya_English">
+            <summary>
+              Looks up a localized string similar to ke.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Korea">
+            <summary>
+              Looks up a localized string similar to kr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.KSA">
+            <summary>
+              Looks up a localized string similar to ar_sa.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Lebanon">
+            <summary>
+              Looks up a localized string similar to ar_lb.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Malaysia_English">
+            <summary>
+              Looks up a localized string similar to en_my.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Mexico">
+            <summary>
+              Looks up a localized string similar to es_mx.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Namibia_English">
+            <summary>
+              Looks up a localized string similar to en_na.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.New_Zealand">
+            <summary>
+              Looks up a localized string similar to nz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Nigeria">
+            <summary>
+              Looks up a localized string similar to en_ng.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Norway">
+            <summary>
+              Looks up a localized string similar to no_no.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Pakistan_English">
+            <summary>
+              Looks up a localized string similar to en_pk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Peru">
+            <summary>
+              Looks up a localized string similar to es_pe.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Philippines_English">
+            <summary>
+              Looks up a localized string similar to en_ph.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Poland">
+            <summary>
+              Looks up a localized string similar to pl_pl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Portugal">
+            <summary>
+              Looks up a localized string similar to pt-PT_pt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Russia">
+            <summary>
+              Looks up a localized string similar to ru_ru.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Senegal_French">
+            <summary>
+              Looks up a localized string similar to fr_sn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Singapore_English">
+            <summary>
+              Looks up a localized string similar to en_sg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Spain">
+            <summary>
+              Looks up a localized string similar to es.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Sweden">
+            <summary>
+              Looks up a localized string similar to sv_se.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Switzerland_German">
+            <summary>
+              Looks up a localized string similar to de_ch.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Taiwan">
+            <summary>
+              Looks up a localized string similar to tw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Tanzania_English">
+            <summary>
+              Looks up a localized string similar to en_tz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Thailand">
+            <summary>
+              Looks up a localized string similar to th.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Turkey">
+            <summary>
+              Looks up a localized string similar to tr_tr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.UAE">
+            <summary>
+              Looks up a localized string similar to ar_ae.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Uganda_English">
+            <summary>
+              Looks up a localized string similar to en_ug.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Ukraine_Russian">
+            <summary>
+              Looks up a localized string similar to ru_ua.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Ukraine_Ukraine">
+            <summary>
+              Looks up a localized string similar to uk_ua.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.United_Kingdom">
+            <summary>
+              Looks up a localized string similar to uk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.United_States">
+            <summary>
+              Looks up a localized string similar to us.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.United_States_Spanish">
+            <summary>
+              Looks up a localized string similar to es_us.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Venezuela">
+            <summary>
+              Looks up a localized string similar to es_ve.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Vietnam">
+            <summary>
+              Looks up a localized string similar to vi_vn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.NewsEdition.Zimbabwe_English">
+            <summary>
+              Looks up a localized string similar to en_zw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Title">
+            <summary>
+            Supplies the title for the result. In some cases, the title and the streetAddress are the same. 
+            This typically occurs when the search term is a street address such as 1231 Lisa Lane, Los Altos, CA.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Latitude">
+            <summary>
+            Supplies the latitude value of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Longitude">
+            <summary>
+            Supplies the longitude value of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.StreetAddress">
+            <summary>
+            Supplies the street address and number for the given result. Note: In some cases, this 
+            property may be set to "" if the result has no known street address.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.City">
+            <summary>
+            Supplies the city name for the result. Note: In some cases, this property may be set to "".
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Region">
+            <summary>
+            Supplies a region name for the result (e.g., in the U.S., this is typically a state 
+            abbreviation, in other regions it might be a province, etc.) Note: In some cases, 
+            this property may be set to "".
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Country">
+            <summary>
+            Supplies a country name for the result. Note: In some cases, this property may be set to "".
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.PhoneNumbers">
+            <summary>
+            Supplies an array of phone number objects where each object contains a .type property and a 
+            .number property. The value of the .type property can be one of "main", "fax", "mobile", 
+            "data", or "".
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.AddressLines">
+            <summary>
+            Supplies an array consisting of the mailing address lines for this result, for 
+            instance: ["1600 Amphitheatre Pky", "Mountain View, CA 94043"] or ["Via del Corso, 330", 
+            "00186 Roma (RM), Italy"]. To correctly render an address associated with a result, 
+            either use the .html property of the result directly or iterate through this 
+            array and display each addressLine in turn.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:GoogleSearchAPI.Query.IGoogleLocalResult.DDrl" -->
+        <!-- Badly formed XML comment ignored for member "P:GoogleSearchAPI.Query.IGoogleLocalResult.DDUrlToHere" -->
+        <!-- Badly formed XML comment ignored for member "P:GoogleSearchAPI.Query.IGoogleLocalResult.DDUrlFromHere" -->
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.StaticMapUrl">
+            <summary>
+            Supplies a url to a static map image representation of the current result. The image is 
+            150px wide by 100px tall with a single marker representing the current location. Expected 
+            usage is to hyperlink this image using the url property. The image may be resized using 
+            google.search.LocalSearch.resizeStaticMapUrl(). The Static Map Tile sample demonstrates 
+            one way to use this property.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.ListingType">
+            <summary>
+            This property indicates the type of this result which can either be "local" in the case of 
+            a local business listing or geocode result, or "kml" in the case of a KML listing.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleLocalResult.Content">
+            <summary>
+            For "kml" results, this property contains a content snippet associated with the KML result. 
+            For "local" results, this property is the empty string.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.Page.Start">
+            <summary>
+            Gets or sets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.Page.Label">
+            <summary>
+            Gets or sets the label.
+            </summary>
+            <value>The label.</value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.Cursor.EstimatedResultCount">
+            <summary>
+            Gets or sets the estimated result count.
+            </summary>
+            <value>The estimated result count.</value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.Cursor.CurrentPageIndex">
+            <summary>
+            Gets or sets the index of the current page.
+            </summary>
+            <value>The index of the current page.</value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.Cursor.MoreResultsURL">
+            <summary>
+            Gets or sets the more results URL.
+            </summary>
+            <value>The more results URL.</value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.Title">
+            <summary>
+            Supplies the title of the image, which is usually the base filename.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property 
+            is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the image.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.Content">
+            <summary>
+            Supplies a brief snippet of information from the page associated with the search result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.ContentNoFormatting">
+            <summary>
+            Supplies the same information as .content, only stripped of HTML formatting.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.OriginalContextUrl">
+            <summary>
+            Supplies the URL of the page containing the image.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.Width">
+            <summary>
+            Supplies the width of the image in pixels.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.Height">
+            <summary>
+            Supplies the height of the image in pixels.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.TbWidth">
+            <summary>
+            Supplies the width, in pixels, of the image thumbnail.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.TbHeight">
+            <summary>
+            Supplies the height, in pixels, of the image thumbnail.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleImageResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.Title">
+            <summary>
+            Supplies the title of the image, which is usually the base filename.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property
+            is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the image.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.Content">
+            <summary>
+            Supplies a brief snippet of information from the page associated with the search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.ContentNoFormatting">
+            <summary>
+            Supplies the same information as .content, only stripped of HTML formatting.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.OriginalContextUrl">
+            <summary>
+            Supplies the URL of the page containing the image.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.Width">
+            <summary>
+            Supplies the width of the image in pixels.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.Height">
+            <summary>
+            Supplies the height of the image in pixels.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.TbWidth">
+            <summary>
+            Supplies the width, in pixels, of the image thumbnail.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.TbHeight">
+            <summary>
+            Supplies the height, in pixels, of the image thumbnail.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleImageResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Resources.CountryCode">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Afghanistan">
+            <summary>
+              Looks up a localized string similar to af.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Åland_Islands">
+            <summary>
+              Looks up a localized string similar to ax.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Albania">
+            <summary>
+              Looks up a localized string similar to al.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Algeria">
+            <summary>
+              Looks up a localized string similar to dz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.American_Samoa">
+            <summary>
+              Looks up a localized string similar to as.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Andorra">
+            <summary>
+              Looks up a localized string similar to ad.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Angola">
+            <summary>
+              Looks up a localized string similar to ao.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Anguilla">
+            <summary>
+              Looks up a localized string similar to ai.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Antarctica">
+            <summary>
+              Looks up a localized string similar to aq.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Antigua_and_Barbuda">
+            <summary>
+              Looks up a localized string similar to ag.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Argentina">
+            <summary>
+              Looks up a localized string similar to ar.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Armenia">
+            <summary>
+              Looks up a localized string similar to am.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Aruba">
+            <summary>
+              Looks up a localized string similar to aw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.australia">
+            <summary>
+              Looks up a localized string similar to au.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.austria">
+            <summary>
+              Looks up a localized string similar to at.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Azerbaijan">
+            <summary>
+              Looks up a localized string similar to az.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bahamas">
+            <summary>
+              Looks up a localized string similar to bs.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bahrain">
+            <summary>
+              Looks up a localized string similar to bh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bangladesh">
+            <summary>
+              Looks up a localized string similar to bd.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Barbados">
+            <summary>
+              Looks up a localized string similar to bb.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Belarus">
+            <summary>
+              Looks up a localized string similar to by.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Belgium">
+            <summary>
+              Looks up a localized string similar to be.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Belize">
+            <summary>
+              Looks up a localized string similar to bz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Benin">
+            <summary>
+              Looks up a localized string similar to bj.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bermuda">
+            <summary>
+              Looks up a localized string similar to bm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bhutan">
+            <summary>
+              Looks up a localized string similar to bt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bolivia">
+            <summary>
+              Looks up a localized string similar to bo.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bosnia">
+            <summary>
+              Looks up a localized string similar to ba.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Botswana">
+            <summary>
+              Looks up a localized string similar to bw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bouvet_Island">
+            <summary>
+              Looks up a localized string similar to bv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Brazil">
+            <summary>
+              Looks up a localized string similar to br.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.British_Indian_Ocean_Territory">
+            <summary>
+              Looks up a localized string similar to io.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Brunei_Daryssalam">
+            <summary>
+              Looks up a localized string similar to bn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Bulgaria">
+            <summary>
+              Looks up a localized string similar to bg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Burkina_Faso">
+            <summary>
+              Looks up a localized string similar to bf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Burunudi">
+            <summary>
+              Looks up a localized string similar to bi.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cambodia">
+            <summary>
+              Looks up a localized string similar to kh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cameroon">
+            <summary>
+              Looks up a localized string similar to cm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Canada">
+            <summary>
+              Looks up a localized string similar to ca.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cape_Verde">
+            <summary>
+              Looks up a localized string similar to cv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cayman_Islands">
+            <summary>
+              Looks up a localized string similar to ky.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Central_African_Republic">
+            <summary>
+              Looks up a localized string similar to cf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Chad">
+            <summary>
+              Looks up a localized string similar to td.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Chile">
+            <summary>
+              Looks up a localized string similar to cl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.China">
+            <summary>
+              Looks up a localized string similar to cn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Christmas_Island">
+            <summary>
+              Looks up a localized string similar to cx.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cocos_Islands">
+            <summary>
+              Looks up a localized string similar to cc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Colombia">
+            <summary>
+              Looks up a localized string similar to co.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Comoros">
+            <summary>
+              Looks up a localized string similar to km.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Congo">
+            <summary>
+              Looks up a localized string similar to cg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Congo_Democratic_Republic">
+            <summary>
+              Looks up a localized string similar to cd.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cook_Islands">
+            <summary>
+              Looks up a localized string similar to ck.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Costa_Rica">
+            <summary>
+              Looks up a localized string similar to cr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cote_dlvoire">
+            <summary>
+              Looks up a localized string similar to ci.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Croatia">
+            <summary>
+              Looks up a localized string similar to hr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cuba">
+            <summary>
+              Looks up a localized string similar to cu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Cyprus">
+            <summary>
+              Looks up a localized string similar to cy.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Czech_Republic">
+            <summary>
+              Looks up a localized string similar to cz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Denmark">
+            <summary>
+              Looks up a localized string similar to dk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Djibouti">
+            <summary>
+              Looks up a localized string similar to dj.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Dominica">
+            <summary>
+              Looks up a localized string similar to dm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Dominican_Republic">
+            <summary>
+              Looks up a localized string similar to do.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Ecuador">
+            <summary>
+              Looks up a localized string similar to ec.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Egypt">
+            <summary>
+              Looks up a localized string similar to eg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.El_Salvador">
+            <summary>
+              Looks up a localized string similar to sv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Equatorial_Guinea">
+            <summary>
+              Looks up a localized string similar to gq.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Eritrea">
+            <summary>
+              Looks up a localized string similar to er.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Estonia">
+            <summary>
+              Looks up a localized string similar to ee.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Ethiopia">
+            <summary>
+              Looks up a localized string similar to et.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Falkland_Islands_Malvinas">
+            <summary>
+              Looks up a localized string similar to fk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Faroe_Islands">
+            <summary>
+              Looks up a localized string similar to fo.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Fiji">
+            <summary>
+              Looks up a localized string similar to fj.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Finland">
+            <summary>
+              Looks up a localized string similar to fi.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.France">
+            <summary>
+              Looks up a localized string similar to fr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.French_Guiana">
+            <summary>
+              Looks up a localized string similar to gf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.French_Polynesia">
+            <summary>
+              Looks up a localized string similar to pf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.French_Southern_Territories">
+            <summary>
+              Looks up a localized string similar to tf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Gabon">
+            <summary>
+              Looks up a localized string similar to ga.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Gambia">
+            <summary>
+              Looks up a localized string similar to gm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Georgia">
+            <summary>
+              Looks up a localized string similar to ge.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Ghana">
+            <summary>
+              Looks up a localized string similar to gh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Gibraltar">
+            <summary>
+              Looks up a localized string similar to gi.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Greece">
+            <summary>
+              Looks up a localized string similar to gr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Greenland">
+            <summary>
+              Looks up a localized string similar to gl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Grenada">
+            <summary>
+              Looks up a localized string similar to gd.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guadeloupe">
+            <summary>
+              Looks up a localized string similar to gp.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guam">
+            <summary>
+              Looks up a localized string similar to gu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guatemala">
+            <summary>
+              Looks up a localized string similar to gt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guernsey">
+            <summary>
+              Looks up a localized string similar to gg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guinea">
+            <summary>
+              Looks up a localized string similar to gn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guinea_Bissau">
+            <summary>
+              Looks up a localized string similar to gw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Guyana">
+            <summary>
+              Looks up a localized string similar to gy.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Haiti">
+            <summary>
+              Looks up a localized string similar to ht.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Heard_Island_and_McDonald_Islands">
+            <summary>
+              Looks up a localized string similar to hm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Holy_See_Vatican_City_State">
+            <summary>
+              Looks up a localized string similar to va.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Honduras">
+            <summary>
+              Looks up a localized string similar to hn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Hong_Kong">
+            <summary>
+              Looks up a localized string similar to hk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Hungary">
+            <summary>
+              Looks up a localized string similar to hu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Iceland">
+            <summary>
+              Looks up a localized string similar to is.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.India">
+            <summary>
+              Looks up a localized string similar to in.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Indonesia">
+            <summary>
+              Looks up a localized string similar to id.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Iran">
+            <summary>
+              Looks up a localized string similar to ir.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Iraq">
+            <summary>
+              Looks up a localized string similar to iq.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Ireland">
+            <summary>
+              Looks up a localized string similar to ie.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Isle_of_Man">
+            <summary>
+              Looks up a localized string similar to im.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Israel">
+            <summary>
+              Looks up a localized string similar to il.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Italy">
+            <summary>
+              Looks up a localized string similar to it.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Jamaica">
+            <summary>
+              Looks up a localized string similar to jm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Japan">
+            <summary>
+              Looks up a localized string similar to jp.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Jersey">
+            <summary>
+              Looks up a localized string similar to je.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Jordan">
+            <summary>
+              Looks up a localized string similar to jo.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Kazakhstan">
+            <summary>
+              Looks up a localized string similar to kz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Kenya">
+            <summary>
+              Looks up a localized string similar to ke.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Kiribati">
+            <summary>
+              Looks up a localized string similar to ki.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Kuwait">
+            <summary>
+              Looks up a localized string similar to kw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Kyrgyzstan">
+            <summary>
+              Looks up a localized string similar to kg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Lao_Peoples">
+            <summary>
+              Looks up a localized string similar to la.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Latvia">
+            <summary>
+              Looks up a localized string similar to lv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Lebanon">
+            <summary>
+              Looks up a localized string similar to lb.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Lesotho">
+            <summary>
+              Looks up a localized string similar to ls.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Liberia">
+            <summary>
+              Looks up a localized string similar to lr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Libyan_Arab_Jamahiriya">
+            <summary>
+              Looks up a localized string similar to ly.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Liechtenstein">
+            <summary>
+              Looks up a localized string similar to li.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Lithuania">
+            <summary>
+              Looks up a localized string similar to lt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Luxembourg">
+            <summary>
+              Looks up a localized string similar to lu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Macao">
+            <summary>
+              Looks up a localized string similar to mo.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Macedonia">
+            <summary>
+              Looks up a localized string similar to mk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Madagascar">
+            <summary>
+              Looks up a localized string similar to mg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Malawi">
+            <summary>
+              Looks up a localized string similar to mw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Malaysia">
+            <summary>
+              Looks up a localized string similar to my.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Maldives">
+            <summary>
+              Looks up a localized string similar to mv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mali">
+            <summary>
+              Looks up a localized string similar to ml.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Malta">
+            <summary>
+              Looks up a localized string similar to mt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Marshall_Islands">
+            <summary>
+              Looks up a localized string similar to mh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Martinique">
+            <summary>
+              Looks up a localized string similar to mq.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mauritania">
+            <summary>
+              Looks up a localized string similar to mr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mauritius">
+            <summary>
+              Looks up a localized string similar to mu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mayotte">
+            <summary>
+              Looks up a localized string similar to yt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mexico">
+            <summary>
+              Looks up a localized string similar to mx.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Micronesia">
+            <summary>
+              Looks up a localized string similar to fm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Moldova_Republic_of">
+            <summary>
+              Looks up a localized string similar to md.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Monaco">
+            <summary>
+              Looks up a localized string similar to mc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mongolia">
+            <summary>
+              Looks up a localized string similar to mn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Montenegro">
+            <summary>
+              Looks up a localized string similar to me.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Montserrat">
+            <summary>
+              Looks up a localized string similar to ms.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Morocco">
+            <summary>
+              Looks up a localized string similar to ma.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Mozambique">
+            <summary>
+              Looks up a localized string similar to mz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Myanmar">
+            <summary>
+              Looks up a localized string similar to mm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Namibia">
+            <summary>
+              Looks up a localized string similar to na.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Nauru">
+            <summary>
+              Looks up a localized string similar to nr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Nepal">
+            <summary>
+              Looks up a localized string similar to np.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Netherlands">
+            <summary>
+              Looks up a localized string similar to nl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.New_Caledonia">
+            <summary>
+              Looks up a localized string similar to nc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.New_Zealand">
+            <summary>
+              Looks up a localized string similar to nz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Nicaragua">
+            <summary>
+              Looks up a localized string similar to ni.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Niger">
+            <summary>
+              Looks up a localized string similar to ne.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Nigeria">
+            <summary>
+              Looks up a localized string similar to ng.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Niue">
+            <summary>
+              Looks up a localized string similar to nu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Norfolk_Island">
+            <summary>
+              Looks up a localized string similar to nf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.North_Korea">
+            <summary>
+              Looks up a localized string similar to kr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Northern_Mariana_Islands">
+            <summary>
+              Looks up a localized string similar to mp.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Norway">
+            <summary>
+              Looks up a localized string similar to no.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Oman">
+            <summary>
+              Looks up a localized string similar to om.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Pakistan">
+            <summary>
+              Looks up a localized string similar to pk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Palau">
+            <summary>
+              Looks up a localized string similar to pw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Palestine">
+            <summary>
+              Looks up a localized string similar to ps.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Panama">
+            <summary>
+              Looks up a localized string similar to pa.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Papua_New_Guinea">
+            <summary>
+              Looks up a localized string similar to pg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Paraguay">
+            <summary>
+              Looks up a localized string similar to py.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Peru">
+            <summary>
+              Looks up a localized string similar to pe.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Philippines">
+            <summary>
+              Looks up a localized string similar to ph.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Pitcairn">
+            <summary>
+              Looks up a localized string similar to pn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Poland">
+            <summary>
+              Looks up a localized string similar to pl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Portugal">
+            <summary>
+              Looks up a localized string similar to pt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Puerto_Rico">
+            <summary>
+              Looks up a localized string similar to pr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Qatar">
+            <summary>
+              Looks up a localized string similar to qa.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Romania">
+            <summary>
+              Looks up a localized string similar to ro.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Runion">
+            <summary>
+              Looks up a localized string similar to re.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Russian_Federation">
+            <summary>
+              Looks up a localized string similar to ru.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Rwanda">
+            <summary>
+              Looks up a localized string similar to rw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Helena">
+            <summary>
+              Looks up a localized string similar to sh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Kitts_and_Nevis">
+            <summary>
+              Looks up a localized string similar to kn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Lucia">
+            <summary>
+              Looks up a localized string similar to lc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Martin_French_part">
+            <summary>
+              Looks up a localized string similar to mf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Pierre_and_Miquelon">
+            <summary>
+              Looks up a localized string similar to pm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saint_Vincent_and_the_Grenadines">
+            <summary>
+              Looks up a localized string similar to vc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Samoa">
+            <summary>
+              Looks up a localized string similar to ws.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.San_Marino">
+            <summary>
+              Looks up a localized string similar to sm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Sao_Tome_and_Principe">
+            <summary>
+              Looks up a localized string similar to st.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Saudi_Arabia">
+            <summary>
+              Looks up a localized string similar to sa.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Senegal">
+            <summary>
+              Looks up a localized string similar to sn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Serbia">
+            <summary>
+              Looks up a localized string similar to rs.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Seychelles">
+            <summary>
+              Looks up a localized string similar to sc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Sierra_Leone">
+            <summary>
+              Looks up a localized string similar to sl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Singapore">
+            <summary>
+              Looks up a localized string similar to sg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Slovakia">
+            <summary>
+              Looks up a localized string similar to sk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Slovenia">
+            <summary>
+              Looks up a localized string similar to si.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Solomon_Islands">
+            <summary>
+              Looks up a localized string similar to sb.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Somalia">
+            <summary>
+              Looks up a localized string similar to so.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.South_Africa">
+            <summary>
+              Looks up a localized string similar to za.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.South_Georgia_and_the_South_Sandwich_Islands">
+            <summary>
+              Looks up a localized string similar to gs.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.South_Korea">
+            <summary>
+              Looks up a localized string similar to kp.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Spain">
+            <summary>
+              Looks up a localized string similar to es.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Sri_Lanka">
+            <summary>
+              Looks up a localized string similar to lk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Sudan">
+            <summary>
+              Looks up a localized string similar to sd.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Suriname">
+            <summary>
+              Looks up a localized string similar to sr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Svalbard_and_Jan_Mayen">
+            <summary>
+              Looks up a localized string similar to sj.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Swaziland">
+            <summary>
+              Looks up a localized string similar to sz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Sweden">
+            <summary>
+              Looks up a localized string similar to se.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Syrian_Arab_Republic">
+            <summary>
+              Looks up a localized string similar to sy.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Taiwan_Province_of_China">
+            <summary>
+              Looks up a localized string similar to tw.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tajikistan">
+            <summary>
+              Looks up a localized string similar to tj.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tanzania">
+            <summary>
+              Looks up a localized string similar to tz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Thailand">
+            <summary>
+              Looks up a localized string similar to th.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Timor_Leste">
+            <summary>
+              Looks up a localized string similar to tl.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Togo">
+            <summary>
+              Looks up a localized string similar to tg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tokelau">
+            <summary>
+              Looks up a localized string similar to tk.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tonga">
+            <summary>
+              Looks up a localized string similar to to.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Trinidad_and_Tobago">
+            <summary>
+              Looks up a localized string similar to tt.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tunisia">
+            <summary>
+              Looks up a localized string similar to tn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Turkey">
+            <summary>
+              Looks up a localized string similar to tr.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Turkmenistan">
+            <summary>
+              Looks up a localized string similar to tm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Turks_and_Caicos_Islands">
+            <summary>
+              Looks up a localized string similar to tc.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Tuvalu">
+            <summary>
+              Looks up a localized string similar to tv.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Uganda">
+            <summary>
+              Looks up a localized string similar to ug.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Ukraine">
+            <summary>
+              Looks up a localized string similar to ua.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.United_Kingdom">
+            <summary>
+              Looks up a localized string similar to gb.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.United_States">
+            <summary>
+              Looks up a localized string similar to us.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.United_States_Minor_Outlying_Islands">
+            <summary>
+              Looks up a localized string similar to um.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Uruguay">
+            <summary>
+              Looks up a localized string similar to uy.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Uzbekistan">
+            <summary>
+              Looks up a localized string similar to uz.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Vanuatu">
+            <summary>
+              Looks up a localized string similar to vu.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Venezuela">
+            <summary>
+              Looks up a localized string similar to ve.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Viet_Nam">
+            <summary>
+              Looks up a localized string similar to vn.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Virgin_Islands_British">
+            <summary>
+              Looks up a localized string similar to vg.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Virgin_Islands_US">
+            <summary>
+              Looks up a localized string similar to vi.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Wallis_and_Futuna">
+            <summary>
+              Looks up a localized string similar to wf.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Western_Sahara">
+            <summary>
+              Looks up a localized string similar to eh.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Yemen">
+            <summary>
+              Looks up a localized string similar to ye.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Zambia">
+            <summary>
+              Looks up a localized string similar to zm.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Resources.CountryCode.Zimbabwe">
+            <summary>
+              Looks up a localized string similar to zw.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.VideoQuery">
+            <summary>
+            Provides a google video query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/video.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryGeoLocationParameter">
+            <summary>
+            This optional argument tells the news search system to scope search results to a particular location.
+            With this argument present, the query argument (q) becomes optional. Note, this is a very new feature and
+            locally scoped query coverage is somewhat sparse. You must supply either a city, state, country, or zip
+            code as in geo=Santa%20Barbara or geo=British%20Columbia or geo=Peru or geo=93108. Note that this optional
+            argument cannot be used with the topic argument.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryQuotePersonIdParameter">
+            <summary>
+            This optional argument tells the news search system to scope search results to include only quote typed results
+            (rather than classic news article style results). With this argument present, the query argument (q) becomes optional.
+            The value of this argument designates a prominent individual whose quotes have been recognized and classified by
+            the Google News search service. For instance, Barack Obama has a qsid value of tPjE5CDNzMicmM and John McCain
+            has a value of lE61RnznhxvadM. Note, this is a very new feature and we currently do not have a good search or
+            descovery mechanism for these qsid values..
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:GoogleSearchAPI.Query.QueryTopicParameter" -->
+        <member name="T:GoogleSearchAPI.Query.QueryNewsEditionParameter">
+            <summary>
+            This optional argument tells the news search system which edition of news to pull results from
+            Use the resource NewsEdition to choose your desired news edition.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.IGoogleService">
+            <summary>
+            Provides a Search interface using Google AJAX API.
+            </summary>
+        </member>
+        <member name="M:GoogleSearchAPI.IGoogleService.Search``1(GoogleSearchAPI.Query.IGoogleQuery)">
+            <summary>
+            This method makes a synchronous call to the Google AJAX API to query it. It uses the query parameters
+            that are supplied in the IGoogleQuery.
+            </summary>
+            <typeparam name="ResultType">The IGoogleResult implementation that matches the IGoogleQuery service. e.g WebQuery -> GoogleWebResult
+            Supported result types: GoogleWebResult, GoogleImageResult, GoogleVideoResult, GoogleBlogResult, GoogleLocalResult, 
+            GoogleBooksResult, GoogleNewsResult, GooglePatentResult</typeparam>
+            <param name="query">The IGoogleQuery implementation that will be used to build the query to the Google AJAX API.
+            Supported IGoogleQuery implementations: WebQuery, ImageQuery, VideoQuery, BookQuery, BlogQuery, LocalQuery, NewsQuery, PatentQuery</param>
+            <returns></returns>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.Title">
+            <summary>
+            Supplies the title of the patent result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is 
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.Url">
+            <summary>
+            Supplies an escaped version of the patent URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.Content">
+            <summary>
+            Supplies a snippet style description of the patent.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.ApplicationDate">
+            <summary>
+            Supplies the application filing date of the patent (rfc-822 format).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.PatentNumber">
+            <summary>
+            Supplies the patent number for issued patents, and the application number for filed, 
+            but not yet issued patents.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.PatentStatus">
+            <summary>
+            Supplies the status of the patent which can either be "filed" for filed, but not 
+            yet issued patents, or "issued" for issued patents.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.Assignee">
+            <summary>
+            Supplies the assignee of the patent.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGooglePatentResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image which visually represents the patent.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.NewsQuery">
+            <summary>
+            Provides a google news query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/news.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryBookTypeParameter">
+            <summary>
+            This optional argument tells the book search system to restrict the search to "full view" books,
+            or all books. A value of as_brr=1 restricts the search to only those books that are viewable in full.
+            The default case is all books and that is indicated by not specifying this argument.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryLibraryParameter">
+            <summary>
+            This optional argument tells the book search system to restrict the search to the specified user-defined library.
+            </summary>
+        </member>
+        <member name="M:GoogleSearchAPI.GoogleService.Search``1(GoogleSearchAPI.Query.IGoogleQuery)">
+            <summary>
+            This method makes a synchronous call to the Google AJAX API to query it. It uses the query parameters
+            that are supplied in the IGoogleQuery.
+            </summary>
+            <typeparam name="ResultType">The IGoogleResult implementation that matches the IGoogleQuery service. e.g WebQuery -&gt; GoogleWebResult
+            Supported result types: GoogleWebResult, GoogleImageResult, GoogleVideoResult, GoogleBlogResult, GoogleLocalResult,
+            GoogleBooksResult, GoogleNewsResult, GooglePatentResult</typeparam>
+            <param name="query">The IGoogleQuery implementation that will be used to build the query to the Google AJAX API.
+            Supported IGoogleQuery implementations: WebQuery, ImageQuery, VideoQuery, BookQuery, BlogQuery, LocalQuery, NewsQuery, PatentQuery</param>
+            <returns></returns>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleNewsResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleNewsResult.Url">
+            <summary>
+            Supplies an escaped version of the news URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleNewsResult.Content">
+            <summary>
+            Supplies a snippet of content from the news story that includes the quotes.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleNewsResult.Author">
+            <summary>
+            Supplies the name of the person that the quote is attributed to.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleNewsResult.Publisher">
+            <summary>
+            Supplies the name of the publisher of the news story.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.LocalQuery">
+            <summary>
+            Provides a google local query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/local.
+            </summary>    
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.Title">
+            <summary>
+            Supplies the title of the book.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is 
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.Url">
+            <summary>
+            Supplies an escaped version of the book's URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.Authors">
+            <summary>
+            Supplies the list of authors of the book.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.BookId">
+            <summary>
+            Supplies the identifier associated with the book. This is typically an ISBN.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.PublishedYear">
+            <summary>
+            Supplies the year that the book was published.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.PageCount">
+            <summary>
+            Supplies the number of pages contained within the book.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBookResult.ThumbnailHtml">
+            <summary>
+            Supplies an html dom node that represents a thumbnail image of the book's cover.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.Title">
+            <summary>
+            Supplies the title of the blog post returned as a search result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.Content">
+            <summary>
+            Supplies a snippet of content from the blog post associated with this search result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.PostUrl">
+            <summary>
+            Supplies the URL to the blog post referenced in this search result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.Author">
+            <summary>
+            Supplies the name of the author that wrote the blog post.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.BlogUrl">
+            <summary>
+            Supplies the URL of the blog which contains the post. 
+            Typically, this URL is displayed in green, beneath the blog search 
+            result and is linked to the blog.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleBlogResult.PublishedDate">
+            <summary>
+            Supplies the published date (rfc-822 format) of the blog post referenced 
+            by this search result.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.SearchSafetyLookup">
+            <summary>
+            Defines a search safety level
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.SearchSafetyLookup.active">
+            <summary>
+            Enables the highest level of safe search filtering.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.SearchSafetyLookup.moderate">
+            <summary>
+            Enables moderate safe search filtering (default).
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.SearchSafetyLookup.off">
+            <summary>
+            Disables safe search filtering.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.DuplicateContentFilterLookup">
+            <summary>
+            Filters duplicate results in the result set.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.DuplicateContentFilterLookup.FilterOff">
+            <summary>
+            Turns duplicate filtering off.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.DuplicateContentFilterLookup.FilterOn">
+            <summary>
+            Turns duplicate filtering on.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ResultSetSize">
+            <summary>
+            Defines the size of the result set. Use small for 4 results and large for 8 results.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ResultSetSize.small">
+            <summary>
+            yields 4 results per page.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ResultSetSize.large">
+            <summary>
+            yields 8 results per page.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageSize">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified size, where size can be one of:
+            icon, small, medium, large, xlarge, xxlarge, huge
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageColorization">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified colorization, where colorization can be one of:
+            gray - restrict to grayscale images
+            color - restrict to color images
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageColorization.gray">
+            <summary>
+            restrict to grayscale images
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageColorization.color">
+            <summary>
+            restrict to color images
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageColor">
+            <summary>
+            This optional argument tells the image search system to filter the search to images of the specified color.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageFileType">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified filetype.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageRights">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images labeled with the given licenses.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageType">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified filetype.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageType.face">
+            <summary>
+            restrict to images of faces
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageType.photo">
+            <summary>
+            restrict to photos
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageType.clipart">
+            <summary>
+            restrict to clipart images
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.ImageType.lineart">
+            <summary>
+            restrict to images of line drawings
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.LocalListingType">
+            <summary>
+            This optional argument specifies which type of listing the user is interested in.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.LocalListingType.blended">
+            <summary>
+             request KML, Local Business Listings, and Geocode results
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.LocalListingType.kmlonly">
+            <summary>
+             request KML and Geocode results
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.LocalListingType.localonly">
+            <summary>
+            request Local Business Listings and Geocode results
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ResultsOrder">
+            <summary>
+            This optional argument tells the search system how to order results. Results may be ordered by relevance (which is the default) or by date. 
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.NewsTopic">
+            <summary>
+            This optional argument tells the news search system to scope search results to a particular topic. 
+            The value of the argument specifies the topic in the current or selected edition.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.h">
+            <summary>
+            specifies the top headlines topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.w">
+            <summary>
+            specifies the world topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.b">
+            <summary>
+            specifies the business topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.n">
+            <summary>
+            specifies the nation topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.t">
+            <summary>
+             specifies the science and technology topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.el">
+            <summary>
+            specifies the elections topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.p">
+            <summary>
+            specifies the politics topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.e">
+            <summary>
+            specifies the entertainment topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.s">
+            <summary>
+            specifies the sports topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.NewsTopic.m">
+            <summary>
+            specifies the health topic
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.BookQueryType.all_books">
+            <summary>
+            The default value, searches for all books.
+            </summary>
+        </member>
+        <member name="F:GoogleSearchAPI.Query.BookQueryType.fullview">
+            <summary>
+            yields only books that all their content is available.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryCenterPointParameter">
+            <summary>
+            This optional argument supplies the search center point for a local search. It's value is a comma separated latitude/longitude pair, e.g., sll=48.8565,2.3509.
+            /// Use the LocalCoordinate class to provide a value to the parameter.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryBBoxParameter">
+            <summary>
+            This optional argument supplies a bounding box that the local search should be relative to. When using a Google Map, 
+            the sspn value can be computed using: myMap.getBounds().toSpan().toUrlValue(); (e.g., sspn=0.065169,0.194149).
+            Use the LocalCoordinate class to provide a value to the parameter.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryLocalListingTypeParameter">
+            <summary>
+            This optional argument specifies which type of listing the user is interested in. 
+            If this argument is not supplied, the default value of localonly is used.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.Title">
+            <summary>
+            Supplies the title value of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike Title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.Content">
+            <summary>
+            Supplies a brief snippet of information from the page associated with the search result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.VisibleUrl">
+            <summary>
+            Supplies a shortened version of the URL associated with the result. Typically displayed in green, stripped of a protocol and path.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.IGoogleWebResult.CacheUrl">
+            <summary>
+            Supplies a url to Google's cached version of the page responsible for producing this result. 
+            This property may be null indicating that there is no cache, and it might be out of date in 
+            cases where the search result has been saved and in the mean time, the cache has gone stale. 
+            For best results, this property should not be persisted.
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.Title">
+            <summary>
+            Supplies the title of the patent result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.Url">
+            <summary>
+            Supplies an escaped version of the patent URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.Content">
+            <summary>
+            Supplies a snippet style description of the patent.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.ApplicationDate">
+            <summary>
+            Supplies the application filing date of the patent (rfc-822 format).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.PatentNumber">
+            <summary>
+            Supplies the patent number for issued patents, and the application number for filed,
+            but not yet issued patents.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.PatentStatus">
+            <summary>
+            Supplies the status of the patent which can either be "filed" for filed, but not
+            yet issued patents, or "issued" for issued patents.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.Assignee">
+            <summary>
+            Supplies the assignee of the patent.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GooglePatentResult.TbUrl">
+            <summary>
+            Supplies the url of a thumbnail image which visually represents the patent.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.PatentQuery">
+            <summary>
+            Provides a google patent query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/patent.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageSizeParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified size, where size can be one of:
+            icon - restrict to small images
+            small|medium|large|xlarge - restrict to medium images
+            xxlarge - restrict to large images
+            huge - restrict to extra large images
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageColorizationParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified colorization,
+            where colorization can be one of:
+            gray - restrict to grayscale images
+            color - restrict to color images
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageColorParameter">
+            <summary>
+            This optional argument allows the caller to restrict the search to documents written in a particular language (e.g., lr=lang_ja). 
+            Note: Use the resource Languages to get a valid language code. e.g. Languages.Hebrew
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageRightsParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images labeled with the given licenses.
+            TODO: Add support for negative restrictions. e.g. as_rights=(cc_publicdomain|cc_attribute|cc_sharealike).-(cc_noncommercial|cc_nonderived).
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QuerySiteSearchParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images within the specified domain, 
+            e.g., as_sitesearch=photobucket.com. Note: This method restricts results to images found on pages at the given URL.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageFileTypeParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified filetype
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryImageTypeParameter">
+            <summary>
+            This optional argument tells the image search system to restrict the search to images of the specified type
+            </summary>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.Url">
+            <summary>
+            Supplies an escaped version of the news URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.Content">
+            <summary>
+            Supplies a snippet of content from the news story that includes the quotes.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.Author">
+            <summary>
+            Supplies the name of the person that the quote is attributed to.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.Publisher">
+            <summary>
+            Supplies the name of the publisher of the news story.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleNewsResult.Title">
+            <summary>
+            Supplies the title value of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Title">
+            <summary>
+            Supplies the title for the result. In some cases, the title and the streetAddress are the same.
+            This typically occurs when the search term is a street address such as 1231 Lisa Lane, Los Altos, CA.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Latitude">
+            <summary>
+            Supplies the latitude value of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Longitude">
+            <summary>
+            Supplies the longitude value of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.StreetAddress">
+            <summary>
+            Supplies the street address and number for the given result. Note: In some cases, this
+            property may be set to "" if the result has no known street address.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.City">
+            <summary>
+            Supplies the city name for the result. Note: In some cases, this property may be set to "".
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Region">
+            <summary>
+            Supplies a region name for the result (e.g., in the U.S., this is typically a state
+            abbreviation, in other regions it might be a province, etc.) Note: In some cases,
+            this property may be set to "".
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Country">
+            <summary>
+            Supplies a country name for the result. Note: In some cases, this property may be set to "".
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.PhoneNumbers">
+            <summary>
+            Supplies an array of phone number objects where each object contains a .type property and a
+            .number property. The value of the .type property can be one of "main", "fax", "mobile",
+            "data", or "".
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.AddressLines">
+            <summary>
+            Supplies an array consisting of the mailing address lines for this result, for
+            instance: ["1600 Amphitheatre Pky", "Mountain View, CA 94043"] or ["Via del Corso, 330",
+            "00186 Roma (RM), Italy"]. To correctly render an address associated with a result,
+            either use the .html property of the result directly or iterate through this
+            array and display each addressLine in turn.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.StaticMapUrl">
+            <summary>
+            Supplies a url to a static map image representation of the current result. The image is
+            150px wide by 100px tall with a single marker representing the current location. Expected
+            usage is to hyperlink this image using the url property. The image may be resized using
+            google.search.LocalSearch.resizeStaticMapUrl(). The Static Map Tile sample demonstrates
+            one way to use this property.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.ListingType">
+            <summary>
+            This property indicates the type of this result which can either be "local" in the case of
+            a local business listing or geocode result, or "kml" in the case of a KML listing.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Content">
+            <summary>
+            For "kml" results, this property contains a content snippet associated with the KML result.
+            For "local" results, this property is the empty string.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleLocalResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.Title">
+            <summary>
+            Supplies the title of the blog post returned as a search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.Content">
+            <summary>
+            Supplies a snippet of content from the blog post associated with this search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.PostUrl">
+            <summary>
+            Supplies the URL to the blog post referenced in this search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.Author">
+            <summary>
+            Supplies the name of the author that wrote the blog post.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.BlogUrl">
+            <summary>
+            Supplies the URL of the blog which contains the post.
+            Typically, this URL is displayed in green, beneath the blog search
+            result and is linked to the blog.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.PublishedDate">
+            <summary>
+            Supplies the published date (rfc-822 format) of the blog post referenced
+            by this search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBlogResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryUserIPParameter">
+            <summary>
+            TODO: Maybe use here the class IPAddress?
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryHostLanguageParameter">
+            <summary>
+            Use the resource Languages to look up a valid language parameter.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QuerySafeParameter">
+            <summary>
+            This optional argument supplies the search safety level which may be one of:
+                active - enables the highest level of safe search filtering
+                moderate - enables moderate safe search filtering (default)
+                off - disables safe search filtering
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryScoringParameter">
+            <summary>
+            This optional argument tells the video search system how to order results. Results may be ordered by relevance 
+            (which is the default) or by date. To select ordering by relevance, do not supply this argument. 
+            To select ordering by date, set scoring as scoring=d.
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.ImageQuery">
+            <summary>
+            Provides a google images query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/images.
+            </summary>    
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.Title">
+            <summary>
+            Supplies the title value of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike Title, this property is stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.Content">
+            <summary>
+            Supplies a brief snippet of information from the page associated with the search result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.VisibleUrl">
+            <summary>
+            Supplies a shortened version of the URL associated with the result. Typically displayed in green, stripped of a protocol and path.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.Url">
+            <summary>
+            Supplies an escaped version of the above URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleWebResult.CacheUrl">
+            <summary>
+            Supplies a url to Google's cached version of the page responsible for producing this result.
+            This property may be null indicating that there is no cache, and it might be out of date in
+            cases where the search result has been saved and in the mean time, the cache has gone stale.
+            For best results, this property should not be persisted.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.Title">
+            <summary>
+            Supplies the title of the book.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.TitleNoFormatting">
+            <summary>
+            Supplies the title, but unlike .title, this property is
+            stripped of html markup (e.g., b, i, etc.).
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.UnescapedUrl">
+            <summary>
+            Supplies the raw URL of the result.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.Url">
+            <summary>
+            Supplies an escaped version of the book's URL.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.Authors">
+            <summary>
+            Supplies the list of authors of the book.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.BookId">
+            <summary>
+            Supplies the identifier associated with the book. This is typically an ISBN.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.PublishedYear">
+            <summary>
+            Supplies the year that the book was published.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.PageCount">
+            <summary>
+            Supplies the number of pages contained within the book.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GoogleSearchAPI.Query.GoogleBookResult.ThumbnailHtml">
+            <summary>
+            Supplies an html dom node that represents a thumbnail image of the book's cover.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.WebQuery">
+            <summary>
+            Provides a google web query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/web.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Query.BlogQuery">
+            <summary>
+            Provides a google blog query. AJAX API URL: http://ajax.googleapis.com/ajax/services/search/blogs.
+            </summary>    
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryCSEUniqueIdParameter">
+            <summary>
+            This optional argument supplies the unique id for the Custom Search Engine that should be used for this request 
+            (e.g., cx=000455696194071821846:reviews).
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryCRefParameter">
+            <summary>
+            This optional argument supplies the url of a linked Custom Search Engine specification that should be used to satisfy this request 
+            (e.g., cref=http://www.google.com/cse/samples/vegetarian.xml).
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryLanguageRestrictParameter">
+            <summary>
+            This optional argument allows the caller to restrict the search to documents written in a particular language (e.g., lr=lang_ja). 
+            Note: Use the resource Languages to get a valid language code. e.g. Languages.Hebrew
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryFilterParameter">
+            <summary>
+            This optional argument controls turning on or off the duplicate content filter:
+            0 - Turns off the duplicate content filter
+            1 - Turns on the duplicate content filter (default)
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryCountryCodeParameter">
+            <summary>
+            This optional argument allows the caller to tailor the results to a specific country. 
+            The value should be a valid country code (e.g. uk, de, etc.). If this argument is not present, 
+            then the system will use a value based on the domain used to load the API (e.g. http://www.google.com/jsapi). 
+            If the API loader was not used, a value of "us" is assumed.
+            Note: Use the Resource CountryCode to get a valid country code. e.g. CountryCode.Israel
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryPatentIssuedParameter">
+            <summary>
+            This optional argument tells the patent search system to restrict the search to ONLY patents that having been issued, 
+            skipping all patents that have only been filed. When specified, that value must be 1 as in as_psrg=1
+            </summary>
+        </member>
+        <member name="T:GoogleSearchAPI.Query.QueryPatentFiledParameter">
+            <summary>
+            This optional argument tells the patent search system to restrict the search to ONLY patents that only been filed,
+            skipping over all patents that have been issued. When specified, that value must be 1 as in as_psrg=1
+            </summary>
+        </member>
+    </members>
+</doc>

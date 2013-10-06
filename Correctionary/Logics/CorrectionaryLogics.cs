@@ -113,7 +113,16 @@ namespace nsLogics
             this.SetHotKeys(userSettings.TranslationHotKey, userSettings.ReverseTranslationHotKey);
         }
 
-       
+        /// <summary>
+        /// Logs the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        public void Log(string message)
+        {
+            Debug.WriteLine(">========================");
+            Debug.WriteLine(message);
+            Debug.WriteLine("========================<");
+        }
 
        
         /// <summary>
@@ -140,6 +149,7 @@ namespace nsLogics
         /// <returns>the translation</returns>
         public TranslationInContextPackage TranslateText(string text)
         {
+            //SearchUtils.SearchLogics.Search(text, this._translationUnit.GetLanguageFrom());
             TranslationInContextPackage translation = new TranslationInContextPackage();
 
             string[] splittedText = text.Split(new char[] { ' ', '\t', '\n' },
@@ -413,18 +423,5 @@ namespace nsLogics
         }
         #endregion
 
-
-
-
-        /// <summary>
-        /// Logs the specified message.
-        /// </summary>
-        /// <param name="message">The message.</param>
-        public void Log(string message)
-        {
-            Debug.WriteLine(">========================");
-            Debug.WriteLine(message);
-            Debug.WriteLine("========================<");
-        }
     }
 }
