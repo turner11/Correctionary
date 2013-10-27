@@ -12,6 +12,7 @@ namespace TransparentControls
         readonly int _timeToDisplay;
         private Label lblCredit;
         private TableLayoutPanel tlpMain;
+        private PictureBox pbImage;
         bool _ClosingBecauseOFTimer;
 
         #region Ctor, init code and dispose
@@ -54,6 +55,13 @@ namespace TransparentControls
             this.lblInnerText.Text = textToDisplay;
         }
 
+        public void SetImage(Image image)
+        {
+            this.pbImage.Image =image;
+
+            
+        }
+
         /// <summary>
         /// Stops the count down to closing.
         /// </summary>
@@ -84,6 +92,35 @@ namespace TransparentControls
         }
 
         #region Event handler
+
+        private void pbImage_MouseEnter(object sender, EventArgs e)
+        {
+            this.lblInnerText.Visible = false;            
+        }
+
+        private void pbImage_MouseLeave(object sender, EventArgs e)
+        {
+            this.lblInnerText.Visible = true;
+        }
+        private void lblInnerText_TextChanged(object sender, EventArgs e)
+        {
+            //setting size of form to fit text
+            Size lblSize = this.lblInnerText.Size;
+            int width = Math.Max(this.lblCredit.Width, lblSize.Width);
+            this.Size = new Size(width + 10, lblSize.Height + this.lblCredit.Height + 30);
+            //this.Size = new Size(lblSize.Width + 10, lblSize.Height+ 10);
+
+        }
+
+        /// <summary>
+        /// Handles the BackgroundImageChanged event of the pbImage control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void pbImage_BackgroundImageChanged(object sender, EventArgs e)
+        {
+            pbImage.Visible = pbImage.Image != null;
+        }
         private void Notification_Load(object sender, System.EventArgs e)
         {
 
@@ -149,7 +186,9 @@ namespace TransparentControls
             this.lblInnerText = new TransparentControls.WrapLabel();
             this.lblCredit = new System.Windows.Forms.Label();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.tlpMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -162,7 +201,7 @@ namespace TransparentControls
             this.lblInnerText.Margin = new System.Windows.Forms.Padding(5);
             this.lblInnerText.Name = "lblInnerText";
             this.lblInnerText.Padding = new System.Windows.Forms.Padding(5);
-            this.lblInnerText.Size = new System.Drawing.Size(291, 27);
+            this.lblInnerText.Size = new System.Drawing.Size(243, 23);
             this.lblInnerText.TabIndex = 2;
             this.lblInnerText.Text = "---";
             this.lblInnerText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,9 +213,10 @@ namespace TransparentControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCredit.AutoSize = true;
             this.lblCredit.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCredit.Location = new System.Drawing.Point(3, 60);
+            this.tlpMain.SetColumnSpan(this.lblCredit, 2);
+            this.lblCredit.Location = new System.Drawing.Point(3, 64);
             this.lblCredit.Name = "lblCredit";
-            this.lblCredit.Size = new System.Drawing.Size(375, 17);
+            this.lblCredit.Size = new System.Drawing.Size(375, 13);
             this.lblCredit.TabIndex = 3;
             this.lblCredit.Text = "Brought to you by Avi Turner: avi.turner111@gmail.com";
             // 
@@ -184,10 +224,12 @@ namespace TransparentControls
             // 
             this.tlpMain.AutoSize = true;
             this.tlpMain.BackColor = System.Drawing.Color.Transparent;
-            this.tlpMain.ColumnCount = 1;
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMain.ColumnCount = 2;
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpMain.Controls.Add(this.lblCredit, 0, 1);
             this.tlpMain.Controls.Add(this.lblInnerText, 0, 0);
+            this.tlpMain.Controls.Add(this.pbImage, 1, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Name = "tlpMain";
@@ -197,16 +239,30 @@ namespace TransparentControls
             this.tlpMain.Size = new System.Drawing.Size(381, 77);
             this.tlpMain.TabIndex = 4;
             // 
+            // pbImage
+            // 
+            this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImage.Location = new System.Drawing.Point(256, 3);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(122, 58);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 4;
+            this.pbImage.TabStop = false;
+            this.pbImage.BackgroundImageChanged += new System.EventHandler(this.pbImage_BackgroundImageChanged);
+            this.pbImage.MouseEnter += new System.EventHandler(this.pbImage_MouseEnter);
+            this.pbImage.MouseLeave += new System.EventHandler(this.pbImage_MouseLeave);
+            // 
             // Notification
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(381, 77);
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximumSize = new System.Drawing.Size(720, 692);
+            this.MaximumSize = new System.Drawing.Size(600, 600);
             this.Name = "Notification";
             this.Text = "Notification";
             this.TopMost = true;
@@ -216,6 +272,7 @@ namespace TransparentControls
             this.MouseLeave += new System.EventHandler(this.Notification_MouseLeave);
             this.tlpMain.ResumeLayout(false);
             this.tlpMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,15 +286,9 @@ namespace TransparentControls
         private System.ComponentModel.IContainer components;
         #endregion
 
-        private void lblInnerText_TextChanged(object sender, EventArgs e)
-        {
-            //setting size of form to fit text
-            Size lblSize = this.lblInnerText.Size;
-            int width = Math.Max(this.lblCredit.Width, lblSize.Width);
-            this.Size = new Size(width + 10, lblSize.Height + this.lblCredit.Height +30);
-            //this.Size = new Size(lblSize.Width + 10, lblSize.Height+ 10);
-            
-        }
+       
+
+       
 
         
 

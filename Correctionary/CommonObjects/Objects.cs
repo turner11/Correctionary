@@ -161,6 +161,18 @@ namespace CommonObjects
     /// </summary>
     public class TranslationInContextPackage : TranslationPackage
     {
+        readonly Guid _Id;
+        /// <summary>
+        /// Gets the id.
+        /// </summary>
+        /// <value>
+        /// The id.
+        /// </value>
+        public Guid Id
+        {
+            get { return _Id; }
+        } 
+
         string _bestMatch;
         public string BestMatch
         {
@@ -209,8 +221,23 @@ namespace CommonObjects
             set { _laguageTo = value; }
         }
 
+        Image _image;
+        /// <summary>
+        /// Gets or sets the image representing translation.
+        /// </summary>
+        /// <value>
+        /// The image.
+        /// </value>
+        public Image Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+
+
         public TranslationInContextPackage()
         {
+            this._Id = Guid.NewGuid();
             this._bestMatch = String.Empty;
             this._transLatedContext = new List<string>();
         }
@@ -572,7 +599,20 @@ namespace CommonObjects
         {
             get { return _reverseTranslationHotKey; }
             set { _reverseTranslationHotKey = value; }
-        } 
+        }
+
+        bool _searchForImages;
+        /// <summary>
+        /// Gets or sets a value indicating whether should search for images.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if should search for images; otherwise, <c>false</c>.
+        /// </value>
+        public bool SearchForImages
+        {
+            get { return _searchForImages; }
+            set { _searchForImages = value; }
+        }
         #endregion
 
         /// <summary>

@@ -13,6 +13,9 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Xml.Serialization;
 using System.Diagnostics;
+using SearchUtils;
+using System.Threading.Tasks;
+using System.Drawing;
 
 
 namespace nsLogics
@@ -59,6 +62,11 @@ namespace nsLogics
         CorrectionaryUnit _translationUnit;
 
         /// <summary>
+        /// The search unit
+        /// </summary>
+        SearchLogics _searchLogics;
+
+        /// <summary>
         /// Counts how many threads were created
         /// </summary>
         int _threadCounter;
@@ -82,6 +90,8 @@ namespace nsLogics
         /// The last action we were requested to do, based on the hot key pressed
         /// </summary>
         private HotkeysActions _lastActionRequest;
+
+        bool _searchForImages;
         #endregion
 
         #region C'tors
@@ -94,6 +104,7 @@ namespace nsLogics
             this._threadCounter = 0;
             this._HookLogics = new HookLogics();
             this._translationUnit = new CorrectionaryUnit();
+            this._searchLogics = new SearchLogics();
             this.BindEvents();
         }
 
@@ -109,8 +120,8 @@ namespace nsLogics
         {
             this.SetLanguages(userSettings.LaguageFrom, userSettings.LaguageTo);
             this.SetLanguageAutoDetectionState(userSettings.AutoDetectLanguage);
-
             this.SetHotKeys(userSettings.TranslationHotKey, userSettings.ReverseTranslationHotKey);
+            this._searchForImages = userSettings.SearchForImages;
         }
 
         /// <summary>
@@ -149,7 +160,7 @@ namespace nsLogics
         /// <returns>the translation</returns>
         public TranslationInContextPackage TranslateText(string text)
         {
-            //SearchUtils.SearchLogics.Search(text, this._translationUnit.GetLanguageFrom());
+            //TODO: go over. Is this how we should get context? I doubt it
             TranslationInContextPackage translation = new TranslationInContextPackage();
 
             string[] splittedText = text.Split(new char[] { ' ', '\t', '\n' },
@@ -187,14 +198,32 @@ namespace nsLogics
             this._isDuringTranslate = true;
             this.TriggerOnTranslationStarted();
             //getting translation
-            TranslationInContextPackage translation = this._translationUnit.Translate(word, context);
+            //TranslationInContextPackage translation = this._translationUnit.Translate(word, context);
+            List<Task> tasks = new List<Task>();
+            TranslationInContextPackage translation = null;
+            var tTranslation = Task<TranslationInContextPackage>.Factory.StartNew(() => translation = this._translationUnit.Translate(word, context));
+            tasks.Add(tTranslation);
+            Image image = null;
+            if (this._searchForImages)
+            {
+                
+                var tImage = Task<Image>.Factory.StartNew(() => image = this._searchLogics.SearchImage(word, this._translationUnit.GetLanguageFrom()));
+                tasks.Add(tImage);
+            }
+           
+            Task.WaitAll(tasks.ToArray());
+            
             this._isDuringTranslate = false;
+
+            if (translation != null)
+            {
+                translation.Image = image;
+            }
             this.TriggerOnTranslationCompleted();
 
 
             //letting everyone know I got the translation...
-            this.TriggerOnGotTranslation(translation);
-
+            this.TriggerOnGotTranslation(translation);            
 
             return translation;
         }
@@ -276,9 +305,9 @@ namespace nsLogics
         /// <param name="clipBoardDataObject">The clip board data object.</param>
         private TranslationInContextPackage TranslateHighlightedText(ClipBoardDataObject clipBoardDataObject)
         {
-            string exp = clipBoardDataObject.Text.Trim();
+            string expression = clipBoardDataObject.Text.Trim();
 
-            return TranslateText(exp);
+            return TranslateText(expression);
         }
 
         /// <summary>

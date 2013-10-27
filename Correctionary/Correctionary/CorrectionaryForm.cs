@@ -144,6 +144,7 @@ namespace Correctionary
         {
             string header = String.Empty;
             string textToDisplay = String.Empty;
+            Image imageToDisplay = null;
             if (!translation.IsEmpty && !translation.ErrorEncounterd)
             {
                 #region Get text values from translations
@@ -190,6 +191,7 @@ namespace Correctionary
 
                 header = translation.Word.Substring(0, Math.Min(translation.Word.Length, 10))
                             + ": " + wordToDisplay.Substring(0, Math.Min(wordToDisplay.Length, 10));
+                imageToDisplay = translation.Image;
             }
             else //we had an error
             {
@@ -206,7 +208,7 @@ namespace Correctionary
             }
 
             RightToLeft rtl = translation.LaguageTo.IsRightToLeft ? RightToLeft.Yes: RightToLeft.No;
-            this.ShowMessage(header, textToDisplay,5000,DEFAULT_TRANSLATION_BACKGROUND,rtl);
+            this.ShowMessage(header, textToDisplay,5000,DEFAULT_TRANSLATION_BACKGROUND,rtl,imageToDisplay);
             
 
         }
@@ -331,8 +333,7 @@ namespace Correctionary
             return success;
         }
 
-
-         /// <summary>
+        /// <summary>
         /// Shows a message.
         /// </summary>
         /// <param name="caption">The caption.</param>
@@ -340,7 +341,18 @@ namespace Correctionary
         /// <exception cref="System.NotImplementedException"></exception>
         private void ShowMessage(string caption, string message)
         {
-            this.ShowMessage(caption,message,3500,Color.Empty,System.Windows.Forms.RightToLeft.No);
+            this.ShowMessage(caption, message,null);
+        }
+
+        /// <summary>
+        /// Shows a message.
+        /// </summary>
+        /// <param name="caption">The caption.</param>
+        /// <param name="message">The message.</param>
+        /// <param name="image">The image.</param>
+        private void ShowMessage(string caption, string message, Image image)
+        {
+            this.ShowMessage(caption,message,3500,Color.Empty,System.Windows.Forms.RightToLeft.No, image);
         }
         /// <summary>
         /// Shows a message.
@@ -351,12 +363,12 @@ namespace Correctionary
         /// <param name="background">The background color.</param>
         /// <param name="rtl">The right-to-left mode.</param>
         /// <exception cref="System.NotImplementedException"></exception>
-        private void ShowMessage(string caption, string message, int showTime, Color background, RightToLeft rtl)
+        private void ShowMessage(string caption, string message, int showTime, Color background, RightToLeft rtl, Image image)
         {
             if (this.InvokeRequired)
             {
-                Action<string, string, int, Color, RightToLeft> action = new Action<string, string, int, Color, RightToLeft>(ShowMessage);
-                object[] args = new object[] { caption, message, showTime, background, rtl };
+                var action = new Action<string, string, int, Color, RightToLeft, Image>(ShowMessage);
+                object[] args = new object[] { caption, message, showTime, background, rtl, image };
                 this.BeginInvoke(action, args);
             }
             else
@@ -369,6 +381,7 @@ namespace Correctionary
 
                 notificationDisplay.Text = caption;
                 notificationDisplay.SetInnerTexst(message);
+                notificationDisplay.SetImage(image);
 
                 notificationDisplay.BackColor = background;
                 notificationDisplay.RightToLeft = rtl;

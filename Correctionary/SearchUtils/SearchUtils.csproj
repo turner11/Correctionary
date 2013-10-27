@@ -31,9 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GoogleSearchDotnet, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GoogleSearchAPI">
+      <HintPath>GoogleSearchAPI\GoogleSearchAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>GoogleSearchAPI\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,20 +51,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GoogleSearch\GoogleSearchAPI.chm" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GoogleSearch\GoogleSearchDotnet.dll" />
-    <Content Include="GoogleSearch\GoogleSearchDotnet.pdb" />
-    <Content Include="GoogleSearch\GoogleSearchDotnet.XML" />
-    <Content Include="GoogleSearch\Newtonsoft.Json.dll" />
-    <Content Include="GoogleSearch\README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CommonObjects\CommonObjects.csproj">
       <Project>{70205539-5988-4553-B325-98C4604C3CBA}</Project>
       <Name>CommonObjects</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GoogleSearchAPI\Documentation.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GoogleSearchAPI\GoogleSearchAPI.Compact.dll" />
+    <Content Include="GoogleSearchAPI\GoogleSearchAPI.Compact.pdb" />
+    <Content Include="GoogleSearchAPI\GoogleSearchAPI.Compact.XML" />
+    <Content Include="GoogleSearchAPI\Newtonsoft.Json.Compact.dll" />
+    <Content Include="GoogleSearchAPI\Newtonsoft.Json.Compact.xml" />
+    <Content Include="GoogleSearchAPI\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -43,13 +43,14 @@
             this.lblDisplayLocation = new System.Windows.Forms.Label();
             this.chbShowDebugMessages = new System.Windows.Forms.CheckBox();
             this.gbTrnaslationWindow = new System.Windows.Forms.GroupBox();
+            this.chbSearchForImages = new System.Windows.Forms.CheckBox();
             this.gbHotKeys = new System.Windows.Forms.GroupBox();
-            this.lblHotKeyTranslation = new System.Windows.Forms.Label();
-            this.lblReverseTranslation = new System.Windows.Forms.Label();
-            this.cmbTranslationMofifier = new System.Windows.Forms.ComboBox();
+            this.cmbReverseTranslationHotKey = new System.Windows.Forms.ComboBox();
             this.cmbTranslationHotKey = new System.Windows.Forms.ComboBox();
             this.cmbReverseTranslationMofifier = new System.Windows.Forms.ComboBox();
-            this.cmbReverseTranslationHotKey = new System.Windows.Forms.ComboBox();
+            this.cmbTranslationMofifier = new System.Windows.Forms.ComboBox();
+            this.lblReverseTranslation = new System.Windows.Forms.Label();
+            this.lblHotKeyTranslation = new System.Windows.Forms.Label();
             this.gbLanguages.SuspendLayout();
             this.lblGeneral.SuspendLayout();
             this.gbTrnaslationWindow.SuspendLayout();
@@ -150,7 +151,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOk.Location = new System.Drawing.Point(10, 339);
+            this.btnOk.Location = new System.Drawing.Point(4, 361);
             this.btnOk.Margin = new System.Windows.Forms.Padding(2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(55, 24);
@@ -162,7 +163,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.Location = new System.Drawing.Point(69, 339);
+            this.btnCancel.Location = new System.Drawing.Point(63, 361);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(55, 24);
@@ -194,7 +195,7 @@
             // chbShowDebugMessages
             // 
             this.chbShowDebugMessages.AutoSize = true;
-            this.chbShowDebugMessages.Location = new System.Drawing.Point(9, 50);
+            this.chbShowDebugMessages.Location = new System.Drawing.Point(9, 69);
             this.chbShowDebugMessages.Name = "chbShowDebugMessages";
             this.chbShowDebugMessages.Size = new System.Drawing.Size(139, 17);
             this.chbShowDebugMessages.TabIndex = 4;
@@ -206,15 +207,27 @@
             // 
             this.gbTrnaslationWindow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbTrnaslationWindow.Controls.Add(this.chbSearchForImages);
             this.gbTrnaslationWindow.Controls.Add(this.chbShowDebugMessages);
             this.gbTrnaslationWindow.Controls.Add(this.lblDisplayLocation);
             this.gbTrnaslationWindow.Controls.Add(this.cmbDisplayLocation);
             this.gbTrnaslationWindow.Location = new System.Drawing.Point(10, 185);
             this.gbTrnaslationWindow.Name = "gbTrnaslationWindow";
-            this.gbTrnaslationWindow.Size = new System.Drawing.Size(267, 69);
+            this.gbTrnaslationWindow.Size = new System.Drawing.Size(267, 92);
             this.gbTrnaslationWindow.TabIndex = 5;
             this.gbTrnaslationWindow.TabStop = false;
             this.gbTrnaslationWindow.Text = "Translation Window";
+            // 
+            // chbSearchForImages
+            // 
+            this.chbSearchForImages.AutoSize = true;
+            this.chbSearchForImages.Location = new System.Drawing.Point(9, 46);
+            this.chbSearchForImages.Name = "chbSearchForImages";
+            this.chbSearchForImages.Size = new System.Drawing.Size(156, 17);
+            this.chbSearchForImages.TabIndex = 4;
+            this.chbSearchForImages.Text = "Search For Images (Slower)";
+            this.chbSearchForImages.UseVisualStyleBackColor = true;
+            this.chbSearchForImages.CheckedChanged += new System.EventHandler(this.chbSearchForImages_CheckedChanged);
             // 
             // gbHotKeys
             // 
@@ -226,39 +239,23 @@
             this.gbHotKeys.Controls.Add(this.cmbTranslationMofifier);
             this.gbHotKeys.Controls.Add(this.lblReverseTranslation);
             this.gbHotKeys.Controls.Add(this.lblHotKeyTranslation);
-            this.gbHotKeys.Location = new System.Drawing.Point(10, 261);
+            this.gbHotKeys.Location = new System.Drawing.Point(10, 283);
             this.gbHotKeys.Name = "gbHotKeys";
             this.gbHotKeys.Size = new System.Drawing.Size(267, 73);
             this.gbHotKeys.TabIndex = 6;
             this.gbHotKeys.TabStop = false;
             this.gbHotKeys.Text = "Hot Keys";
             // 
-            // lblHotKeyTranslation
+            // cmbReverseTranslationHotKey
             // 
-            this.lblHotKeyTranslation.AutoSize = true;
-            this.lblHotKeyTranslation.Location = new System.Drawing.Point(6, 16);
-            this.lblHotKeyTranslation.Name = "lblHotKeyTranslation";
-            this.lblHotKeyTranslation.Size = new System.Drawing.Size(59, 13);
-            this.lblHotKeyTranslation.TabIndex = 0;
-            this.lblHotKeyTranslation.Text = "Translation";
-            // 
-            // lblReverseTranslation
-            // 
-            this.lblReverseTranslation.AutoSize = true;
-            this.lblReverseTranslation.Location = new System.Drawing.Point(6, 40);
-            this.lblReverseTranslation.Name = "lblReverseTranslation";
-            this.lblReverseTranslation.Size = new System.Drawing.Size(102, 13);
-            this.lblReverseTranslation.TabIndex = 0;
-            this.lblReverseTranslation.Text = "Reverse Translation";
-            // 
-            // cmbTranslationMofifier
-            // 
-            this.cmbTranslationMofifier.FormattingEnabled = true;
-            this.cmbTranslationMofifier.Location = new System.Drawing.Point(120, 13);
-            this.cmbTranslationMofifier.Name = "cmbTranslationMofifier";
-            this.cmbTranslationMofifier.Size = new System.Drawing.Size(74, 21);
-            this.cmbTranslationMofifier.TabIndex = 1;
-            this.cmbTranslationMofifier.SelectedIndexChanged += new System.EventHandler(this.cmbTranslationMofifier_SelectedIndexChanged);
+            this.cmbReverseTranslationHotKey.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbReverseTranslationHotKey.FormattingEnabled = true;
+            this.cmbReverseTranslationHotKey.Location = new System.Drawing.Point(200, 40);
+            this.cmbReverseTranslationHotKey.Name = "cmbReverseTranslationHotKey";
+            this.cmbReverseTranslationHotKey.Size = new System.Drawing.Size(53, 21);
+            this.cmbReverseTranslationHotKey.TabIndex = 1;
+            this.cmbReverseTranslationHotKey.SelectedIndexChanged += new System.EventHandler(this.cmbReverseTranslationHotKey_SelectedIndexChanged);
             // 
             // cmbTranslationHotKey
             // 
@@ -280,22 +277,38 @@
             this.cmbReverseTranslationMofifier.TabIndex = 1;
             this.cmbReverseTranslationMofifier.SelectedIndexChanged += new System.EventHandler(this.cmbReverseTranslationMofifier_SelectedIndexChanged);
             // 
-            // cmbReverseTranslationHotKey
+            // cmbTranslationMofifier
             // 
-            this.cmbReverseTranslationHotKey.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbReverseTranslationHotKey.FormattingEnabled = true;
-            this.cmbReverseTranslationHotKey.Location = new System.Drawing.Point(200, 40);
-            this.cmbReverseTranslationHotKey.Name = "cmbReverseTranslationHotKey";
-            this.cmbReverseTranslationHotKey.Size = new System.Drawing.Size(53, 21);
-            this.cmbReverseTranslationHotKey.TabIndex = 1;
-            this.cmbReverseTranslationHotKey.SelectedIndexChanged += new System.EventHandler(this.cmbReverseTranslationHotKey_SelectedIndexChanged);
+            this.cmbTranslationMofifier.FormattingEnabled = true;
+            this.cmbTranslationMofifier.Location = new System.Drawing.Point(120, 13);
+            this.cmbTranslationMofifier.Name = "cmbTranslationMofifier";
+            this.cmbTranslationMofifier.Size = new System.Drawing.Size(74, 21);
+            this.cmbTranslationMofifier.TabIndex = 1;
+            this.cmbTranslationMofifier.SelectedIndexChanged += new System.EventHandler(this.cmbTranslationMofifier_SelectedIndexChanged);
+            // 
+            // lblReverseTranslation
+            // 
+            this.lblReverseTranslation.AutoSize = true;
+            this.lblReverseTranslation.Location = new System.Drawing.Point(6, 40);
+            this.lblReverseTranslation.Name = "lblReverseTranslation";
+            this.lblReverseTranslation.Size = new System.Drawing.Size(102, 13);
+            this.lblReverseTranslation.TabIndex = 0;
+            this.lblReverseTranslation.Text = "Reverse Translation";
+            // 
+            // lblHotKeyTranslation
+            // 
+            this.lblHotKeyTranslation.AutoSize = true;
+            this.lblHotKeyTranslation.Location = new System.Drawing.Point(6, 16);
+            this.lblHotKeyTranslation.Name = "lblHotKeyTranslation";
+            this.lblHotKeyTranslation.Size = new System.Drawing.Size(59, 13);
+            this.lblHotKeyTranslation.TabIndex = 0;
+            this.lblHotKeyTranslation.Text = "Translation";
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 374);
+            this.ClientSize = new System.Drawing.Size(286, 396);
             this.ControlBox = false;
             this.Controls.Add(this.gbHotKeys);
             this.Controls.Add(this.gbTrnaslationWindow);
@@ -343,5 +356,6 @@
         private System.Windows.Forms.ComboBox cmbTranslationMofifier;
         private System.Windows.Forms.Label lblReverseTranslation;
         private System.Windows.Forms.Label lblHotKeyTranslation;
+        private System.Windows.Forms.CheckBox chbSearchForImages;
     }
 }

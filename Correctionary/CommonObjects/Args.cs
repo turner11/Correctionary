@@ -253,4 +253,42 @@ namespace CommonObjects
 
        
     }
+
+    public class LogArgs:EventArgs
+    {
+        string _message;
+        /// <summary>
+        /// Gets the message to log.
+        /// </summary>
+        /// <value>
+        /// The message to log.
+        /// </value>
+        public string Message
+        {
+            get { return _message; }
+        }
+
+        string _source;
+        /// <summary>
+        /// Gets information about source of event.
+        /// </summary>
+        /// <value>
+        /// information about source of event.
+        /// </value>
+        public string Source
+        {
+            get { return _source; }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LogArgs"/> class.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="message">The message.</param>
+        public LogArgs(string source, string message)
+        {
+            this._source = source;
+            this._message = message;
+        }
+    }
 }

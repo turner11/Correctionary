@@ -93,6 +93,8 @@ namespace Correctionary
             this.chbIdentifyLanguageAutomaticaly.Checked = userSettings.AutoDetectLanguage;
             /*Debug messages*/
             this.chbShowDebugMessages.Checked = userSettings.ShowDebugMessages;
+            /*Images search*/
+            this.chbSearchForImages.Checked = userSettings.SearchForImages;
             /*Hot keys*/
             this.cmbTranslationMofifier.SelectedItem = (ModifierKeys)userSettings.TranslationHotKey.Modifier;
             this.cmbTranslationHotKey.SelectedItem = (Keys)userSettings.TranslationHotKey.Hotkey;
@@ -251,6 +253,16 @@ namespace Correctionary
         }
 
         /// <summary>
+        /// Handles the CheckedChanged event of the chbSearchForImages control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void chbSearchForImages_CheckedChanged(object sender, EventArgs e)
+        {
+            this._userSettings.SearchForImages = this.chbSearchForImages.Checked;
+        }
+
+        /// <summary>
         /// Handles the SelectedIndexChanged event of the cmbTranslationMofifier control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -298,6 +310,8 @@ namespace Correctionary
             this._userSettings.ReverseTranslationHotKey.Hotkey = (Keys)this.cmbReverseTranslationHotKey.SelectedValue;
         }
         #endregion
+
+        
       
     }
 }
