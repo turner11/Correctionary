@@ -327,6 +327,7 @@ namespace Correctionary
                 catch (Exception ex)
                 {
                     this.ShowMessage( "Error while saving user settings",ex.Message);
+                    success = false;
                 }
 
             }
