@@ -398,8 +398,21 @@ namespace nsLogics
         {
             if (e.DataObject != null)
             {
+                switch (this._lastActionRequest)
+                {
+                    case HotkeysActions.None:
+                        break;
+                    case HotkeysActions.ObtainContext:
+                    case HotkeysActions.TranslateParagraph:
+                        break;
+                    case HotkeysActions.TranslateWord:                        
+                    case HotkeysActions.ReverseTranslate:                       
+                        TranslationInContextPackage translation = this.TranslateHighlightedText(e.DataObject);
+                        break;
+                    default:
+                        break;
+                }
                 //translating
-                TranslationInContextPackage translation = this.TranslateHighlightedText(e.DataObject);
             }
 
         }

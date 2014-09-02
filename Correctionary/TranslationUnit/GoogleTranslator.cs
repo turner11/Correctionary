@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
+using System.Threading;
 
 
 namespace TranslationUnit
@@ -39,7 +40,12 @@ namespace TranslationUnit
         /// </summary>
         public GoogleTranslator()
         {
+            // this is just for getting initial connection...
+            var lang = new Language("en","English","English");
+            Thread t = new Thread(()=>this.GetTranslation("Hello World", lang, lang));
+            t.Start();
 
+            
         } 
         #endregion
 
@@ -70,16 +76,16 @@ namespace TranslationUnit
 
         #region Private functions
         /// <summary>
-        /// Gets the translation for aword in a context.
+        /// Gets the translation for a word in a context.
         /// </summary>
         /// <param name="word">The word.</param>
         /// <param name="context">The context.</param>
         /// <param name="languageFrom">The language to translate from.</param>
         /// <param name="languageTo">The language to translate to.</param>
-        /// <returns>The package containg translation</returns>
+        /// <returns>The package contaning translation</returns>
         private TranslationInContextPackage GetTranslationWithContext(string word, string context, Language languageFrom, Language languageTo)
         {
-            // TODO: document, if nedded, simplify!
+            // TODO: document, if needed, simplify!
             TranslationInContextPackage retPackage = new TranslationInContextPackage();
             retPackage.LaguageFrom = languageFrom;
             retPackage.LaguageTo = languageTo;

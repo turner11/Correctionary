@@ -34,6 +34,16 @@ namespace TransparentControls
             this.lblInnerText.Text = String.Empty;
             this.HookMouseMove(this.Controls);
 
+            ContextMenu cm = new ContextMenu();
+            var item = cm.MenuItems.Add("Copy");
+            item.Click += (s, e) =>
+                {
+                    Clipboard.SetText(this.lblInnerText.Text);
+                };
+            
+
+            this.lblInnerText.ContextMenu = cm;
+
            
 		}
 
