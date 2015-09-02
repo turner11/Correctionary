@@ -23,15 +23,15 @@ namespace TranslationUnit
     {
         #region URL
 
+      
+        
         /// <summary>
         /// The template for translation requests from google 
         /// </summary>
-        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "http://translate.google.com/translate_a/t?client=p&hl={0}&sl={1}&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&oc=2&otf=1&ssel=0&tsel=0&pc=1&sc=1&q={3}"; 
-      
+        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "https://translate.google.com/translate_a/single?client=t&sl={1}&tl={2}&hl={0}&dt=bd&dt=ex&dt=ld&dt=md&dt=qc&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=1&ssel=6&tsel=3&kc=1&tk=519563|864430&q={3}";
+      //const string GOOGLE_TRANSLATE_URL_TEMPLATE = "http://translate.google.com/translate_a/t?client=p&hl={0}&sl={1}&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&oc=2&otf=1&ssel=0&tsel=0&pc=1&sc=1&q={3}";
                                                   
-        //"http://translate.google.com/translate_a/t?client=t&hl=iw&sl=auto&tl=iw&ie=UTF-8&oe=UTF-8&multires=1&oc=1&prev=conf&psl=en&ptl=iw&otf=1&it=sel.8772&ssel=3&tsel=6&uptl=iw&alttl=en&sc=1&q=dog"
-                                                  
-        //"http://translate.google.com/translate_a/t?client=p&text={0}&hl={1}&sl=en&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&otf=2&ssel=2&tsel=2&sc=1";  
+
         #endregion
 
         #region C'tors
@@ -229,10 +229,21 @@ namespace TranslationUnit
         private Translation GetTranslationFromReply(string reply)
         {
             //this will contain all translations
-            JObject jReply = JObject.Parse(reply);
-            List<string> translations = GetTranslations(jReply);
+            Translation translation;
+            try
+            {
+                JObject jReply = JObject.Parse(reply);
 
-            Translation translation = new Translation(String.Empty, translations);
+                List<string> translations = GetTranslations(jReply);
+
+                translation = new Translation(String.Empty, translations);
+            }
+            catch (Exception ex)
+            {
+
+                translation = new Translation(String.Empty, new List<string> {"Failed to get translation from reply: \n"+ex.Message}); ;
+            }
+           
 
             return translation;
         }
