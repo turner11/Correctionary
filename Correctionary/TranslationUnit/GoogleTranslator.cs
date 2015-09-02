@@ -26,12 +26,17 @@ namespace TranslationUnit
         /// <summary>
         /// The template for translation requests from google 
         /// </summary>
-        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "http://translate.google.com/translate_a/t?client=p&hl={0}&sl={1}&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&oc=2&otf=1&ssel=0&tsel=0&pc=1&sc=1&q={3}"; 
+        const string GOOGLE_TRANSLATE_URL_TEMPLATE = 
+            "http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}";
+#region OLD URLs
+		
+        //const string GOOGLE_TRANSLATE_URL_TEMPLATE = "http://translate.google.com/translate_a/t?client=p&hl={0}&sl={1}&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&oc=2&otf=1&ssel=0&tsel=0&pc=1&sc=1&q={3}"; 
       
                                                   
         //"http://translate.google.com/translate_a/t?client=t&hl=iw&sl=auto&tl=iw&ie=UTF-8&oe=UTF-8&multires=1&oc=1&prev=conf&psl=en&ptl=iw&otf=1&it=sel.8772&ssel=3&tsel=6&uptl=iw&alttl=en&sc=1&q=dog"
                                                   
-        //"http://translate.google.com/translate_a/t?client=p&text={0}&hl={1}&sl=en&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&otf=2&ssel=2&tsel=2&sc=1";  
+        //"http://translate.google.com/translate_a/t?client=p&text={0}&hl={1}&sl=en&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&otf=2&ssel=2&tsel=2&sc=1";   
+	#endregion
         #endregion
 
         #region C'tors
@@ -186,7 +191,7 @@ namespace TranslationUnit
         private Translation TranslateExpression(string expression, Language languageFrom, Language languageTo)
         {
             Translation trans = new Translation(expression);
-            Encoding encoding = Encoding.GetEncoding(1255);
+            
             //Getting the url
             string url = GoogleTranslator.GetTranslateUrl(expression, languageFrom, languageTo);
 
@@ -196,10 +201,11 @@ namespace TranslationUnit
                 try
                 {
 
-                    webClient.Encoding = encoding;
-                    Stream st = webClient.OpenRead(url);
-                    StreamReader reader = new StreamReader(st);
-                    reply = reader.ReadToEnd();
+                    webClient.Encoding = System.Text.Encoding.UTF8;
+                    webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0");
+                    webClient.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");//Encoding.GetEncoding(1255);
+
+                    reply = webClient.DownloadString(url); ;
                 }
                 catch (WebException ex)
                 {
@@ -228,6 +234,13 @@ namespace TranslationUnit
         /// <param name="reply">Googls reply.</param>
         private Translation GetTranslationFromReply(string reply)
         {
+            var result = reply.Substring(reply.IndexOf("<span title=\"") + "<span title=\"".Length);
+            result = result.Substring(result.IndexOf(">") + 1);
+            result = result.Substring(0, result.IndexOf("</span>"));
+
+            Translation translationA = new Translation(String.Empty, new string[]{result});
+            return  Translation translation = new Translation(String.Empty, translations);;
+
             //this will contain all translations
             JObject jReply = JObject.Parse(reply);
             List<string> translations = GetTranslations(jReply);
@@ -343,9 +356,11 @@ namespace TranslationUnit
             // for a parameter called SL in the URL...
             string slParam = String.IsNullOrWhiteSpace(sourceSymbol) ? "auto" : sourceSymbol;
 
-            //this is for passing the expression in encodeURIcomponent format for non english expressions
+            //this is for passing the expression in encodeURIcomponent format for non English expressions
             string encodedSentene = Uri.EscapeUriString(expression);
-            string url = String.Format(GoogleTranslator.GOOGLE_TRANSLATE_URL_TEMPLATE, sourceSymbol, slParam, targetSymbol, encodedSentene);
+            var languagePair = String.Format("{0}|{1}", sourceSymbol, targetSymbol);
+                string url =
+                String.Format(GoogleTranslator.GOOGLE_TRANSLATE_URL_TEMPLATE, encodedSentene, languagePair);
             return url;
         }
         
