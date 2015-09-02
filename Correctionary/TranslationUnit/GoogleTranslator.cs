@@ -14,6 +14,7 @@ using Newtonsoft.Json.Linq;
 using System.Threading;
 
 
+
 namespace TranslationUnit
 {
     /// <summary>
@@ -26,11 +27,14 @@ namespace TranslationUnit
         /// <summary>
         /// The template for translation requests from google 
         /// </summary>
-        const string GOOGLE_TRANSLATE_URL_TEMPLATE = 
-            "http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}";
+
+        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "https://translate.google.com/translate_a/single?client=t&sl={0}&tl={1}&hl={2}&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=1&ssel=3&tsel=4&kc=1&tk=522633|266647&q={3}";
+
+ 
 #region OLD URLs
-		
+
         //const string GOOGLE_TRANSLATE_URL_TEMPLATE = "http://translate.google.com/translate_a/t?client=p&hl={0}&sl={1}&tl={2}&ie=UTF-8&oe=UTF-8&multires=1&oc=2&otf=1&ssel=0&tsel=0&pc=1&sc=1&q={3}"; 
+       //const string GOOGLE_TRANSLATE_URL_TEMPLATE ="http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}";
       
                                                   
         //"http://translate.google.com/translate_a/t?client=t&hl=iw&sl=auto&tl=iw&ie=UTF-8&oe=UTF-8&multires=1&oc=1&prev=conf&psl=en&ptl=iw&otf=1&it=sel.8772&ssel=3&tsel=6&uptl=iw&alttl=en&sc=1&q=dog"
@@ -200,15 +204,18 @@ namespace TranslationUnit
             {
                 try
                 {
-
                     webClient.Encoding = System.Text.Encoding.UTF8;
                     webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0");
                     webClient.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");//Encoding.GetEncoding(1255);
 
                     reply = webClient.DownloadString(url); ;
+                    //Stream st = webClient.OpenRead(url);
+                    //StreamReader reader = new StreamReader(st);
+                    //reply = reader.ReadToEnd();
                 }
                 catch (WebException ex)
                 {
+                    trans = new Translation();
                     trans.ErrorException = ex;
                     return trans;
                     //TODO: add logging
@@ -234,18 +241,27 @@ namespace TranslationUnit
         /// <param name="reply">Googls reply.</param>
         private Translation GetTranslationFromReply(string reply)
         {
-            var result = reply.Substring(reply.IndexOf("<span title=\"") + "<span title=\"".Length);
-            result = result.Substring(result.IndexOf(">") + 1);
-            result = result.Substring(0, result.IndexOf("</span>"));
 
-            Translation translationA = new Translation(String.Empty, new string[]{result});
-            return  Translation translation = new Translation(String.Empty, translations);;
+            Translation translation = null;
 
-            //this will contain all translations
-            JObject jReply = JObject.Parse(reply);
-            List<string> translations = GetTranslations(jReply);
+            try
+            {
 
-            Translation translation = new Translation(String.Empty, translations);
+
+
+                //this will contain all translations
+                JObject jReply = JObject.Parse(reply);
+                List<string> translations = GetTranslations(jReply);
+
+                translation = new Translation(String.Empty, translations);
+            }
+            catch (Exception ex)
+            {
+
+                translation = new Translation();
+                translation.ErrorException = ex;
+            }
+          
 
             return translation;
         }
@@ -353,14 +369,15 @@ namespace TranslationUnit
         /// <returns>the url</returns>
         private static string GetUrlBySymbols(string expression, string sourceSymbol, string targetSymbol)
         {
-            // for a parameter called SL in the URL...
+            // for a parameter called SL (source language) in the URL...
             string slParam = String.IsNullOrWhiteSpace(sourceSymbol) ? "auto" : sourceSymbol;
 
             //this is for passing the expression in encodeURIcomponent format for non English expressions
             string encodedSentene = Uri.EscapeUriString(expression);
-            var languagePair = String.Format("{0}|{1}", sourceSymbol, targetSymbol);
-                string url =
-                String.Format(GoogleTranslator.GOOGLE_TRANSLATE_URL_TEMPLATE, encodedSentene, languagePair);
+
+            string url = String.Format(GoogleTranslator.GOOGLE_TRANSLATE_URL_TEMPLATE, slParam, targetSymbol, sourceSymbol, encodedSentene);
+
+           
             return url;
         }
         
