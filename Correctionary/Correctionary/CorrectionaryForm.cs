@@ -387,9 +387,6 @@ namespace Correctionary
                 notificationDisplay.BackColor = background;
                 notificationDisplay.RightToLeft = rtl;
 
-
-
-
                 notificationDisplay.Show();
 
                 this.SetNotificationLocation(notificationDisplay);
