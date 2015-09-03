@@ -28,7 +28,9 @@ namespace TranslationUnit
         /// The template for translation requests from google 
         /// </summary>
 
-        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "https://translate.google.com/translate_a/single?client=t&sl={0}&tl={1}&hl={2}&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=1&ssel=3&tsel=4&kc=1&tk=522633|266647&q={3}";
+        const string GOOGLE_TRANSLATE_URL_TEMPLATE = "https://translate.google.com/translate_a/single?client=p&sl={0}&tl={1}&hl={2}&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=1&ssel=3&tsel=4&kc=1&tk=522633|266647&q=fair";
+
+       // const string GOOGLE_TRANSLATE_URL_TEMPLATE = "https://translate.google.com/translate_a/single?client=t&sl={0}&tl={1}&hl={2}&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&dt=at&ie=UTF-8&oe=UTF-8&otf=1&ssel=3&tsel=4&kc=1&tk=522633|266647&q={3}";
 
  
 #region OLD URLs

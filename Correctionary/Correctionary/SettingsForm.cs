@@ -18,7 +18,7 @@ namespace Correctionary
     /// <summary>
     /// A form for modifying user settings
     /// </summary>
-#if DEBUG
+#if DEBUGAA
     [assembly:InternalsVisibleToAttribute("TranslationUnitTests")] 
 #endif
     public partial class SettingsForm : Form
