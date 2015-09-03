@@ -141,6 +141,11 @@ namespace CommonObjects
             this._errorException = other._errorException;
         }
 
+        public override string ToString()
+        {
+            return String.Format("{0} : \n\t {1}", this.Word, String.Join(Environment.NewLine, this.Translations));
+        }
+
     }
     /// <summary>
     ///  translation package when the translation had no specific context
