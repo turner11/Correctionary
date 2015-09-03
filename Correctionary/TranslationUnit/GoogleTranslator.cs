@@ -225,6 +225,7 @@ namespace TranslationUnit
             if (!string.IsNullOrEmpty(reply))
             {
                 trans = this.GetTranslationFromReply(reply);
+                trans.Word = expression;
             }
             else
             {
