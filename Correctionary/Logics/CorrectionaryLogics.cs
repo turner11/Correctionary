@@ -22,7 +22,7 @@ namespace nsLogics
 {
     //We need to inherit from "Form" in order to get a handle 
     /// <summary>
-    /// This handles all logics and requests related to the correctinary logics
+    /// This handles all logics and requests related to the Correctionary logics
     /// </summary>
     public class CorrectionaryLogics : Form
     {
@@ -37,7 +37,7 @@ namespace nsLogics
         public event EventHandler<HotkeyPressedArgs> onHotkeyPressed;
 
         /// <summary>
-        /// Occurs when failes registrating hot key.
+        /// Occurs when fails registration of a hot key.
         /// </summary>
         public event EventHandler<ErrorRegistratingHotKeyArgs> onFailedRegistratingHotKeys;
         /// <summary>

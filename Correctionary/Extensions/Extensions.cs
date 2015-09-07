@@ -26,17 +26,36 @@ using CommonObjects;
         }
 
 
-        /// <summary>
-        /// Gets the descrition attribute of the enum.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <returns></returns>
-        public static string GetDescrition(this Enum value)
-        {
-            EnumToStringUsingDescription interpeter = new EnumToStringUsingDescription();
-            return interpeter.GetEnumDescrition(value);
-        }
-
-       
+    /// <summary>
+    /// Coverts an Enums to string by it's description. falls back to ToString
+    /// </summary>
+    /// <param name="enumVal">The enum val.</param>
+    /// <returns></returns>
+    public static string ToStringByDescription(this Enum enumVal)
+    {
+        EnumToStringUsingDescription inter = new EnumToStringUsingDescription();
+        string str = inter.EnumToString(enumVal);
+        return str;
     }
+
+    /// <summary>
+    /// Coverts an Enums to string by it's description. falls back to ToString.
+    /// </summary>
+    /// <param name="value">The value to convert.</param>
+    /// <param name="flagSeperator">The string to separate flag values with.</param>
+    /// <returns></returns>
+    public static string ToStringByDescription(this Enum enumVal, string flagSeperator)
+    {
+        EnumToStringUsingDescription inter = new EnumToStringUsingDescription();
+        string str = inter.EnumToString(enumVal, flagSeperator);
+        return str;
+    }
+
+   
+
+
+
+
+
+}
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HtmlAgilityPack;
 using System.Text;
 //using GoogleSearchAPI.Query;
 using Google.API.Search;
@@ -17,16 +18,20 @@ namespace SearchUtils
     using System.Net;
     using System.IO;
     using System.Drawing;
+  
+
     /// <summary>
     /// Class for handling search logics
     /// </summary>
     public class SearchLogics : CommonObjects.ILoggable
     {
         /// <summary>
-        /// Occurs when an event that is worth logging has occured.
+        /// Occurs when an event that is worth logging has occurred.
         /// </summary>
         public event EventHandler<CommonObjects.LogArgs> onWorthLogging;
 
+
+        const string GOOGLE_PIC_PARENT_DIV_ID = "rg_s";
         /// <summary>
         /// Searches for images by query.
         /// </summary>
@@ -51,16 +56,23 @@ namespace SearchUtils
                         {
                             string html = reader.ReadToEnd(); // here we go, we sent a request  using the steps above and saved the response in our StreamReader
 
-                            String[] s = html.Split(new String[] { "&amp" }, StringSplitOptions.RemoveEmptyEntries)
-                               .Where(data => data.Contains("imgres?imgurl="))
-                               .Select(data => data.Substring(3)).ToArray();
-                            
+                            var document = new HtmlDocument();
+                            document.LoadHtml(html);
+
+                            var wrpaerDiv = document.GetElementbyId("ires");
+                            var imagesTable = wrpaerDiv.ChildNodes.FirstOrDefault();
+                            var imagesRows =    imagesTable.ChildNodes
+                                                .Where(cn => cn.NodeType == HtmlNodeType.Element)
+                                                .ToArray();
+                            var picsUrls = imagesRows.Select(tr => tr.FirstChild.FirstChild.ChildNodes["img"].Attributes["src"].Value).ToArray();
+                            //var a = imagesRows[0].FirstChild.FirstChild.ChildNodes["img"].Attributes["src"].Value;
+
                             
                             // bla bla bla get the pieces of code where there's imgres?imgurl= (where google stores the images' urls)
-                            int itteration = Math.Min(numberOfresult, s.Count());
+                            int itteration = Math.Min(numberOfresult, picsUrls.Length);
                             for (int i = 0; i < itteration; i++) // loop the string array 
                             {
-                                string imgUrl = s[i].Remove(0, s[i].IndexOf("imgurl=") + 7); // get the url (this was done by speculation, hence the +7) - hey it works for now > some geek can probably write a regular expression and get rid of the speculation method, but hey I just wanted to get some results asap
+                                string imgUrl = picsUrls[i];
                                 WebClient wc = new WebClient(); // webclient allows you to download urls
                                 try
                                 {

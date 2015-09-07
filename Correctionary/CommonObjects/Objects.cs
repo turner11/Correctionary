@@ -681,14 +681,18 @@ namespace CommonObjects
             {
                 string name = value.ToString();
                 Type effectiveType = value.GetType();
-                effectiveType = value.GetType();
-
 
                 if (name != null)
                 {
-                    object[] attrs =
-                        effectiveType.GetField(name).GetCustomAttributes(typeof(DescriptionAttribute), false);
-                    return (attrs.Length > 0) ? ((DescriptionAttribute)attrs[0]).Description : name;
+                    FieldInfo fi = effectiveType.GetField(name);
+                    if (fi != null)
+                    {
+                        object[] attrs =
+                        fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
+                        var retVal = (attrs.Length > 0) ? ((DescriptionAttribute)attrs[0]).Description : name;
+                        return retVal;
+                    }
+
                 }
             }
 
@@ -698,15 +702,33 @@ namespace CommonObjects
         /// <summary>
         /// Coverts an Enums to string by it's description. falls back to ToString.
         /// </summary>
-        /// <param name="value">The value.</param>
+        /// <param name="value">The value to convert.</param>
         /// <returns></returns>
         public string EnumToString(Enum value)
         {
+            var flagSeperator = "\n";
+            return this.EnumToString(value, flagSeperator);
+
+        }
+
+        /// <summary>
+        /// Coverts an Enums to string by it's description. falls back to ToString.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <param name="flagSeperator">The string to separate flag values with.</param>
+        /// <returns></returns>
+        public string EnumToString(Enum value, string flagSeperator)
+        {
             //getting the actual values
-            List<Enum> values = EnumToStringUsingDescription.GetFlaggedValues(value);
-            values.ToString();
+            List<Enum> values = GetFlaggedValues(value);
+            //values.ToString();
             //Will hold results for each value
             List<string> results = new List<string>();
+            //if there are flags ,ommit the None flag
+            if (values.Count > 1)
+            {
+                values = values.Where(v => !(Convert.ToInt32(v) == 0 && v.ToString().ToUpper() == "NONE")).ToList();
+            }
             //getting the representing strings
             foreach (Enum currValue in values)
             {
@@ -714,31 +736,18 @@ namespace CommonObjects
                 results.Add(currresult);
             }
 
-            return String.Join("\n", results);
 
+            return String.Join(flagSeperator, results);
         }
 
-        /// <summary>
-        /// All of the values of enumeration that are represented by specified value.
-        /// If it is not a flag, the value will be the only value retured
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <returns></returns>
-        private static List<Enum> GetFlaggedValues(Enum value)
+        public static List<Enum> GetFlaggedValues(Enum value)
         {
-            //checking if this string is a flaged Enum
+            //checking if this string is a flagged Enum
             Type enumType = value.GetType();
             object[] attributes = enumType.GetCustomAttributes(true);
-            bool hasFlags = false;
-            foreach (object currAttibute in attributes)
-            {
-                if (enumType.GetCustomAttributes(true)[0] is System.FlagsAttribute)
-                {
-                    hasFlags = true;
-                    break;
-                }
-            }
-            //If it is a flag, add all fllaged values
+
+            bool hasFlags = enumType.GetCustomAttributes(true).Any(attr => attr is System.FlagsAttribute);
+            //If it is a flag, add all flagged values
             List<Enum> values = new List<Enum>();
             if (hasFlags)
             {
@@ -750,9 +759,6 @@ namespace CommonObjects
                         values.Add(currValue);
                     }
                 }
-
-
-
             }
             else//if not just add current value
             {
@@ -761,11 +767,7 @@ namespace CommonObjects
             return values;
         }
 
-        public string GetEnumDescrition(object value)
-        {
-            return this.ConvertTo(null, null, value, typeof(String)).ToString();
 
-        }
 
     }
 

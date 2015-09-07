@@ -13,35 +13,13 @@ namespace TransparentControls
     /// </summary>
     public class TransDialog : System.Windows.Forms.Form
     {
-        const double OPACITY_INTERVAL = 0.1;
-        
-        private int _transistionTime;
-        public int TransitionTime
-        {
-            get { return this._transistionTime; }
-            set
-            {
-                this.m_clock.Stop();
-                this._transistionTime = value;
-                this.m_clock.Interval = CLOCK_INTERVAL;
-                this.m_clock.Start();
-            }
-        }
-
-        int CLOCK_INTERVAL 
-        {
-            get
-            {
-                return (int)(OPACITY_INTERVAL * TransitionTime);
-            }
-        }
+        const int CLOCK_INTERVAL = 100;
         bool _cancelClose = false;
 
         #region Constructor
         public TransDialog()
         {
 			InitializeComponents();
-            this.TransitionTime = 3000;
         }
 		public TransDialog(bool disposeAtEnd)
 		{
@@ -51,13 +29,11 @@ namespace TransparentControls
         void InitializeComponents()
 		{
             this.components = new System.ComponentModel.Container();
-           
-            
+            this.m_clock =  new Timer(this.components);
+            this.m_clock.Interval = CLOCK_INTERVAL;
             this.SuspendLayout();
             //m_clock
-            this.m_clock = new Timer(this.components);
             this.m_clock.Tick += new EventHandler(m_clock_Tick);
-            this.TransitionTime = 3000;
             //TransDialog
             this.Load += new EventHandler(TransDialog_Load);
             this.FormClosing += new FormClosingEventHandler(TransDialog_Closing);
@@ -128,7 +104,7 @@ namespace TransparentControls
             {
                 if (this.Opacity < 1)
                 {
-                    this.Opacity += OPACITY_INTERVAL;
+                    this.Opacity += 0.1;
                 }
                 else
                 {
@@ -139,7 +115,7 @@ namespace TransparentControls
             {
                 if (this.Opacity > 0)
                 {
-                    this.Opacity -= OPACITY_INTERVAL;
+                    this.Opacity -= 0.1;
                 }
                 else
                 {
