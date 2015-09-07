@@ -84,7 +84,7 @@ namespace SearchUtils
                                 }
                                 catch (Exception ex)
                                 {
-                                    TriggerOnWorthLogging(String.Format("An error Occured while searching for image:{0}{1}",Environment.NewLine,ex.Message));
+                                    TriggerOnWorthLogging(string.Format("An error Occurred while searching for image:{0}{1}",Environment.NewLine,ex.Message));
                                 }
                             }
                         }
