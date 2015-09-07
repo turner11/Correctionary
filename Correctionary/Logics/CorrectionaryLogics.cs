@@ -206,9 +206,12 @@ namespace nsLogics
             Image image = null;
             if (this._searchForImages)
             {
-                
-                var tImage = Task<Image>.Factory.StartNew(() => image = this._searchLogics.SearchImage(word, this._translationUnit.GetLanguageFrom()));
-                tasks.Add(tImage);
+                var query = new string[] { word, context }.Where(s=> s.Trim().Length > 0).FirstOrDefault();
+                if ((query ?? "").Length > 0)
+                {
+                    var tImage = Task<Image>.Factory.StartNew(() => image = this._searchLogics.SearchImage(query, this._translationUnit.GetLanguageFrom()));
+                    tasks.Add(tImage);
+                }
             }
            
             Task.WaitAll(tasks.ToArray());

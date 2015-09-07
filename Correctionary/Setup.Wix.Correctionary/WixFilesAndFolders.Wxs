@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="CorrectionaryFOLDER">
+            <Component Id="cmpAE2D23F8308877C7E1D7ADB968165D28" Guid="*">
+                <File Id="fil31F825437E0F9CC7E43B127A9BA54F9F" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\ClipBoardUtils.dll" />
+            </Component>
+            
+            <Component Id="cmp2D7C4B8588918C401872033DF0CC55DC" Guid="*">
+                <File Id="fil4C48F8CE6BF55919C7D5D46F7A4AD587" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\CommonObjects.dll" />
+            </Component>
+            
+            <Component Id="cmp2C126576EA56AC2BF7C0CB23DBE2F116" Guid="*">
+                <Class Id="{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}" Context="InprocServer32" Description="Correctionary.CorrectionaryForm" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="Correctionary.CorrectionaryForm" Description="Correctionary.CorrectionaryForm" />
+                </Class>
+                <File Id="filFFF8BFBE971C4D73DAD8252D3A22F190" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Correctionary.exe" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32\0.0.0.0" Name="Class" Value="Correctionary.CorrectionaryForm" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32\0.0.0.0" Name="Assembly" Value="Correctionary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32\0.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32\0.0.0.0" Name="CodeBase" Value="file:///[#filFFF8BFBE971C4D73DAD8252D3A22F190]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32" Name="Class" Value="Correctionary.CorrectionaryForm" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32" Name="Assembly" Value="Correctionary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9C8AFBAF-3A20-30F4-B777-7A1D02C0B2FF}\InprocServer32" Name="CodeBase" Value="file:///[#filFFF8BFBE971C4D73DAD8252D3A22F190]" Type="string" Action="write" />
+            </Component>
+            <Component Id="cmp527E4EDA571E55A98C9EE2595BEC883E" Guid="*">
+                <File Id="filDA58323CB0262409DE34ACF4E2132917" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Correctionary.exe.config" />
+            </Component>
+            
+            <Component Id="cmp663C9B65AA49439F6C93CCE5BB46ABFE" Guid="*">
+                <File Id="filE16510A4DEE83D853BBF97706533B947" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Extensions.dll" />
+            </Component>
+            
+            <Component Id="cmp3B8FFE2EE68BA87B13E1065BB6F9608B" Guid="*">
+                <File Id="filE6AF268306C24E7DE8BAC227C5996D04" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\GuiFramework.dll" />
+            </Component>
+            
+            <Component Id="cmpAE8068CA607B50EE2A11252229551D37" Guid="*">
+                <Class Id="{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}" Context="InprocServer32" Description="HtmlAgilityPack.MixedCodeDocument" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="HtmlAgilityPack.MixedCodeDocument" Description="HtmlAgilityPack.MixedCodeDocument" />
+                </Class>
+                <Class Id="{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}" Context="InprocServer32" Description="HtmlAgilityPack.PermissionHelper" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="HtmlAgilityPack.PermissionHelper" Description="HtmlAgilityPack.PermissionHelper" />
+                </Class>
+                <Class Id="{5E1358B9-C759-3D30-A3B1-810DFCC473BD}" Context="InprocServer32" Description="HtmlAgilityPack.HtmlDocument" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="HtmlAgilityPack.HtmlDocument" Description="HtmlAgilityPack.HtmlDocument" />
+                </Class>
+                <Class Id="{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}" Context="InprocServer32" Description="HtmlAgilityPack.HtmlWeb" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="HtmlAgilityPack.HtmlWeb" Description="HtmlAgilityPack.HtmlWeb" />
+                </Class>
+                <Class Id="{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}" Context="InprocServer32" Description="HtmlAgilityPack.Crc32" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="HtmlAgilityPack.Crc32" Description="HtmlAgilityPack.Crc32" />
+                </Class>
+                <File Id="fil39C0DEEA08CF858A7F4E374BE6FB41DA" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\HtmlAgilityPack.dll" />
+                <ProgId Id="Record" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32\1.4.6.0" Name="Class" Value="HtmlAgilityPack.MixedCodeDocument" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32" Name="Class" Value="HtmlAgilityPack.MixedCodeDocument" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{30BA735A-59BF-3644-9C2B-8C7BFE711CF8}\InprocServer32" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32\1.4.6.0" Name="Class" Value="HtmlAgilityPack.PermissionHelper" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32" Name="Class" Value="HtmlAgilityPack.PermissionHelper" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{49EFF2DB-E679-3E14-BE0E-FD28E6868EA2}\InprocServer32" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32\1.4.6.0" Name="Class" Value="HtmlAgilityPack.HtmlDocument" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32" Name="Class" Value="HtmlAgilityPack.HtmlDocument" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{5E1358B9-C759-3D30-A3B1-810DFCC473BD}\InprocServer32" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32\1.4.6.0" Name="Class" Value="HtmlAgilityPack.HtmlWeb" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32" Name="Class" Value="HtmlAgilityPack.HtmlWeb" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D7641A38-303E-3AFE-81D1-5F5B9B4450F3}\InprocServer32" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32\1.4.6.0" Name="Class" Value="HtmlAgilityPack.Crc32" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32" Name="Class" Value="HtmlAgilityPack.Crc32" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{EFAA6C38-79F9-36FF-805B-2FFCA4C218FA}\InprocServer32" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1709F210-913D-314F-88C4-D3C53C709514}\1.4.6.0" Name="Class" Value="HtmlAgilityPack.AttributeValueQuote" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1709F210-913D-314F-88C4-D3C53C709514}\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1709F210-913D-314F-88C4-D3C53C709514}\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1709F210-913D-314F-88C4-D3C53C709514}\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1FA04C11-1E03-3A6C-85DE-44F484EACA05}\1.4.6.0" Name="Class" Value="HtmlAgilityPack.MixedCodeDocumentFragmentType" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1FA04C11-1E03-3A6C-85DE-44F484EACA05}\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1FA04C11-1E03-3A6C-85DE-44F484EACA05}\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{1FA04C11-1E03-3A6C-85DE-44F484EACA05}\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{56E7E437-6174-361E-8EC4-2034FF055C53}\1.4.6.0" Name="Class" Value="HtmlAgilityPack.HtmlParseErrorCode" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{56E7E437-6174-361E-8EC4-2034FF055C53}\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{56E7E437-6174-361E-8EC4-2034FF055C53}\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{56E7E437-6174-361E-8EC4-2034FF055C53}\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{62AF9458-FD85-3500-A4CF-18EF6FE7E568}\1.4.6.0" Name="Class" Value="HtmlAgilityPack.HtmlNodeType" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{62AF9458-FD85-3500-A4CF-18EF6FE7E568}\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{62AF9458-FD85-3500-A4CF-18EF6FE7E568}\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{62AF9458-FD85-3500-A4CF-18EF6FE7E568}\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{BC1D8408-4DFF-3517-878F-7DFA5994EF0F}\1.4.6.0" Name="Class" Value="HtmlAgilityPack.HtmlElementFlag" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{BC1D8408-4DFF-3517-878F-7DFA5994EF0F}\1.4.6.0" Name="Assembly" Value="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{BC1D8408-4DFF-3517-878F-7DFA5994EF0F}\1.4.6.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{BC1D8408-4DFF-3517-878F-7DFA5994EF0F}\1.4.6.0" Name="CodeBase" Value="file:///[#fil39C0DEEA08CF858A7F4E374BE6FB41DA]" Type="string" Action="write" />
+            </Component>
+            <Component Id="cmp6C214229E8E0D19B309F369642C1329A" Guid="*">
+                <File Id="fil3801E7BBD2B69264036CCB29B93A274A" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.Commons.dll" />
+            </Component>
+            
+            <Component Id="cmpF340A9D6F683C379E961228F25B35814" Guid="*">
+                <File Id="filA0C3768D969DD3BE46BCA8676E27F354" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.Commons.xml" />
+            </Component>
+            <Component Id="cmpFCB9281F57E9513EA87A64462B47FA02" Guid="*">
+                <File Id="fil99E9AD7FA7959758132A30B5A4ACD82A" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NClassify.dll" />
+            </Component>
+            
+            <Component Id="cmp54206116061C5C621F4753E748267C4A" Guid="*">
+                <File Id="filB29275CCF2CF2DF7595B7D43A513FEB8" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NClassify.xml" />
+            </Component>
+            <Component Id="cmpA1AD701F99E38F41F86C750A34C31A84" Guid="*">
+                <File Id="fil8ECC6303D2D5814F6AA3FF57F104E74C" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NTextCat.Lib.dll" />
+            </Component>
+            <Component Id="cmp2D9D5569C7708E7D308A2A5F9484F377" Guid="*">
+                <File Id="fil441885A6671309994220AB5D75443F01" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NTextCat.Lib.Legacy.dll" />
+            </Component>
+            
+            <Component Id="cmpB3336815E90999EA28C90AAB6219194B" Guid="*">
+                <File Id="filEA2E64A65521F2AE80C22D66B3CD4D53" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NTextCat.Lib.Legacy.xml" />
+            </Component>
+            
+            <Component Id="cmp7F30115EEAEF1DCCDC6778F227130352" Guid="*">
+                <File Id="fil854C6509903F7A2FF392DBA956C49951" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\IvanAkcheurov.NTextCat.Lib.xml" />
+            </Component>
+            <Component Id="cmp773C4A0EE7C1FA400B228824CCCA9233" Guid="*">
+                <File Id="fil5BEE03421250CF5F639494E3DD0E98D6" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Logics.dll" />
+            </Component>
+            
+            <Component Id="cmpFAE16FB284421566294B6C0178B311BC" Guid="*">
+                <File Id="filF5A968E65647BDF0A9A8B3A216F7BC96" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Microsoft.ExceptionMessageBox.dll" />
+            </Component>
+            <Component Id="cmp99DB8512CBFEEAA6559DAC614B501F39" Guid="*">
+                <File Id="filD8695BEEDD734433717380FEADA417D8" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmpA9DF88485CB4E1940F55DDBB6E9D0E5D" Guid="*">
+                <File Id="fil512D14BD6BFB78FB34E0E15335D84AE5" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\SearchUtils.dll" />
+            </Component>
+            
+            <Component Id="cmp5D54608AC13EA93028EC7EFECD4D5FAF" Guid="*">
+                <File Id="filD7493AB07E2AD8756E64A6BEDE15ADAE" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\settings.xml" />
+            </Component>
+            <Component Id="cmp39F75369EC9237B0F2A9E6BC884ADA4D" Guid="*">
+                <File Id="fil78D232424BDD55C3A931E88B310E3B42" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\TranslationUnit.dll" />
+            </Component>
+            
+            <Component Id="cmp69DBABD36D6BC93E8AA67BF34EC19FCE" Guid="*">
+                <File Id="filCFB95CE133B201EAAEB4B5FE8A515990" KeyPath="yes" Source="$(var.CorrectionaryForm.TargetDir)\TransparentControls.dll" />
+            </Component>
+            
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CorrectionaryInstallationFiles">
+            <ComponentRef Id="cmpAE2D23F8308877C7E1D7ADB968165D28" />
+            
+            <ComponentRef Id="cmp2D7C4B8588918C401872033DF0CC55DC" />
+            
+            <ComponentRef Id="cmp2C126576EA56AC2BF7C0CB23DBE2F116" />
+            <ComponentRef Id="cmp527E4EDA571E55A98C9EE2595BEC883E" />
+            
+            <ComponentRef Id="cmp663C9B65AA49439F6C93CCE5BB46ABFE" />
+            
+            <ComponentRef Id="cmp3B8FFE2EE68BA87B13E1065BB6F9608B" />
+            
+            <ComponentRef Id="cmpAE8068CA607B50EE2A11252229551D37" />
+            <ComponentRef Id="cmp6C214229E8E0D19B309F369642C1329A" />
+            
+            <ComponentRef Id="cmpF340A9D6F683C379E961228F25B35814" />
+            <ComponentRef Id="cmpFCB9281F57E9513EA87A64462B47FA02" />
+            
+            <ComponentRef Id="cmp54206116061C5C621F4753E748267C4A" />
+            <ComponentRef Id="cmpA1AD701F99E38F41F86C750A34C31A84" />
+            <ComponentRef Id="cmp2D9D5569C7708E7D308A2A5F9484F377" />
+            
+            <ComponentRef Id="cmpB3336815E90999EA28C90AAB6219194B" />
+            
+            <ComponentRef Id="cmp7F30115EEAEF1DCCDC6778F227130352" />
+            <ComponentRef Id="cmp773C4A0EE7C1FA400B228824CCCA9233" />
+            
+            <ComponentRef Id="cmpFAE16FB284421566294B6C0178B311BC" />
+            <ComponentRef Id="cmp99DB8512CBFEEAA6559DAC614B501F39" />
+            <ComponentRef Id="cmpA9DF88485CB4E1940F55DDBB6E9D0E5D" />
+            
+            <ComponentRef Id="cmp5D54608AC13EA93028EC7EFECD4D5FAF" />
+            <ComponentRef Id="cmp39F75369EC9237B0F2A9E6BC884ADA4D" />
+            
+            <ComponentRef Id="cmp69DBABD36D6BC93E8AA67BF34EC19FCE" />
+            
+        </ComponentGroup>
+    </Fragment>
+</Wix>
