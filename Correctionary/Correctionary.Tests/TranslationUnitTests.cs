@@ -31,9 +31,10 @@ namespace Correctionary.Tests
         #endregion
 
         #region Tests
-        [TestCase("Dog", "כֶּלֶב", "en", "he", Description = "Testing translation from english to hebrew")]
-        [TestCase("כלב", "dog","he", "en", Description = "Testing translation from hebrew to english")]
-        public void HebrewToEnglishTest(string word, string expected, string fromSymbol, string toSymbol)
+        [TestCase("fair", new string[] { "כֶּלֶב" }, "en", "iw", TestName  = "Testing english to hebrew - multi result")]
+        [TestCase("Dog", new string[] { "כֶּלֶב" }, "en", "iw", TestName  = "Testing translation from english to hebrew")]
+        [TestCase("כלב", new string[] { "dog" }, "iw", "en", TestName = "Testing translation from hebrew to english")]
+        public void HebrewToEnglishTest(string word, string[] expected, string fromSymbol, string toSymbol)
         {
             
             //Arrange
@@ -48,13 +49,13 @@ namespace Correctionary.Tests
             TranslationPackage pack = this._translationUnit.Translate(word);
             
             //assert
-            bool hasTranslation = pack.Translations.Contains(expected,new TranslationComparer());
-            string errorMessage = String.Format("Failed to translate '{0}'. expected '{1}' but got: '{2}'"
+            bool hasTranslation = pack.Translations.SequenceEqual(expected,new TranslationComparer());
+            string errorMessage = String.Format("Failed to translate '{0}'. expected '{1}' \nbut got: '{2}'"
                                                 , word
-                                                , expected,
-                                                String.Join(", ", pack.Translations));
+                                                , string.Join(", ",expected),
+                                                String.Join(", ", (pack.Translations.Count ==0 ? new string[] { "EMPTY"}: pack.Translations)));
 
-            Assert.IsTrue(hasTranslation, errorMessage);
+            Assert.IsTrue(hasTranslation,( errorMessage + "\n"+ pack.ErrorMessage).Trim());
         } 
         #endregion
 

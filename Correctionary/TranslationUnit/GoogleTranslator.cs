@@ -118,6 +118,9 @@ namespace TranslationUnit
                     translationWord = this.GetTranslation(word, languageFrom, languageTo);
                     retPackage.Word = word;
                     retPackage.Translations.AddRange(translationWord.Translations);
+
+                    retPackage.ErrorException = translationWord.ErrorException;
+                    retPackage.ErrorMessage = translationWord.ErrorMessage;
                 }
 
                 if (translationSentence != null)
