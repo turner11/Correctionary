@@ -61,6 +61,15 @@ namespace TranslationUnit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [[[&quot;הוגן&quot;,&quot;fair&quot;,,,0],[,,,&quot;fe(?)r&quot;]],[[&quot;adjective&quot;,[&quot;הוֹגֶן&quot;,&quot;בֵּינוֹנִי&quot;,&quot;בָּהִיר&quot;,&quot;יָפֶה&quot;,&quot;טוֹב&quot;,&quot;טוֹב לְמַדַי&quot;,&quot;נוֹחַ&quot;,&quot;כָּשֵׁר&quot;],[[&quot;הוֹגֶן&quot;,[&quot;fair&quot;,&quot;decent&quot;,&quot;straight&quot;,&quot;upright&quot;,&quot;reasonable&quot;,&quot;suitable&quot;],,0.46759713],[&quot;בֵּינוֹנִי&quot;,[&quot;medium&quot;,&quot;moderate&quot;,&quot;mediocre&quot;,&quot;fair&quot;,&quot;middle&quot;,&quot;mid&quot;],,0.058019698],[&quot;בָּהִיר&quot;,[&quot;bright&quot;,&quot;clear&quot;,&quot;light&quot;,&quot;fair&quot;,&quot;sunny&quot;,&quot;lucid&quot;],,0.0069519016],[&quot;יָפֶה&quot;,[&quot;beautiful&quot;,&quot;pretty&quot;,&quot;nice&quot;,&quot;lovely&quot;,&quot;well&quot;,&quot;fair&quot;]],[&quot;טוֹב&quot;,[&quot;good&quot;,&quot;well&quot;,&quot;kind&quot;,&quot;fair&quot;]],[&quot;טוֹב לְמַדַי&quot;,[&quot;fair&quot;]],[&quot;נוֹ [rest of string was truncated]&qu....
+        /// </summary>
+        internal static string fairTranslation {
+            get {
+                return ResourceManager.GetString("fairTranslation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;ArrayOfLanguage xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
         ///  &lt;Language&gt;

@@ -12,8 +12,7 @@ using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
 using System.Threading;
-
-
+using System.Threading.Tasks;
 
 namespace TranslationUnit
 {
@@ -51,8 +50,7 @@ namespace TranslationUnit
         {
             // this is just for getting initial connection...
             var lang = new Language("en","English","English");
-            Thread t = new Thread(()=>this.GetTranslation("Hello World", lang, lang));
-            t.Start();
+           //Task.Run(()=>this.GetTranslation("Hello World", lang, lang));
 
             
         } 
@@ -211,6 +209,11 @@ namespace TranslationUnit
                     webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0");
                     webClient.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");//Encoding.GetEncoding(1255);
 
+                    //this is for avoiding google rejecting the requests
+                   // WebProxy myProxy = new WebProxy();
+                    //webClient.Proxy = myProxy;
+
+                    
                     reply = webClient.DownloadString(url); ;
                     //Stream st = webClient.OpenRead(url);
                     //StreamReader reader = new StreamReader(st);
@@ -227,7 +230,7 @@ namespace TranslationUnit
             }
             if (!string.IsNullOrEmpty(reply))
             {
-                trans = this.GetTranslationFromReply(reply);
+                trans = this.GetTranslationFromReply(reply,expression);
                 trans.Word = expression;
             }
             else
@@ -243,7 +246,7 @@ namespace TranslationUnit
         /// Gets the translation from googles reply.
         /// </summary>
         /// <param name="reply">Googls reply.</param>
-        private Translation GetTranslationFromReply(string reply)
+        private Translation GetTranslationFromReply(string reply, string expression = "")
         {
 
             Translation translation = null;
@@ -265,7 +268,7 @@ namespace TranslationUnit
 
               
 
-                translation = new Translation(String.Empty, translations);
+                translation = new Translation(expression?? String.Empty, translations);
             }
             catch (Exception ex)
             {
