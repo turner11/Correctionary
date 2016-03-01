@@ -92,5 +92,14 @@ namespace TranslationUnit.Properties {
                 return ResourceManager.GetString("languages", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [[[&quot;שָׂפָה&quot;,&quot;language&quot;,,,2],[,,,&quot;?laNGgwij&quot;]],[[&quot;noun&quot;,[&quot;שָׂפָה&quot;,&quot;לָשׁוֹן&quot;],[[&quot;שָׂפָה&quot;,[&quot;language&quot;,&quot;lip&quot;,&quot;tongue&quot;,&quot;border&quot;,&quot;edge&quot;,&quot;bordure&quot;],,0.87980551],[&quot;לָשׁוֹן&quot;,[&quot;language&quot;,&quot;tongue&quot;,&quot;speech&quot;,&quot;lingo&quot;,&quot;expression&quot;],,0.030412389]],&quot;language&quot;,1]],&quot;en&quot;,,,[[&quot;language&quot;,32000,[[&quot;שָׂפָה&quot;,1000,true,false],[&quot;לָשׁוֹן&quot;,1000,true,false],[&quot;השפה&quot;,287,true,false],[&quot;בשפה&quot;,12,true,false],[&quot;שפת&quot;,2,true,false]],[[0,8]],&quot;language&quot;,0,0]],1,,[[&quot;en&quot;],,[1],[&quot;en&quot;]],,,[[&quot;noun&quot;,[[[&quot;speech&quot;,&quot;writing&quot;,&quot;communication&quot;,&quot;conversation&quot;,&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string languageTranslation {
+            get {
+                return ResourceManager.GetString("languageTranslation", resourceCulture);
+            }
+        }
     }
 }

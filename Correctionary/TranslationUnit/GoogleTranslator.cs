@@ -214,7 +214,7 @@ namespace TranslationUnit
                     //webClient.Proxy = myProxy;
 
                     
-                    reply = webClient.DownloadString(url); ;
+                    reply = webClient.DownloadString(url); 
                     //Stream st = webClient.OpenRead(url);
                     //StreamReader reader = new StreamReader(st);
                     //reply = reader.ReadToEnd();

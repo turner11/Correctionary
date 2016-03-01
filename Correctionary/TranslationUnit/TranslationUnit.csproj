@@ -104,6 +104,7 @@
   <ItemGroup>
     <Content Include="Gtranslate.dll" />
     <Content Include="HtmlAgilityPack.dll" />
+    <None Include="Resources\languageTranslation.txt" />
     <None Include="packages.config" />
     <None Include="Resources\fairTranslation.txt" />
     <None Include="Resources\languages.xml" />

@@ -31,7 +31,7 @@ namespace Correctionary.Tests
         #endregion
 
         #region Tests
-        [TestCase("fair", new string[] { "כֶּלֶב" }, "en", "iw", TestName  = "Testing english to hebrew - multi result")]
+        [TestCase("fair", new string[] { "בֵּינוֹנִי", "בָּהִיר", "יָפֶה", "טוֹב", "טוֹב לְמַדַי", "נוֹחַ", "כָּשֵׁר" }, "en", "iw", TestName  = "Testing english to hebrew - multi result")]
         [TestCase("Dog", new string[] { "כֶּלֶב" }, "en", "iw", TestName  = "Testing translation from english to hebrew")]
         [TestCase("כלב", new string[] { "dog" }, "iw", "en", TestName = "Testing translation from hebrew to english")]
         public void HebrewToEnglishTest(string word, string[] expected, string fromSymbol, string toSymbol)
@@ -47,9 +47,9 @@ namespace Correctionary.Tests
 
             //act
             TranslationPackage pack = this._translationUnit.Translate(word);
-            
+            var a = String.Join(",", pack.Translations);
             //assert
-            bool hasTranslation = pack.Translations.SequenceEqual(expected,new TranslationComparer());
+            bool hasTranslation = expected.All(e=> pack.Translations.Contains(e, new TranslationComparer()));
             string errorMessage = String.Format("Failed to translate '{0}'. expected '{1}' \nbut got: '{2}'"
                                                 , word
                                                 , string.Join(", ",expected),
