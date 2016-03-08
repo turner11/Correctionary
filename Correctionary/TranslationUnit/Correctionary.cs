@@ -50,7 +50,7 @@ namespace TranslationUnit
         /// </summary>
         public CorrectionaryUnit()
         {
-            this._translator = new GoogleTranslator();
+            this._translator = new GooglePageParserTranslator();//new GoogleTranslator();
             this._languageFrom = DEFAULT_LANGUAGE_FOR;
             this._languageTo = DEFAULT_LANGUAGE_TO;
             this._isAutoDetectingLanguage = false;

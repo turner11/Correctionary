@@ -353,7 +353,7 @@ namespace CommonObjects
     /// represents a language
     /// </summary>
     [Serializable]
-    [DebuggerDisplay("{ToString()}")]
+    [DebuggerDisplay("{String.Format(\"{0}, {1} ({2})\", Symbol, EnglishName, NativeName)}")]
     public class Language: IComparable
     {
         #region Data Members
@@ -441,6 +441,7 @@ namespace CommonObjects
         /// </returns>
         public override string ToString()
         {
+            return this.Symbol;
             return String.Format("{0}, {1} ({2})", Symbol, EnglishName, NativeName);
         }
 

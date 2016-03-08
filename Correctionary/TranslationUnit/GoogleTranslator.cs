@@ -19,7 +19,7 @@ namespace TranslationUnit
     /// <summary>
     /// The translation unit that uses google translate
     /// </summary>
-    partial class GoogleTranslator
+    class GoogleTranslator
     {
         #region URL
 
@@ -193,7 +193,7 @@ namespace TranslationUnit
         /// <param name="target">The language to translate to.</param>
         /// <param name="encoding">The encoding.</param>
         /// <returns>The translation</returns>
-        private Translation TranslateExpression(string expression, Language languageFrom, Language languageTo)
+        protected virtual Translation TranslateExpression(string expression, Language languageFrom, Language languageTo)
         {
             Translation trans = new Translation(expression);
             

@@ -45,6 +45,7 @@ namespace Correctionary.Tests
 
             this._translationUnit.SetLanguages(from, to);
 
+            //System.Threading.Thread.Sleep(5000);
             //act
             TranslationPackage pack = this._translationUnit.Translate(word);
             var a = String.Join(",", pack.Translations);
